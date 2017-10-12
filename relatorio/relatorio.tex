@@ -1,0 +1,325 @@
+%-----------------------------------------------------------------------
+%
+%   UFRJ  - Universidade Federal do Rio de Janeiro
+%   COPPE - Coordenação dos Programas de Pós-graduação em Engenharia
+%   PEE   - Programa de Engenharia Elétrica
+%
+%   COE-835  Controle adaptativo
+%
+%   Relatório da simulação
+%                                                         Ramon R. Costa
+%                                                         05/out/09, Rio
+%-----------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc} %pacote para utilizar palavras acentuadas
+\usepackage{amsmath,amssymb}  %pacotes do AMS
+\usepackage{latexsym}         %pacote para incluir simbolos (ex.\Box)
+\usepackage{fancybox,fancyhdr}%pacote com frescuras
+\usepackage{graphicx}         %pacote para incluir figuras tipo eps
+\usepackage{psfrag}
+\usepackage[portuguese]{babel}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{datetime}
+\usepackage[a4paper]{hyperref}% Make sure it comes last of your loaded packages
+\hypersetup{
+  verbose,
+  plainpages=false,
+  bookmarks=true,
+  colorlinks=true,
+  linkcolor=blue
+}
+
+%\input{commands}
+%\input{a4size}
+
+\newcommand{\RED}[1]{\colorbox{white}{\textcolor{red}{#1}}}
+\newcommand{\WoR}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\BLU}[1]{\colorbox{white}{\textcolor{blue}{#1}}}
+\newcommand{\GRE}[1]{\colorbox{green}{\textcolor{black}{#1}}}
+\newcommand{\HI}[1]{\colorbox{yellow}{\textcolor{black}{#1}}}  %% Highlithed text
+
+\newcommand{\equacao}[2]{
+  \makebox[40mm][l]{#1 \dotfill}: \quad \parbox[t]{8cm}{$\displaystyle
+  \begin{aligned}
+    #2
+  \end{aligned} $} \\
+}
+
+\begin{document}
+
+%---------------------------------------------------------------------
+\pagestyle{fancy}%
+\fancyhf{}
+\renewcommand{\headrulewidth}  {0.4pt}%
+\renewcommand{\footrulewidth}  {0.4pt}%
+\lhead{\bfseries{Relatório das simulações}}%
+\chead{}%
+\rhead{\bfseries\thepage}%
+\lfoot{}%
+\cfoot{}%
+\rfoot{[\currenttime] \quad \today}%
+
+---------------------------------------------------------------------
+\begin{center}
+  \huge{COE-835  Controle  adaptativo}  \\[20mm]
+
+  \Large{Simulações do exemplo 1} \\[20mm]
+\end{center}
+
+
+Algoritmo: \quad \HI{Standard MRAC}
+
+\bigskip%
+Caso: \quad \parbox[t]{10cm}{
+  $~n = 1$ \quad (ordem da planta) \\[2mm]
+  $n^* = 1$ \quad (grau relativo) \\[2mm]
+  $n_p = 1$ \quad (\# de parâmetros) \\[20mm]
+}
+
+%%%  \parbox{50mm}{
+%%%    Ordem da planta  \dotfill  $n = 1$   \\[2mm]
+%%%    Grau relativo    \dotfill  $n^* = 1$ \\[2mm]
+%%%    \# de parâmetros \dotfill  $n_p = 1$ \\[5mm]
+%%%  }
+%%%
+%%%  {\bf Algoritmo}: Standard MRAC \\[20mm]
+
+
+%---------------------------------------------------------------------
+
+\tableofcontents
+
+\newpage%
+%---------------------------------------------------------------------
+\section{Resumo das equações do sistema}
+
+\equacao{Planta}
+  {\dot{y}_p = a_p y_p + u}
+
+\equacao{Modelo}
+  {\dot{y}_m = -a_m y_m + r}
+
+\equacao{Erro de saída}
+  {e_0 = y_p - y_m}
+
+\equacao{Lei de controle}
+  {u = \theta\,y_p + r}
+
+\equacao{Lei de adaptação}
+  {\dot{\theta} = -\gamma e_0 y_p}
+
+
+%---------------------------------------------------------------------
+\section{Diagramas de blocos}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{figs/MRAC-111.eps}
+  \caption{Diagrama de blocos do sistema. \quad
+  (Model: \HI{\texttt{MRAC-111.mdl}}) }
+\end{figure}
+
+%---------------------------------------------------------------------
+\bigskip%
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{figs/plant.eps}
+  \caption{Diagrama de blocos da planta.}
+\end{figure}
+
+%---------------------------------------------------------------------
+\bigskip%
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{figs/reference-model.eps}
+  \caption{Diagrama de blocos do modelo de referência.}
+\end{figure}
+
+%---------------------------------------------------------------------
+\bigskip%
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{figs/reference-signal.eps}
+  \caption{Diagrama de blocos do gerador de sinais de referência.}
+\end{figure}
+
+%---------------------------------------------------------------------
+\bigskip%
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{figs/adaptation.eps}
+  \caption{Diagrama de blocos da lei de adaptação.}
+\end{figure}
+
+\newpage%
+%---------------------------------------------------------------------
+\section{Resultados das simulações}
+
+Simulação utilizando \HI{\texttt{Matlab/Simulink}}.
+
+\subsection{Simulação \#1}
+
+Avaliação do efeito do ganho de adaptação no caso em que as condições iniciais são todas nulas.
+
+\bigskip%
+Parâmetros e condições iniciais  :
+%
+\begin{align*}
+  a_p &= -2\,,  &  y_p(0) &= \HI{0}\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  r &= 1\,.
+\end{align*}
+
+\bigskip%
+\begin{figure}[H]
+  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
+  \centering
+  \includegraphics[width=12cm]{figs/fig01d.eps} \\[2mm]
+  \caption{Diagrama $e_0 \times \tilde{\theta}$.
+  \hfill (Script: \HI{\tt simu01.m}) }
+\end{figure}
+
+\newpage%
+%---------------------------------------------------------------------
+\begin{figure}[H]
+  \psfrag{theta, theta*}[l]{\footnotesize $\theta, \ \theta^*$}
+  \psfrag{theta*}[bl]{\footnotesize $\theta^*$}
+  \psfrag{gamma=10}[bl]{\footnotesize $\gamma=10$}
+  \psfrag{gamma=100}[bl]{\footnotesize $\gamma=100$}
+  \centering
+  \includegraphics[width=12cm]{figs/fig01c.eps} \\[2mm]
+  %(c) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig01a.eps} \\[2mm]
+  %(a) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig01b.eps} \\[2mm]
+  %(b) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig01e.eps} \\[2mm]
+  %(e) \\[3mm]
+  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \hfill (Script: \HI{\tt simu01.m}) }
+\end{figure}
+
+
+\newpage%
+%---------------------------------------------------------------------
+\subsection{Simulação \#2}
+
+Avaliação do efeito do ganho de adaptação para o caso de uma condição inicial pequena.
+
+\bigskip%
+Parâmetros e condições iniciais  :
+%
+\begin{align*}
+  a_p &= -2\,,  &  y_p(0) &= \HI{2}\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  r &= 1\,.
+\end{align*}
+
+\bigskip%
+\begin{figure}[H]
+  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
+  \centering
+  \includegraphics[width=12cm]{figs/fig02d.eps} \\[2mm]
+  \caption{Diagrama $e_0 \times \tilde{\theta}$.
+  \hfill (Script: \HI{\tt simu02.m}) }
+\end{figure}
+
+\newpage%
+%---------------------------------------------------------------------
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/fig02c.eps} \\[2mm]
+  %(c) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig02a.eps} \\[2mm]
+  %(a) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig02b.eps} \\[2mm]
+  %(b) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig02e.eps} \\[2mm]
+  %(e) \\[3mm]
+  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \hfill (Script: \HI{\tt simu02.m}) }
+\end{figure}
+
+Esta simulação mostra a não uniformidade do transitório de adaptação em relação às condições iniciais.
+
+\newpage%
+%---------------------------------------------------------------------
+\subsection{Simulação \#3}
+
+Idem caso da simulação anterior, com condição inicial maior.
+
+\bigskip%
+Parâmetros e condições iniciais  :
+%
+\begin{align*}
+  a_p &= -2\,,  &  y_p(0) &= \HI{5}\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  r &= 1\,.
+\end{align*}
+
+\bigskip%
+\begin{figure}[H]
+  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
+  \centering
+  \includegraphics[width=12cm]{figs/fig03d.eps} \\[2mm]
+  \caption{Diagrama $e_0 \times \tilde{\theta}$.
+  \hfill (Script: \HI{\tt simu03.m}) }
+\end{figure}
+
+\newpage%
+%---------------------------------------------------------------------
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/fig03c.eps} \\[2mm]
+  %(c) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig03a.eps} \\[2mm]
+  %(a) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig03b.eps} \\[2mm]
+  %(b) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig03e.eps} \\[2mm]
+  %(b) \\[3mm]
+  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \hfill (Script: \HI{\tt simu03.m}) }
+\end{figure}
+
+A duração do transitório de adaptação aumenta com as condições iniciais.
+
+Note o salto inicial do parâmetro adaptado. Ocorre uma \emph{super-estabilização} inicial do sistema.
+
+
+\newpage%
+%---------------------------------------------------------------------
+\subsection{Simulação \#4}
+
+Este exemplo mostra uma simulação contínua onde o parâmetro da planta sofre variações descontínuas.
+
+\bigskip%
+Parâmetros e condições iniciais  :
+%
+\begin{align*}
+  a_p &= \HI{[-2, \ -1, \ 0, \ 1, \ 2]}\,,  &  y_p(0) &= \HI{2}\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 10\,  \\
+  r &= 1\,.
+\end{align*}
+
+\bigskip%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/fig04c.eps} \\[2mm]
+  %(c) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig04a.eps} \\[2mm]
+  %(a) \\[3mm]
+  \includegraphics[width=12cm]{figs/fig04b.eps} \\[2mm]
+  %(b) \\[3mm]
+  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \hfill (Script: \HI{\tt simu04.m}) }
+\end{figure}
+
+
+%---------------------------------------------------------------------
+%\bibliographystyle{agsm}
+%\bibliography{bib,coe736}
+
+%---------------------------------------------------------------------
+\end{document}
