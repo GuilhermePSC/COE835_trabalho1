@@ -45,7 +45,7 @@
 \begin{center}
   \huge{COE-835  Controle  adaptativo}  \\[20mm]
 
-  \Large{Simulações do exemplo 2} \\[20mm]
+  \Large{Simulações do Trabalho 1} \\[20mm]
 \end{center}
 
 
@@ -79,7 +79,7 @@ Caso: \quad \parbox[t]{10cm}{
   {u = \theta y_p + r}
 
 \equacao{Filtro}
-  {\zeta = \frac{1}{s+a_m}\,y_p}
+  {\dot{\zeta} + a_m \, \zeta = y_p}
 
 \equacao{Estimativa do erro}
   {\hat{e} = \frac{1}{s+a_m}\,[\theta y_p] - \theta\zeta}
@@ -88,11 +88,16 @@ Caso: \quad \parbox[t]{10cm}{
   {\varepsilon = e_0 - \hat{e}}
 
 \equacao{Sinal normalizante}
-  {m^2 = 1 + \zeta^2}
+  {(i) \, m^2 = 1 + \zeta^2 \text{\,\,\,ou\,\,\,}(ii) \, m^2 = 1 + \zeta^2 + \dot{\zeta}^2 }
 
 \equacao{Lei de adaptação}
   {\dot{\theta} = - \frac{\gamma \varepsilon \zeta}{m^2}}
 
+%---------------------------------------------------------------------
+\section{Prova da limitação de $\dot{\varepsilon}/m$}
+
+A seguinte candidata à função de Lyapunov é proposta 
+$$2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0$$
 
 %---------------------------------------------------------------------
 \section{Diagramas de blocos}
