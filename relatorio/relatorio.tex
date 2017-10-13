@@ -20,7 +20,7 @@
 \usepackage[portuguese]{babel}
 \usepackage{xcolor}
 \usepackage{float}
-\usepackage{datetime}
+%\usepackage{datetime}
 \usepackage[a4paper]{hyperref}% Make sure it comes last of your loaded packages
 \hypersetup{
   verbose,
@@ -30,21 +30,7 @@
   linkcolor=blue
 }
 
-%\input{commands}
-%\input{a4size}
-
-\newcommand{\RED}[1]{\colorbox{white}{\textcolor{red}{#1}}}
-\newcommand{\WoR}[1]{\colorbox{red}{\textcolor{white}{#1}}}
-\newcommand{\BLU}[1]{\colorbox{white}{\textcolor{blue}{#1}}}
-\newcommand{\GRE}[1]{\colorbox{green}{\textcolor{black}{#1}}}
-\newcommand{\HI}[1]{\colorbox{yellow}{\textcolor{black}{#1}}}  %% Highlithed text
-
-\newcommand{\equacao}[2]{
-  \makebox[40mm][l]{#1 \dotfill}: \quad \parbox[t]{8cm}{$\displaystyle
-  \begin{aligned}
-    #2
-  \end{aligned} $} \\
-}
+\input{macros}
 
 \begin{document}
 
@@ -58,7 +44,7 @@
 \rhead{\bfseries\thepage}%
 \lfoot{}%
 \cfoot{}%
-\rfoot{[\currenttime] \quad \today}%
+\rfoot{[\hours] \quad \today}%
 
 ---------------------------------------------------------------------
 \begin{center}
