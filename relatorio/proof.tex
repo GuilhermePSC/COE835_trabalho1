@@ -1,5 +1,78 @@
 %---------------------------------------------------------------------
 \section{Prova da limitação de $\dot{\varepsilon}/m$}
 
-A seguinte candidata à função de Lyapunov é proposta 
-$$2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0$$
+Utilizando as eq.s do sistema, a dinâmica do erro é expressa por:
+%
+\begin{flalign}
+\dot{e}_0 &= \dot{y}_p - \dot{y}_m \nonumber \\
+&= -a_m \, e_0 + \tilde{\theta} \, y_p \,,
+\end{flalign}
+%
+ou ainda:
+%
+\begin{flalign}
+e_0 &= \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast ( \tilde{\theta}\,y_p ) \nonumber \\ 
+&= \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta\,y_p) - \theta^* \, \zeta \,,
+\end{flalign}
+%
+onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa, $\circledast$ denota a operação de \textit{convolução} de sinais e $\theta^*$ é o ganho de realimentação ideal.
+%
+Assim, o erro de estimativa pode ser escrito como:
+%
+\begin{flalign}
+\varepsilon &= e_0 - \hat{e} \nonumber \\ 
+&=\mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta \, y_p) - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta \, y_p) + \theta \, \zeta \nonumber \nonumber \\
+&= \tilde{\theta} \, \zeta \,.
+\label{eq:erro_est}
+\end{flalign}
+
+A seguinte candidata à função de Lyapunov é proposta:
+%
+\begin{equation}
+2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0
+\end{equation}
+
+Derivando e utilizando a lei de adaptação proposta, tem-se:
+%
+\begin{flalign}
+\dot{V} &= \gamma^{-1} \, \tilde{\theta} \, \dot{\theta} \nonumber \\
+&= - \frac{\varepsilon^2}{m^2} \leq 0 \,,
+\end{flalign}
+%
+onde \eqref{eq:erro_est} foi utilizado. Como $\dot{V}$ é apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
+
+\begin{lemma}
+Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Então:
+%
+\begin{flalign}
+\norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
+\norm{\frac{b}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,. \nonumber
+\end{flalign}
+%
+\end{lemma}
+
+Dividindo \eqref{eq:erro_est} por $m = \sqrt{1+\zeta^2+\dot{\zeta}^2}$, obtemos:
+%
+\begin{flalign}
+\frac{\varepsilon}{m} = \tilde{\theta} \, \frac{\zeta}{m} \,.
+\label{eq:erro_est2}
+\end{flalign}
+
+De acordo com o Lema 1 (para $a = \zeta$, $b=\dot{\zeta}$), $\norm{\zeta/m} \leq 1$ e, como $\tilde{\theta} \in \mathcal{L}_{\infty}$, então 
+$\varepsilon/m \in \mathcal{L}_{\infty}$.
+%
+A lei de controle pode ser expressa por:
+\begin{equation}
+\dot{\theta} = \dot{\tilde{\theta}} = \gamma \, \underbrace{\frac{\varepsilon}{m}}_{\in \mathcal{L}_{\infty}} \, \frac{\zeta}{m} \,.
+\end{equation}
+%
+Como $\varepsilon/m \in \mathcal{L}_{\infty}$ e pelo Lema 1 $\norm{\zeta/m} \leq 1$, então $\dot{\tilde{\theta}} \in \mathcal{L}_{\infty}$.
+%
+Finalmente, derivando \eqref{eq:erro_est} no tempo e divindo por $m$, obtemos:
+%
+\begin{flalign}
+\frac{\dot{\varepsilon}}{m} = \underbrace{\dot{\tilde{\theta}}}_{\in \mathcal{L}_{\infty}} \, \frac{\zeta}{m} + \underbrace{\tilde{\theta}}_{\in \mathcal{L}_{\infty}} \, \frac{\dot{\zeta}}{m} \,.
+\label{eq:erro_est3}
+\end{flalign}
+
+Novamente utilizando o Lema 1, mostra-se que os sinais constituintes de $\dot{\varepsilon}/m$ são limitados, e portanto $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$.
