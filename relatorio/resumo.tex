@@ -1,0 +1,29 @@
+%---------------------------------------------------------------------
+\section{Resumo das equações do sistema simulado}
+
+\equacao{Planta}
+  {\dot{y}_p = a_p y_p + u}
+
+\equacao{Modelo}
+  {\dot{y}_m = -a_m y_m + r}
+
+\equacao{Erro de saída}
+  {e_0 = y_p - y_m}
+
+\equacao{Lei de controle}
+  {u = \theta y_p + r}
+
+\equacao{Filtro}
+  {\dot{\zeta} + a_m \, \zeta = y_p}
+
+\equacao{Estimativa do erro}
+  {\hat{e} = \frac{1}{s+a_m}\,[\theta y_p] - \theta\zeta}
+
+\equacao{Erro de estimativa}
+  {\varepsilon = e_0 - \hat{e}}
+
+\equacao{Sinal normalizante}
+  {(i) \, m^2 = 1 + \zeta^2 \text{\,\,\,ou\,\,\,}(ii) \, m^2 = 1 + \zeta^2 + \dot{\zeta}^2 }
+
+\equacao{Lei de adaptação}
+  {\dot{\theta} = - \frac{\gamma \varepsilon \zeta}{m^2}}
