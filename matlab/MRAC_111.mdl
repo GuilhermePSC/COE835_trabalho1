@@ -2,12 +2,12 @@ Model {
   Name			  "MRAC_111"
   Version		  8.5
   MdlSubVersion		  0
-  SavedCharacterEncoding  "windows-1252"
+  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.58"
+    ComputedModelVersion    "1.69"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [267.0, 52.0, 1227.0, 806.0]
+      Location		      [267.0, 108.0, 1227.0, 806.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -52,10 +52,10 @@ Model {
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"51"
-	Extents			[984.0, 631.0]
+	LoadSaveID		"1"
+	Extents			[976.0, 615.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[-10.0, -36.305951237678528]
       }
     }
   }
@@ -63,11 +63,11 @@ Model {
   Creator		  "Ramon"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "ramon"
+  LastModifiedBy	  "guilherme"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Oct 09 06:03:03 2017"
-  RTWModifiedTimeStamp	  429429735
-  ModelVersionFormat	  "1.%<AutoIncrement:58>"
+  LastModifiedDate	  "Fri Oct 13 16:13:11 2017"
+  RTWModifiedTimeStamp	  429811627
+  ModelVersionFormat	  "1.%<AutoIncrement:69>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -959,6 +959,21 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
       BlockType		      ToWorkspace
       VariableName	      "simulink_output"
       MaxDataPoints	      "1000"
@@ -980,7 +995,7 @@ Model {
   }
   System {
     Name		    "MRAC_111"
-    Location		    [267, 52, 1494, 858]
+    Location		    [267, 80, 1494, 886]
     Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
@@ -994,7 +1009,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "93"
+    SIDHighWatermark	    "104"
     Block {
       BlockType		      SubSystem
       Name		      "Adaptation"
@@ -1006,8 +1021,8 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Adaptation"
-	Location		[267, 52, 1494, 858]
-	Open			off
+	Location		[267, 108, 1494, 914]
+	Open			on
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
 	ScreenColor		"white"
@@ -1023,7 +1038,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "e0"
 	  SID			  "2"
-	  Position		  [95, 50, 115, 70]
+	  Position		  [95, 10, 115, 30]
 	  ZOrder		  -1
 	  BackgroundColor	  "green"
 	  IconDisplay		  "Port number"
@@ -1040,10 +1055,31 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Block {
+	  BlockType		  Integrator
+	  Name			  " "
+	  SID			  "97"
+	  Ports			  [1, 1]
+	  Position		  [230, 150, 260, 180]
+	  ZOrder		  17
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "  "
+	  SID			  "95"
+	  Position		  [230, 195, 260, 225]
+	  ZOrder		  15
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  Gain			  "am"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
 	  BlockType		  Gain
 	  Name			  "-gamma"
 	  SID			  "4"
-	  Position		  [505, 134, 560, 176]
+	  Position		  [585, 134, 640, 176]
 	  ZOrder		  -3
 	  BackgroundColor	  "lightBlue"
 	  Gain			  "-gamma"
@@ -1052,16 +1088,34 @@ Model {
 	  BlockType		  Constant
 	  Name			  "DC"
 	  SID			  "5"
-	  Position		  [330, 426, 360, 454]
+	  Position		  [370, 461, 400, 489]
 	  ZOrder		  -4
 	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "DC1"
+	  SID			  "102"
+	  Position		  [160, 401, 190, 429]
+	  ZOrder		  21
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "DC2"
+	  SID			  "103"
+	  Position		  [145, 461, 200, 489]
+	  ZOrder		  22
+	  ShowName		  off
+	  Value			  "m_type - 1"
 	}
 	Block {
 	  BlockType		  Product
 	  Name			  "Divide1"
 	  SID			  "6"
 	  Ports			  [2, 1]
-	  Position		  [475, 351, 515, 389]
+	  Position		  [555, 351, 595, 389]
 	  ZOrder		  -5
 	  ShowName		  off
 	  Inputs		  "*/"
@@ -1072,17 +1126,9 @@ Model {
 	}
 	Block {
 	  BlockType		  TransferFcn
-	  Name			  "Filter 1"
-	  SID			  "91"
-	  Position		  [165, 147, 225, 183]
-	  ZOrder		  11
-	  Denominator		  "[1 am]"
-	}
-	Block {
-	  BlockType		  TransferFcn
 	  Name			  "Filter 2"
 	  SID			  "8"
-	  Position		  [270, 252, 330, 288]
+	  Position		  [350, 252, 410, 288]
 	  ZOrder		  -7
 	  Denominator		  "[1 am]"
 	}
@@ -1090,7 +1136,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From1"
 	  SID			  "9"
-	  Position		  [150, 368, 200, 392]
+	  Position		  [95, 368, 145, 392]
 	  ZOrder		  -8
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -1112,7 +1158,7 @@ Model {
 	  BlockType		  From
 	  Name			  "From3"
 	  SID			  "11"
-	  Position		  [95, 103, 145, 127]
+	  Position		  [95, 63, 145, 87]
 	  ZOrder		  -10
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -1120,10 +1166,21 @@ Model {
 	  GotoTag		  "theta"
 	}
 	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  SID			  "98"
+	  Position		  [95, 433, 145, 457]
+	  ZOrder		  18
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "dotzeta"
+	}
+	Block {
 	  BlockType		  Goto
 	  Name			  "Goto1"
 	  SID			  "92"
-	  Position		  [275, 198, 325, 222]
+	  Position		  [355, 198, 405, 222]
 	  ZOrder		  12
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -1133,18 +1190,28 @@ Model {
 	  BlockType		  Goto
 	  Name			  "Goto2"
 	  SID			  "13"
-	  Position		  [785, 198, 835, 222]
+	  Position		  [865, 198, 915, 222]
 	  ZOrder		  -12
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
 	  GotoTag		  "theta"
 	}
 	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  SID			  "96"
+	  Position		  [220, 108, 270, 132]
+	  ZOrder		  16
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  GotoTag		  "dotzeta"
+	}
+	Block {
 	  BlockType		  Integrator
 	  Name			  "Integrator"
 	  SID			  "14"
 	  Ports			  [1, 1]
-	  Position		  [680, 146, 720, 184]
+	  Position		  [760, 146, 800, 184]
 	  ZOrder		  -13
 	  ShowName		  off
 	  InitialCondition	  "theta0"
@@ -1154,8 +1221,18 @@ Model {
 	  Name			  "Math\nFunction"
 	  SID			  "15"
 	  Ports			  [1, 1]
-	  Position		  [285, 361, 325, 399]
+	  Position		  [365, 361, 405, 399]
 	  ZOrder		  -14
+	  ShowName		  off
+	  Operator		  "square"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction1"
+	  SID			  "99"
+	  Ports			  [1, 1]
+	  Position		  [365, 411, 405, 449]
+	  ZOrder		  19
 	  ShowName		  off
 	  Operator		  "square"
 	}
@@ -1164,7 +1241,7 @@ Model {
 	  Name			  "Product"
 	  SID			  "16"
 	  Ports			  [2, 1]
-	  Position		  [270, 136, 310, 174]
+	  Position		  [350, 136, 390, 174]
 	  ZOrder		  -15
 	  ShowName		  off
 	}
@@ -1182,16 +1259,43 @@ Model {
 	  Name			  "Product2"
 	  SID			  "18"
 	  Ports			  [2, 1]
-	  Position		  [590, 146, 630, 184]
+	  Position		  [670, 146, 710, 184]
 	  ZOrder		  -17
 	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  SID			  "104"
+	  Ports			  [1]
+	  Position		  [370, 504, 400, 536]
+	  ZOrder		  23
+	  Floating		  off
+	  Location		  [188, 393, 512, 632]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  List {
+	    ListType		    ScopeGraphics
+	    FigureColor		    "[0.5 0.5 0.5]"
+	    AxesColor		    "[0 0 0]"
+	    AxesTickColor	    "[1 1 1]"
+	    LineColors		    "[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	    LineStyles		    "-|-|-|-|-|-"
+	    LineWidths		    "[0.5 0.5 0.5 0.5 0.5 0.5]"
+	    MarkerStyles	    "none|none|none|none|none|none"
+	  }
+	  SaveName		  "ScopeData1"
 	}
 	Block {
 	  BlockType		  Sum
 	  Name			  "Sum1"
 	  SID			  "19"
 	  Ports			  [2, 1]
-	  Position		  [345, 140, 375, 170]
+	  Position		  [425, 140, 455, 170]
 	  ZOrder		  -18
 	  ShowName		  off
 	  IconShape		  "round"
@@ -1201,30 +1305,51 @@ Model {
 	  BlockType		  Sum
 	  Name			  "Sum2"
 	  SID			  "20"
-	  Ports			  [2, 1]
-	  Position		  [380, 365, 410, 395]
+	  Ports			  [3, 1]
+	  Position		  [460, 365, 490, 395]
 	  ZOrder		  -19
 	  ShowName		  off
 	  IconShape		  "round"
-	  Inputs		  "|++"
+	  Inputs		  "|+++"
 	}
 	Block {
 	  BlockType		  Sum
 	  Name			  "Sum3"
 	  SID			  "21"
 	  Ports			  [2, 1]
-	  Position		  [410, 140, 440, 170]
+	  Position		  [490, 140, 520, 170]
 	  ZOrder		  -20
 	  ShowName		  off
 	  IconShape		  "round"
 	  Inputs		  "+-|"
 	}
 	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  SID			  "94"
+	  Ports			  [2, 1]
+	  Position		  [165, 155, 185, 175]
+	  ZOrder		  14
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Switch"
+	  SID			  "101"
+	  Position		  [245, 410, 295, 450]
+	  ZOrder		  20
+	  Criteria		  "u2 > Threshold"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 1"
 	  SID			  "22"
 	  Ports			  [1]
-	  Position		  [505, 97, 545, 123]
+	  Position		  [585, 97, 625, 123]
 	  ZOrder		  -21
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -1237,7 +1362,7 @@ Model {
 	  Name			  "To Workspace 2"
 	  SID			  "23"
 	  Ports			  [1]
-	  Position		  [780, 107, 820, 133]
+	  Position		  [860, 107, 900, 133]
 	  ZOrder		  -22
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -1250,7 +1375,7 @@ Model {
 	  Name			  "To Workspace 3"
 	  SID			  "24"
 	  Ports			  [1]
-	  Position		  [465, 47, 490, 73]
+	  Position		  [545, 7, 570, 33]
 	  ZOrder		  -23
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -1263,7 +1388,7 @@ Model {
 	  Name			  "To Workspace 4"
 	  SID			  "25"
 	  Ports			  [1]
-	  Position		  [420, 192, 445, 218]
+	  Position		  [500, 192, 525, 218]
 	  ZOrder		  -24
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
@@ -1275,7 +1400,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "theta"
 	  SID			  "26"
-	  Position		  [785, 155, 805, 175]
+	  Position		  [865, 155, 885, 175]
 	  ZOrder		  -25
 	  BackgroundColor	  "green"
 	  IconDisplay		  "Port number"
@@ -1287,8 +1412,8 @@ Model {
 	  SrcPort		  1
 	  Points		  [15, 0]
 	  Branch {
-	    ZOrder		    112
-	    DstBlock		    "Filter 1"
+	    ZOrder		    171
+	    DstBlock		    "Sum4"
 	    DstPort		    1
 	  }
 	  Branch {
@@ -1321,20 +1446,30 @@ Model {
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  113
-	  SrcBlock		  "Filter 1"
+	  ZOrder		  179
+	  SrcBlock		  " "
 	  SrcPort		  1
-	  Points		  [15, 0]
+	  Points		  [29, 0]
 	  Branch {
-	    ZOrder		    143
+	    ZOrder		    173
 	    Points		    [0, 45]
-	    DstBlock		    "Goto1"
+	    DstBlock		    "  "
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    142
-	    DstBlock		    "Product"
-	    DstPort		    2
+	    ZOrder		    172
+	    Points		    [31, 0]
+	    Branch {
+	      ZOrder		      143
+	      Points		      [0, 45]
+	      DstBlock		      "Goto1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      142
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
 	  }
 	}
 	Line {
@@ -1348,7 +1483,7 @@ Model {
 	  ZOrder		  11
 	  SrcBlock		  "From1"
 	  SrcPort		  1
-	  Points		  [48, 0]
+	  Points		  [183, 0]
 	  Branch {
 	    ZOrder		    85
 	    DstBlock		    "Math\nFunction"
@@ -1410,9 +1545,9 @@ Model {
 	  ZOrder		  23
 	  SrcBlock		  "e0"
 	  SrcPort		  1
-	  Points		  [305, 0]
+	  Points		  [385, 0]
 	  Branch {
-	    ZOrder		    24
+	    ZOrder		    175
 	    DstBlock		    "Sum3"
 	    DstPort		    1
 	  }
@@ -1468,7 +1603,7 @@ Model {
 	  ZOrder		  33
 	  SrcBlock		  "From3"
 	  SrcPort		  1
-	  Points		  [95, 0; 0, 30]
+	  Points		  [185, 0]
 	  DstBlock		  "Product"
 	  DstPort		  1
 	}
@@ -1476,21 +1611,105 @@ Model {
 	  ZOrder		  110
 	  SrcBlock		  "Math\nFunction"
 	  SrcPort		  1
+	  Points		  [39, 0]
 	  DstBlock		  "Sum2"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  111
+	  ZOrder		  170
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  Points		  [9, 0]
+	  Branch {
+	    ZOrder		    178
+	    DstBlock		    " "
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    177
+	    Points		    [0, -45]
+	    DstBlock		    "Goto3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  174
+	  SrcBlock		  "  "
+	  SrcPort		  1
+	  Points		  [-50, 0]
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  180
 	  SrcBlock		  "DC"
 	  SrcPort		  1
-	  Points		  [30, 0]
+	  Points		  [70, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  182
+	  SrcBlock		  "Math\nFunction1"
+	  SrcPort		  1
+	  Points		  [23, 0; 0, -35]
 	  DstBlock		  "Sum2"
 	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  184
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [32, 0]
+	  Branch {
+	    ZOrder		    218
+	    Points		    [0, 90]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    217
+	    DstBlock		    "Math\nFunction1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  187
+	  SrcBlock		  "DC2"
+	  SrcPort		  1
+	  Points		  [13, 0; 0, -45]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  219
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  220
+	  SrcBlock		  "DC1"
+	  SrcPort		  1
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "100"
+	  Name			  "dotzeta^2"
+	  Position		  [410, 440, 454, 457]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  HorizontalAlignment	  "left"
+	  VerticalAlignment	  "top"
+	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "27"
 	  Name			  "theta"
-	  Position		  [738, 153, 764, 168]
+	  Position		  [818, 153, 842, 170]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1499,7 +1718,7 @@ Model {
 	Annotation {
 	  SID			  "28"
 	  Name			  "dtheta"
-	  Position		  [655, 155, 687, 170]
+	  Position		  [735, 155, 764, 172]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1508,7 +1727,7 @@ Model {
 	Annotation {
 	  SID			  "30"
 	  Name			  "epsilon"
-	  Position		  [464, 145, 500, 160]
+	  Position		  [544, 145, 577, 162]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1517,7 +1736,7 @@ Model {
 	Annotation {
 	  SID			  "31"
 	  Name			  "zeta^2"
-	  Position		  [352, 372, 385, 387]
+	  Position		  [432, 372, 463, 389]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1526,7 +1745,7 @@ Model {
 	Annotation {
 	  SID			  "32"
 	  Name			  "m^2"
-	  Position		  [443, 372, 465, 387]
+	  Position		  [523, 372, 543, 389]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1535,7 +1754,7 @@ Model {
 	Annotation {
 	  SID			  "33"
 	  Name			  "e^"
-	  Position		  [391, 144, 404, 159]
+	  Position		  [471, 144, 483, 161]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1554,7 +1773,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Plant"
-	Location		[267, 52, 1494, 858]
+	Location		[267, 80, 1494, 886]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -1663,7 +1882,7 @@ Model {
 	}
 	Annotation {
 	  SID			  "42"
-	  Position		  [160, 110, 162, 125]
+	  Position		  [160, 110, 162, 127]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
@@ -1692,7 +1911,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference model"
-	Location		[267, 52, 1494, 858]
+	Location		[267, 80, 1494, 886]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -1789,8 +2008,8 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference signal"
-	Location		[267, 52, 1494, 858]
-	Open			on
+	Location		[267, 80, 1494, 886]
+	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -2055,7 +2274,7 @@ Model {
     Annotation {
       SID		      "64"
       Name		      "e0"
-      Position		      [425, 144, 439, 159]
+      Position		      [425, 144, 438, 161]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
