@@ -16,18 +16,18 @@ disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
 disp('      Parametros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Standard MRAC')
+disp('Algoritmo: Gradiente normalizado')
 disp(' ')
 disp('-------------------------------')
 
 %------------------------------------------------ Initialization -----
-tfinal = 30;    %Simulation interval
-st = 0.001;      %Sample time to workspace
+tfinal = 10;    %Simulation interval
+st = 0.01;      %Sample time to workspace
 
 s = tf([1 0],[0 1]);    %trick!
 
 %--------------------------------------------------------- Plant -----
-ap = -1;
+ap = -2;
 
 P = 1/(s-ap);
 P = ss(P);
@@ -39,7 +39,7 @@ M = 1/(s+am);
 M = ss(M);
 
 %--------------------------------------------- Initial condition -----
-yp0  = 5;
+yp0  = 10;
 x0   = yp0;
 
 ym0  = 0;
@@ -49,13 +49,13 @@ xm0  = ym0;
 DC = 1;   %Constant
 
 As = 0;   %Sine wave amplitude
-ws = 1;  %Frequency
+ws = 10;  %Frequency
 
 %------------------------------------------------- Matching gain -----
 thetas = -ap - am;   %theta*
 
 %----------------------------------------- Adaptation parameters -----
-gamma1 = 2;       %Adaptation gains
+gamma1 = 1;       %Adaptation gains
 gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
 
@@ -96,6 +96,7 @@ clf
 subplot(211)
 plot(t,theta1,t,theta2,t,Thetas,'Linew',0.5);
 grid on
+title('theta, theta*')
 title('\theta, \theta*')
 legend(par1,par2,'\theta*','Location','SouthEast')
 print -depsc2 ../relatorio/figs/fig03b.eps
@@ -133,9 +134,9 @@ sim('MRAC_111',tfinal);
 ttheta=theta-thetas;
 
 plot(e0,ttheta);shg
-par1 = strcat('y_p(0) = ',num2str(yp0))
-par2 = strcat('y_p(0) = ',num2str(-yp0))
-legend(par1,par2)%,'Location','SouthEast')
+par3 = strcat('y_p(0) = ',num2str(yp0))
+par4 = strcat('y_p(0) = ',num2str(-yp0))
+legend(par3,par4)%,'Location','SouthEast')
 print -depsc2 ../relatorio/figs/fig03d.eps
 
 figure(5)
@@ -157,7 +158,7 @@ subplot(221)
 hold on
 plot(t,e01)
 plot(t,e02,'Linew',0.5);
-grid on
+grid on; 
 title('e_0')
 legend(par1,par2,'Location','SouthEast')
 
@@ -165,7 +166,7 @@ subplot(222)
 hold on
 plot(t,theta1)
 plot(t,theta2,t,Thetas,'r','Linew',0.5);
-grid on
+grid on; 
 title('\theta, \theta*')
 legend(par1,par2,'\theta*','Location','SouthEast')
 
@@ -173,7 +174,7 @@ subplot(223)
 hold on
 plot(t,yp1);
 plot(t,yp2,t,r,t,ym,'Linew',0.5);
-grid on
+grid on; 
 title('r, y_m, y_p')
 legend(par1,par2,'r','y_m','Location','SouthEast')
 
@@ -181,7 +182,7 @@ subplot(224)
 hold on
 plot(t,u1)
 plot(t,u2,'Linew',0.5);grid;
-grid on
+grid on; 
 title('u')
 legend(par1,par2,'Location','SouthEast')
 

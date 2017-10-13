@@ -13,14 +13,12 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[latin1]{inputenc} %pacote para utilizar palavras acentuadas
 \usepackage{amsmath,amssymb}  %pacotes do AMS
-\usepackage{latexsym}         %pacote para incluir simbolos (ex.\Box)
+\usepackage{latexsym}         %pacote para incluir símbolos (ex.\Box)
 \usepackage{fancybox,fancyhdr}%pacote com frescuras
 \usepackage{graphicx}         %pacote para incluir figuras tipo eps
-\usepackage{psfrag}
 \usepackage[portuguese]{babel}
 \usepackage{xcolor}
 \usepackage{float}
-%\usepackage{datetime}
 \usepackage[a4paper]{hyperref}% Make sure it comes last of your loaded packages
 \hypersetup{
   verbose,
@@ -33,10 +31,8 @@
 \input{macros}
 
 \begin{document}
-
 %---------------------------------------------------------------------
 \pagestyle{fancy}%
-\fancyhf{}
 \renewcommand{\headrulewidth}  {0.4pt}%
 \renewcommand{\footrulewidth}  {0.4pt}%
 \lhead{\bfseries{Relatório das simulações}}%
@@ -45,16 +41,15 @@
 \lfoot{}%
 \cfoot{}%
 \rfoot{[\hours] \quad \today}%
-
----------------------------------------------------------------------
+%---------------------------------------------------------------------
 \begin{center}
   \huge{COE-835  Controle  adaptativo}  \\[20mm]
 
-  \Large{Simulações do exemplo 1} \\[20mm]
+  \Large{Simulações do exemplo 2} \\[20mm]
 \end{center}
 
 
-Algoritmo: \quad \HI{Standard MRAC}
+Algoritmo: \quad \HI{Gradiente normalizado}
 
 \bigskip%
 Caso: \quad \parbox[t]{10cm}{
@@ -63,22 +58,13 @@ Caso: \quad \parbox[t]{10cm}{
   $n_p = 1$ \quad (\# de parâmetros) \\[20mm]
 }
 
-%%%  \parbox{50mm}{
-%%%    Ordem da planta  \dotfill  $n = 1$   \\[2mm]
-%%%    Grau relativo    \dotfill  $n^* = 1$ \\[2mm]
-%%%    \# de parâmetros \dotfill  $n_p = 1$ \\[5mm]
-%%%  }
-%%%
-%%%  {\bf Algoritmo}: Standard MRAC \\[20mm]
-
-
 %---------------------------------------------------------------------
 
 \tableofcontents
 
 \newpage%
 %---------------------------------------------------------------------
-\section{Resumo das equações do sistema}
+\section{Resumo das equações do sistema simulado}
 
 \equacao{Planta}
   {\dot{y}_p = a_p y_p + u}
@@ -90,10 +76,22 @@ Caso: \quad \parbox[t]{10cm}{
   {e_0 = y_p - y_m}
 
 \equacao{Lei de controle}
-  {u = \theta\,y_p + r}
+  {u = \theta y_p + r}
+
+\equacao{Filtro}
+  {\zeta = \frac{1}{s+a_m}\,y_p}
+
+\equacao{Estimativa do erro}
+  {\hat{e} = \frac{1}{s+a_m}\,[\theta y_p] - \theta\zeta}
+
+\equacao{Erro de estimativa}
+  {\varepsilon = e_0 - \hat{e}}
+
+\equacao{Sinal normalizante}
+  {m^2 = 1 + \zeta^2}
 
 \equacao{Lei de adaptação}
-  {\dot{\theta} = -\gamma e_0 y_p}
+  {\dot{\theta} = - \frac{\gamma \varepsilon \zeta}{m^2}}
 
 
 %---------------------------------------------------------------------
@@ -101,7 +99,7 @@ Caso: \quad \parbox[t]{10cm}{
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.8]{figs/MRAC-111.eps}
+  \includegraphics[width=14cm]{figs/MRAC-111.eps}
   \caption{Diagrama de blocos do sistema. \quad
   (Model: \HI{\texttt{MRAC-111.mdl}}) }
 \end{figure}
@@ -134,7 +132,7 @@ Caso: \quad \parbox[t]{10cm}{
 \bigskip%
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.8]{figs/adaptation.eps}
+  \includegraphics[width=16cm]{figs/adaptation.eps}
   \caption{Diagrama de blocos da lei de adaptação.}
 \end{figure}
 
@@ -146,20 +144,17 @@ Simulação utilizando \HI{\texttt{Matlab/Simulink}}.
 
 \subsection{Simulação \#1}
 
-Avaliação do efeito do ganho de adaptação no caso em que as condições iniciais são todas nulas.
-
 \bigskip%
 Parâmetros e condições iniciais  :
 %
 \begin{align*}
-  a_p &= -2\,,  &  y_p(0) &= \HI{0}\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 10,\ 100\,, \\
   r &= 1\,.
 \end{align*}
 
 \bigskip%
 \begin{figure}[H]
-  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
   \centering
   \includegraphics[width=12cm]{figs/fig01d.eps} \\[2mm]
   \caption{Diagrama $e_0 \times \tilde{\theta}$.
@@ -169,20 +164,12 @@ Parâmetros e condições iniciais  :
 \newpage%
 %---------------------------------------------------------------------
 \begin{figure}[H]
-  \psfrag{theta, theta*}[l]{\footnotesize $\theta, \ \theta^*$}
-  \psfrag{theta*}[bl]{\footnotesize $\theta^*$}
-  \psfrag{gamma=10}[bl]{\footnotesize $\gamma=10$}
-  \psfrag{gamma=100}[bl]{\footnotesize $\gamma=100$}
   \centering
   \includegraphics[width=12cm]{figs/fig01c.eps} \\[2mm]
-  %(c) \\[3mm]
   \includegraphics[width=12cm]{figs/fig01a.eps} \\[2mm]
-  %(a) \\[3mm]
   \includegraphics[width=12cm]{figs/fig01b.eps} \\[2mm]
-  %(b) \\[3mm]
   \includegraphics[width=12cm]{figs/fig01e.eps} \\[2mm]
-  %(e) \\[3mm]
-  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \caption{Resultado da simulação com algoritmo Gradiente normalizado.
   \hfill (Script: \HI{\tt simu01.m}) }
 \end{figure}
 
@@ -190,8 +177,6 @@ Parâmetros e condições iniciais  :
 \newpage%
 %---------------------------------------------------------------------
 \subsection{Simulação \#2}
-
-Avaliação do efeito do ganho de adaptação para o caso de uma condição inicial pequena.
 
 \bigskip%
 Parâmetros e condições iniciais  :
@@ -204,7 +189,6 @@ Parâmetros e condições iniciais  :
 
 \bigskip%
 \begin{figure}[H]
-  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
   \centering
   \includegraphics[width=12cm]{figs/fig02d.eps} \\[2mm]
   \caption{Diagrama $e_0 \times \tilde{\theta}$.
@@ -216,37 +200,28 @@ Parâmetros e condições iniciais  :
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{figs/fig02c.eps} \\[2mm]
-  %(c) \\[3mm]
   \includegraphics[width=12cm]{figs/fig02a.eps} \\[2mm]
-  %(a) \\[3mm]
   \includegraphics[width=12cm]{figs/fig02b.eps} \\[2mm]
-  %(b) \\[3mm]
   \includegraphics[width=12cm]{figs/fig02e.eps} \\[2mm]
-  %(e) \\[3mm]
-  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \caption{Resultado da simulação com algoritmo Gradiente normalizado.
   \hfill (Script: \HI{\tt simu02.m}) }
 \end{figure}
-
-Esta simulação mostra a não uniformidade do transitório de adaptação em relação às condições iniciais.
 
 \newpage%
 %---------------------------------------------------------------------
 \subsection{Simulação \#3}
 
-Idem caso da simulação anterior, com condição inicial maior.
-
 \bigskip%
 Parâmetros e condições iniciais  :
 %
 \begin{align*}
-  a_p &= -2\,,  &  y_p(0) &= \HI{5}\,, & \theta(0) &= 0\,, \\
+  a_p &= -2\,,  &  y_p(0) &= \HI{10}\,, & \theta(0) &= 0\,, \\
   a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
   r &= 1\,.
 \end{align*}
 
 \bigskip%
 \begin{figure}[H]
-  \psfrag{e0 x ttheta}[bl]{$e_0 \times \tilde{\theta}$}
   \centering
   \includegraphics[width=12cm]{figs/fig03d.eps} \\[2mm]
   \caption{Diagrama $e_0 \times \tilde{\theta}$.
@@ -258,48 +233,11 @@ Parâmetros e condições iniciais  :
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{figs/fig03c.eps} \\[2mm]
-  %(c) \\[3mm]
   \includegraphics[width=12cm]{figs/fig03a.eps} \\[2mm]
-  %(a) \\[3mm]
   \includegraphics[width=12cm]{figs/fig03b.eps} \\[2mm]
-  %(b) \\[3mm]
   \includegraphics[width=12cm]{figs/fig03e.eps} \\[2mm]
-  %(b) \\[3mm]
-  \caption{Resultado da simulação com algoritmo MRAC  Standard.
+  \caption{Resultado da simulação com algoritmo Gradiente normalizado.
   \hfill (Script: \HI{\tt simu03.m}) }
-\end{figure}
-
-A duração do transitório de adaptação aumenta com as condições iniciais.
-
-Note o salto inicial do parâmetro adaptado. Ocorre uma \emph{super-estabilização} inicial do sistema.
-
-
-\newpage%
-%---------------------------------------------------------------------
-\subsection{Simulação \#4}
-
-Este exemplo mostra uma simulação contínua onde o parâmetro da planta sofre variações descontínuas.
-
-\bigskip%
-Parâmetros e condições iniciais  :
-%
-\begin{align*}
-  a_p &= \HI{[-2, \ -1, \ 0, \ 1, \ 2]}\,,  &  y_p(0) &= \HI{2}\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 10\,  \\
-  r &= 1\,.
-\end{align*}
-
-\bigskip%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/fig04c.eps} \\[2mm]
-  %(c) \\[3mm]
-  \includegraphics[width=12cm]{figs/fig04a.eps} \\[2mm]
-  %(a) \\[3mm]
-  \includegraphics[width=12cm]{figs/fig04b.eps} \\[2mm]
-  %(b) \\[3mm]
-  \caption{Resultado da simulação com algoritmo MRAC  Standard.
-  \hfill (Script: \HI{\tt simu04.m}) }
 \end{figure}
 
 

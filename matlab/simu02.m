@@ -1,7 +1,7 @@
 %---------------------------------------------------------------------
 %  COE-835  Controle adaptativo
 %
-%  Script para simular o exemplo 1
+%  Script para simular o exemplo 2
 %                                                       Ramon R. Costa
 %                                                       01/out/09, Rio
 %---------------------------------------------------------------------
@@ -10,19 +10,19 @@ clc;
 
 %---------------------------------------------------------------------
 disp('-------------------------------')
-disp('Script para simular o exemplo 1')
+disp('Script para simular o exemplo 2')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
 disp('      Parametros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Standard MRAC')
+disp('Algoritmo: Gradiente normalizado')
 disp(' ')
 disp('-------------------------------')
 
 %------------------------------------------------ Initialization -----
-tfinal = 15;    %Simulation interval
-st = 0.01;      %Sample time to workspace
+tfinal = 10;    %Simulation interval
+st = 0.05;      %Sample time to workspace
 
 s = tf([1 0],[0 1]);    %trick!
 
@@ -133,7 +133,7 @@ subplot(211)
 hold on
 plot(t,u1)
 plot(t,u2,'Linew',0.5);grid;
-grid on
+grid on; 
 title('u')
 legend(par1,par2,'Location','SouthEast')
 print -depsc2 ../relatorio/figs/fig02e.eps
@@ -146,9 +146,9 @@ subplot(221)
 hold on
 plot(t,e01)
 plot(t,e02,'Linew',0.5);
-grid on; 
+grid on
 title('e_0')
-legend(par1,par2)
+legend(par1,par2,'Location','SouthEast')
 
 subplot(222)
 hold on
@@ -162,7 +162,7 @@ subplot(223)
 hold on
 plot(t,yp1);
 plot(t,yp2,t,r,t,ym,'Linew',0.5);
-grid on; 
+grid on
 title('r, y_m, y_p')
 legend(par1,par2,'r','y_m','Location','SouthEast')
 
@@ -170,7 +170,7 @@ subplot(224)
 hold on
 plot(t,u1)
 plot(t,u2,'Linew',0.5);grid;
-grid on; 
+grid on
 title('u')
 legend(par1,par2,'Location','SouthEast')
 

@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.39"
+    ComputedModelVersion    "1.58"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [378.0, 52.0, 808.0, 702.0]
+      Location		      [267.0, 52.0, 1227.0, 806.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -38,7 +38,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -51,9 +51,9 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkTopLevel"
-	LoadSaveID		"0"
-	Extents			[565.0, 527.0]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"51"
+	Extents			[984.0, 631.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "ramon"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 05 18:27:53 2017"
-  RTWModifiedTimeStamp	  429126398
-  ModelVersionFormat	  "1.%<AutoIncrement:39>"
+  LastModifiedDate	  "Mon Oct 09 06:03:03 2017"
+  RTWModifiedTimeStamp	  429429735
+  ModelVersionFormat	  "1.%<AutoIncrement:58>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -180,8 +180,8 @@ Model {
 	Simulink.SolverCC {
 	  $ObjectID		  8
 	  Version		  "1.15.0"
-	  StartTime		  "10"
-	  StopTime		  "20"
+	  StartTime		  "0.0"
+	  StopTime		  "40.0"
 	  AbsTol		  "1e-6"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -678,8 +678,8 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Diagnostics/Sample Time"
-      ConfigPrmDlgPosition     [ 740, 400, 1820, 1040 ] 
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 1380, 760, 2460, 1400 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -768,6 +768,12 @@ Model {
       PreserveConstantTs      off
     }
     Block {
+      BlockType		      From
+      GotoTag		      "A"
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
       BlockType		      Gain
       Gain		      "1"
       Multiplication	      "Element-wise(K.*u)"
@@ -781,6 +787,12 @@ Model {
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
       SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      GotoTag		      "A"
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
     }
     Block {
       BlockType		      Inport
@@ -817,6 +829,21 @@ Model {
       IgnoreLimit	      off
       ZeroCross		      on
       ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
     }
     Block {
       BlockType		      Outport
@@ -942,11 +969,19 @@ Model {
       NumInputs		      "1"
       SampleTime	      "0"
     }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
   }
   System {
     Name		    "MRAC_111"
-    Location		    [378, 52, 1186, 754]
-    Open		    on
+    Location		    [267, 52, 1494, 858]
+    Open		    off
     ModelBrowserVisibility  on
     ModelBrowserWidth	    212
     ScreenColor		    "white"
@@ -959,7 +994,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "45"
+    SIDHighWatermark	    "93"
     Block {
       BlockType		      SubSystem
       Name		      "Adaptation"
@@ -971,7 +1006,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Adaptation"
-	Location		[378, 52, 1186, 754]
+	Location		[267, 52, 1494, 858]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	212
@@ -988,7 +1023,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "e0"
 	  SID			  "2"
-	  Position		  [50, 100, 70, 120]
+	  Position		  [95, 50, 115, 70]
 	  ZOrder		  -1
 	  BackgroundColor	  "green"
 	  IconDisplay		  "Port number"
@@ -998,7 +1033,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "yp"
 	  SID			  "3"
-	  Position		  [50, 175, 70, 195]
+	  Position		  [95, 155, 115, 175]
 	  ZOrder		  -2
 	  BackgroundColor	  "green"
 	  Port			  "2"
@@ -1008,36 +1043,202 @@ Model {
 	  BlockType		  Gain
 	  Name			  "-gamma"
 	  SID			  "4"
-	  Position		  [130, 89, 185, 131]
+	  Position		  [505, 134, 560, 176]
 	  ZOrder		  -3
 	  BackgroundColor	  "lightBlue"
 	  Gain			  "-gamma"
 	}
 	Block {
+	  BlockType		  Constant
+	  Name			  "DC"
+	  SID			  "5"
+	  Position		  [330, 426, 360, 454]
+	  ZOrder		  -4
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  SID			  "6"
+	  Ports			  [2, 1]
+	  Position		  [475, 351, 515, 389]
+	  ZOrder		  -5
+	  ShowName		  off
+	  Inputs		  "*/"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Filter 1"
+	  SID			  "91"
+	  Position		  [165, 147, 225, 183]
+	  ZOrder		  11
+	  Denominator		  "[1 am]"
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Filter 2"
+	  SID			  "8"
+	  Position		  [270, 252, 330, 288]
+	  ZOrder		  -7
+	  Denominator		  "[1 am]"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  SID			  "9"
+	  Position		  [150, 368, 200, 392]
+	  ZOrder		  -8
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "zeta"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  SID			  "10"
+	  Position		  [95, 268, 145, 292]
+	  ZOrder		  -9
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "theta"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  SID			  "11"
+	  Position		  [95, 103, 145, 127]
+	  ZOrder		  -10
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "theta"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  SID			  "92"
+	  Position		  [275, 198, 325, 222]
+	  ZOrder		  12
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  GotoTag		  "zeta"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  SID			  "13"
+	  Position		  [785, 198, 835, 222]
+	  ZOrder		  -12
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  GotoTag		  "theta"
+	}
+	Block {
 	  BlockType		  Integrator
 	  Name			  "Integrator"
-	  SID			  "5"
+	  SID			  "14"
 	  Ports			  [1, 1]
-	  Position		  [305, 101, 345, 139]
-	  ZOrder		  -4
+	  Position		  [680, 146, 720, 184]
+	  ZOrder		  -13
+	  ShowName		  off
 	  InitialCondition	  "theta0"
+	}
+	Block {
+	  BlockType		  Math
+	  Name			  "Math\nFunction"
+	  SID			  "15"
+	  Ports			  [1, 1]
+	  Position		  [285, 361, 325, 399]
+	  ZOrder		  -14
+	  ShowName		  off
+	  Operator		  "square"
 	}
 	Block {
 	  BlockType		  Product
 	  Name			  "Product"
-	  SID			  "6"
+	  SID			  "16"
 	  Ports			  [2, 1]
-	  Position		  [225, 101, 265, 139]
-	  ZOrder		  -5
+	  Position		  [270, 136, 310, 174]
+	  ZOrder		  -15
 	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  SID			  "17"
+	  Ports			  [2, 1]
+	  Position		  [185, 251, 225, 289]
+	  ZOrder		  -16
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  SID			  "18"
+	  Ports			  [2, 1]
+	  Position		  [590, 146, 630, 184]
+	  ZOrder		  -17
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "19"
+	  Ports			  [2, 1]
+	  Position		  [345, 140, 375, 170]
+	  ZOrder		  -18
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|-+"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  SID			  "20"
+	  Ports			  [2, 1]
+	  Position		  [380, 365, 410, 395]
+	  ZOrder		  -19
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  SID			  "21"
+	  Ports			  [2, 1]
+	  Position		  [410, 140, 440, 170]
+	  ZOrder		  -20
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "+-|"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace 1"
+	  SID			  "22"
+	  Ports			  [1]
+	  Position		  [505, 97, 545, 123]
+	  ZOrder		  -21
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  VariableName		  "epsilon"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "st"
 	}
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 2"
-	  SID			  "7"
+	  SID			  "23"
 	  Ports			  [1]
-	  Position		  [410, 67, 450, 93]
-	  ZOrder		  -6
+	  Position		  [780, 107, 820, 133]
+	  ZOrder		  -22
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  VariableName		  "theta"
@@ -1047,10 +1248,10 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 3"
-	  SID			  "8"
+	  SID			  "24"
 	  Ports			  [1]
-	  Position		  [130, 47, 155, 73]
-	  ZOrder		  -7
+	  Position		  [465, 47, 490, 73]
+	  ZOrder		  -23
 	  BackgroundColor	  "yellow"
 	  ShowName		  off
 	  VariableName		  "e0"
@@ -1058,95 +1259,294 @@ Model {
 	  SampleTime		  "st"
 	}
 	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace 4"
+	  SID			  "25"
+	  Ports			  [1]
+	  Position		  [420, 192, 445, 218]
+	  ZOrder		  -24
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  VariableName		  "ehat"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "st"
+	}
+	Block {
 	  BlockType		  Outport
 	  Name			  "theta"
-	  SID			  "9"
-	  Position		  [415, 110, 435, 130]
-	  ZOrder		  -8
+	  SID			  "26"
+	  Position		  [785, 155, 805, 175]
+	  ZOrder		  -25
 	  BackgroundColor	  "green"
 	  IconDisplay		  "Port number"
 	  InitialOutput		  "0"
 	}
 	Line {
 	  ZOrder		  1
-	  SrcBlock		  "Integrator"
+	  SrcBlock		  "yp"
 	  SrcPort		  1
-	  Points		  [30, 0]
+	  Points		  [15, 0]
 	  Branch {
-	    ZOrder		    2
-	    Points		    [0, -40]
-	    DstBlock		    "To Workspace 2"
+	    ZOrder		    112
+	    DstBlock		    "Filter 1"
 	    DstPort		    1
 	  }
 	  Branch {
 	    ZOrder		    3
-	    DstBlock		    "theta"
+	    Points		    [0, 95]
+	    DstBlock		    "Product1"
 	    DstPort		    1
 	  }
 	}
 	Line {
 	  ZOrder		  4
-	  SrcBlock		  "-gamma"
+	  SrcBlock		  "Product"
 	  SrcPort		  1
-	  DstBlock		  "Product"
+	  DstBlock		  "Sum1"
 	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  5
-	  SrcBlock		  "yp"
+	  SrcBlock		  "Product1"
 	  SrcPort		  1
-	  Points		  [125, 0; 0, -55]
-	  DstBlock		  "Product"
-	  DstPort		  2
+	  DstBlock		  "Filter 2"
+	  DstPort		  1
 	}
 	Line {
 	  ZOrder		  6
-	  SrcBlock		  "e0"
+	  SrcBlock		  "Filter 2"
 	  SrcPort		  1
-	  Points		  [20, 0]
+	  Points		  [25, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  113
+	  SrcBlock		  "Filter 1"
+	  SrcPort		  1
+	  Points		  [15, 0]
 	  Branch {
-	    ZOrder		    7
-	    Points		    [0, -50]
-	    DstBlock		    "To Workspace 3"
+	    ZOrder		    143
+	    Points		    [0, 45]
+	    DstBlock		    "Goto1"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    8
-	    DstBlock		    "-gamma"
+	    ZOrder		    142
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "-gamma"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  11
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  Points		  [48, 0]
+	  Branch {
+	    ZOrder		    85
+	    DstBlock		    "Math\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    35
+	    Points		    [0, -42; 187, 0; 0, 22]
+	    DstBlock		    "Divide1"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  9
-	  SrcBlock		  "Product"
+	  ZOrder		  16
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  17
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -195]
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "Product2"
 	  SrcPort		  1
 	  DstBlock		  "Integrator"
 	  DstPort		  1
 	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  Branch {
+	    ZOrder		    20
+	    DstBlock		    "theta"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    21
+	    Points		    [0, -45]
+	    DstBlock		    "To Workspace 2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    22
+	    Points		    [0, 45]
+	    DstBlock		    "Goto2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  23
+	  SrcBlock		  "e0"
+	  SrcPort		  1
+	  Points		  [305, 0]
+	  Branch {
+	    ZOrder		    24
+	    DstBlock		    "Sum3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    25
+	    DstBlock		    "To Workspace 3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    ZOrder		    27
+	    DstBlock		    "Sum3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    28
+	    Points		    [0, 50]
+	    DstBlock		    "To Workspace 4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  29
+	  Labels		  [1, 0]
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    ZOrder		    30
+	    DstBlock		    "-gamma"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    31
+	    Points		    [0, -45]
+	    DstBlock		    "To Workspace 1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  32
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  33
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  Points		  [95, 0; 0, 30]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  110
+	  SrcBlock		  "Math\nFunction"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  111
+	  SrcBlock		  "DC"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
 	Annotation {
-	  SID			  "10"
+	  SID			  "27"
 	  Name			  "theta"
-	  Position		  [363, 108, 389, 123]
+	  Position		  [738, 153, 764, 168]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
 	  ZOrder		  -1
 	}
 	Annotation {
-	  SID			  "11"
+	  SID			  "28"
 	  Name			  "dtheta"
-	  Position		  [285, 105, 317, 120]
+	  Position		  [655, 155, 687, 170]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
 	  FixedWidth		  off
 	  ZOrder		  -2
+	}
+	Annotation {
+	  SID			  "30"
+	  Name			  "epsilon"
+	  Position		  [464, 145, 500, 160]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -4
+	}
+	Annotation {
+	  SID			  "31"
+	  Name			  "zeta^2"
+	  Position		  [352, 372, 385, 387]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -5
+	}
+	Annotation {
+	  SID			  "32"
+	  Name			  "m^2"
+	  Position		  [443, 372, 465, 387]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -6
+	}
+	Annotation {
+	  SID			  "33"
+	  Name			  "e^"
+	  Position		  [391, 144, 404, 159]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -7
 	}
       }
     }
     Block {
       BlockType		      SubSystem
       Name		      "Plant"
-      SID		      "12"
+      SID		      "34"
       Ports		      [1, 1]
       Position		      [260, 129, 315, 181]
       ZOrder		      -2
@@ -1154,7 +1554,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Plant"
-	Location		[147, 79, 826, 534]
+	Location		[267, 52, 1494, 858]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -1170,7 +1570,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "u"
-	  SID			  "13"
+	  SID			  "35"
 	  Position		  [50, 100, 70, 120]
 	  ZOrder		  -1
 	  BackgroundColor	  "green"
@@ -1179,7 +1579,7 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "Planta"
-	  SID			  "14"
+	  SID			  "36"
 	  Ports			  [1, 1]
 	  Position		  [120, 89, 195, 131]
 	  ZOrder		  -2
@@ -1194,7 +1594,7 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 1"
-	  SID			  "15"
+	  SID			  "37"
 	  Ports			  [1]
 	  Position		  [260, 42, 285, 68]
 	  ZOrder		  -3
@@ -1207,7 +1607,7 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 2"
-	  SID			  "16"
+	  SID			  "38"
 	  Ports			  [1]
 	  Position		  [120, 42, 145, 68]
 	  ZOrder		  -4
@@ -1220,7 +1620,7 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "yp"
-	  SID			  "17"
+	  SID			  "39"
 	  Position		  [265, 100, 285, 120]
 	  ZOrder		  -5
 	  BackgroundColor	  "green"
@@ -1262,25 +1662,7 @@ Model {
 	  }
 	}
 	Annotation {
-	  SID			  "18"
-	  Name			  "yp"
-	  Position		  [213, 95, 226, 110]
-	  InternalMargins	  [0, 0, 0, 0]
-	  FixedHeight		  off
-	  FixedWidth		  off
-	  ZOrder		  -1
-	}
-	Annotation {
-	  SID			  "19"
-	  Name			  "u"
-	  Position		  [98, 102, 106, 117]
-	  InternalMargins	  [0, 0, 0, 0]
-	  FixedHeight		  off
-	  FixedWidth		  off
-	  ZOrder		  -2
-	}
-	Annotation {
-	  SID			  "20"
+	  SID			  "42"
 	  Position		  [160, 110, 162, 125]
 	  InternalMargins	  [0, 0, 0, 0]
 	  FixedHeight		  off
@@ -1292,7 +1674,7 @@ Model {
     Block {
       BlockType		      Product
       Name		      "Product1"
-      SID		      "21"
+      SID		      "43"
       Ports		      [2, 1]
       Position		      [260, 226, 300, 264]
       ZOrder		      -3
@@ -1302,7 +1684,7 @@ Model {
     Block {
       BlockType		      SubSystem
       Name		      "Reference model"
-      SID		      "22"
+      SID		      "44"
       Ports		      [1, 1]
       Position		      [260, 44, 315, 96]
       ZOrder		      -4
@@ -1310,7 +1692,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference model"
-	Location		[53, 71, 405, 460]
+	Location		[267, 52, 1494, 858]
 	Open			off
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
@@ -1326,7 +1708,7 @@ Model {
 	Block {
 	  BlockType		  Inport
 	  Name			  "r"
-	  SID			  "23"
+	  SID			  "45"
 	  Position		  [40, 105, 60, 125]
 	  ZOrder		  -1
 	  BackgroundColor	  "green"
@@ -1335,7 +1717,7 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "Modelo"
-	  SID			  "24"
+	  SID			  "46"
 	  Ports			  [1, 1]
 	  Position		  [90, 94, 165, 136]
 	  ZOrder		  -2
@@ -1350,7 +1732,7 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 1"
-	  SID			  "25"
+	  SID			  "47"
 	  Ports			  [1]
 	  Position		  [230, 47, 255, 73]
 	  ZOrder		  -3
@@ -1363,7 +1745,7 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "ym"
-	  SID			  "26"
+	  SID			  "48"
 	  Position		  [230, 105, 250, 125]
 	  ZOrder		  -4
 	  BackgroundColor	  "green"
@@ -1394,30 +1776,12 @@ Model {
 	  DstBlock		  "Modelo"
 	  DstPort		  1
 	}
-	Annotation {
-	  SID			  "27"
-	  Name			  "r"
-	  Position		  [76, 106, 81, 121]
-	  InternalMargins	  [0, 0, 0, 0]
-	  FixedHeight		  off
-	  FixedWidth		  off
-	  ZOrder		  -1
-	}
-	Annotation {
-	  SID			  "28"
-	  Name			  "ym"
-	  Position		  [182, 103, 198, 118]
-	  InternalMargins	  [0, 0, 0, 0]
-	  FixedHeight		  off
-	  FixedWidth		  off
-	  ZOrder		  -2
-	}
       }
     }
     Block {
       BlockType		      SubSystem
       Name		      "Reference signal"
-      SID		      "29"
+      SID		      "51"
       Ports		      [0, 1]
       Position		      [60, 43, 120, 97]
       ZOrder		      -5
@@ -1425,8 +1789,8 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference signal"
-	Location		[101, 102, 557, 565]
-	Open			off
+	Location		[267, 52, 1494, 858]
+	Open			on
 	ModelBrowserVisibility	on
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1441,22 +1805,23 @@ Model {
 	Block {
 	  BlockType		  Clock
 	  Name			  "Clock"
-	  SID			  "30"
+	  SID			  "52"
 	  Position		  [180, 172, 205, 198]
 	  ZOrder		  -1
 	}
 	Block {
 	  BlockType		  Constant
 	  Name			  "DC"
-	  SID			  "31"
+	  SID			  "53"
 	  Position		  [55, 41, 85, 69]
 	  ZOrder		  -2
+	  ShowName		  off
 	  Value			  "DC"
 	}
 	Block {
 	  BlockType		  Sin
 	  Name			  "Sine wave"
-	  SID			  "32"
+	  SID			  "54"
 	  Ports			  [0, 1]
 	  Position		  [55, 110, 85, 140]
 	  ZOrder		  -3
@@ -1467,7 +1832,7 @@ Model {
 	Block {
 	  BlockType		  Sum
 	  Name			  "Sum"
-	  SID			  "33"
+	  SID			  "55"
 	  Ports			  [2, 1]
 	  Position		  [125, 110, 155, 140]
 	  ZOrder		  -4
@@ -1478,7 +1843,7 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 1"
-	  SID			  "34"
+	  SID			  "56"
 	  Ports			  [1]
 	  Position		  [235, 172, 260, 198]
 	  ZOrder		  -5
@@ -1491,7 +1856,7 @@ Model {
 	Block {
 	  BlockType		  ToWorkspace
 	  Name			  "To Workspace 2"
-	  SID			  "35"
+	  SID			  "57"
 	  Ports			  [1]
 	  Position		  [235, 67, 260, 93]
 	  ZOrder		  -6
@@ -1504,7 +1869,7 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "r"
-	  SID			  "36"
+	  SID			  "58"
 	  Position		  [240, 115, 260, 135]
 	  ZOrder		  -7
 	  BackgroundColor	  "green"
@@ -1555,7 +1920,7 @@ Model {
     Block {
       BlockType		      Scope
       Name		      "Scope"
-      SID		      "37"
+      SID		      "59"
       Ports		      [1]
       Position		      [480, 85, 510, 115]
       ZOrder		      -6
@@ -1577,7 +1942,7 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum"
-      SID		      "38"
+      SID		      "60"
       Ports		      [2, 1]
       Position		      [380, 140, 410, 170]
       ZOrder		      -7
@@ -1588,7 +1953,7 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum1"
-      SID		      "39"
+      SID		      "61"
       Ports		      [2, 1]
       Position		      [195, 140, 225, 170]
       ZOrder		      -8
@@ -1688,58 +2053,13 @@ Model {
       DstPort		      2
     }
     Annotation {
-      SID		      "40"
-      Name		      "u"
-      Position		      [238, 147, 246, 162]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -1
-    }
-    Annotation {
-      SID		      "41"
-      Name		      "r"
-      Position		      [241, 59, 246, 74]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -2
-    }
-    Annotation {
-      SID		      "42"
+      SID		      "64"
       Name		      "e0"
-      Position		      [425, 149, 439, 164]
+      Position		      [425, 144, 439, 159]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
       ZOrder		      -3
-    }
-    Annotation {
-      SID		      "43"
-      Name		      "yp"
-      Position		      [331, 147, 344, 162]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -4
-    }
-    Annotation {
-      SID		      "44"
-      Name		      "ym"
-      Position		      [332, 61, 348, 76]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -5
-    }
-    Annotation {
-      SID		      "45"
-      Name		      "r"
-      Position		      [170, 146, 175, 161]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -6
     }
   }
 }

@@ -1,7 +1,7 @@
 %---------------------------------------------------------------------
 %  COE-835  Controle adaptativo
 %
-%  Script para simular o exemplo 1
+%  Script para simular o exemplo 2
 %                                                       Ramon R. Costa
 %                                                       01/out/09, Rio
 %---------------------------------------------------------------------
@@ -10,13 +10,13 @@ clc;
 
 %---------------------------------------------------------------------
 disp('-------------------------------')
-disp('Script para simular o exemplo 1')
+disp('Script para simular o exemplo 2')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
 disp('      Parametros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Standard MRAC')
+disp('Algoritmo: Gradiente normalizado')
 disp(' ')
 disp('-------------------------------')
 
@@ -25,6 +25,8 @@ tfinal = 10;    %Simulation interval
 st = 0.05;      %Sample time to workspace
 
 s = tf([1 0],[0 1]);    %trick!
+
+PRINT = 'ON';  %'ON' : imprimi diagramas
 
 %--------------------------------------------------------- Plant -----
 ap = -2;
@@ -49,15 +51,17 @@ xm0  = ym0;
 DC = 1;   %Constant
 
 As = 0;   %Sine wave amplitude
-ws = 10;  %Frequency
+ws = 3;  %Frequency
 
 %------------------------------------------------- Matching gain -----
 thetas = -ap - am;   %theta*
 
 %----------------------------------------- Adaptation parameters -----
-gamma1 = 2;       %Adaptation gains
+gamma1 = 10;       %Adaptation gains
 gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
+
+mu = 0
 
 %---------------------------------------------------- Simulation -----
 gamma = gamma1
@@ -97,7 +101,7 @@ subplot(211)
 plot(t,theta1,t,theta2,t,Thetas,'Linew',0.5);
 grid on
 title('\theta, \theta*')
-legend(par1,par2,'\theta*')
+legend(par1,par2,'\theta*','Location','SouthEast')
 print -depsc2 ../relatorio/figs/fig01b.eps
 
 figure(3)
@@ -175,22 +179,25 @@ title('u')
 legend(par1,par2,'Location','SouthEast')
 
 %--------------------------------------- Impress�o dos diagramas -----
-open_system('MRAC_111');
-print -depsc2 -sMRAC_111 ../relatorio/figs/MRAC-111.eps
+if PRINT == 'ON'
+    open_system('MRAC_111');
+    print -depsc2 -sMRAC_111 ../relatorio/figs/MRAC-111.eps
+    
+    open_system('MRAC_111/Plant');
+    print -depsc2 -sMRAC_111/Plant ../relatorio/figs/plant.eps
+    
+    open_system('MRAC_111/Reference model');
+    print -depsc2 '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.eps
+    
+    open_system('MRAC_111/Adaptation');
+    print -depsc2 -sMRAC_111/Adaptation ../relatorio/figs/adaptation.eps
+    
+    open_system('MRAC_111/Reference signal');
+    print -depsc2 '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.eps
+    
+    close_system('MRAC_111');
+end
 
-open_system('MRAC_111/Plant');
-print -depsc2 -sMRAC_111/Plant ../relatorio/figs/plant.eps
-
-open_system('MRAC_111/Reference model');
-print -depsc2 '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.eps
-
-open_system('MRAC_111/Adaptation');
-print -depsc2 -sMRAC_111/Adaptation ../relatorio/figs/adaptation.eps
-
-open_system('MRAC_111/Reference signal');
-print -depsc2 '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.eps
-
-close_system('MRAC_111');
 %---------------------------------------------------------------------
 
 
