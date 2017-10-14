@@ -60,137 +60,174 @@ gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
 
 %---------------------------------------------------- Simulation -----
+m_type = 1; %without dotzeta
+
 gamma = gamma1
 sim('MRAC_111',tfinal);
 
-yp1 = yp;   %Save results
-e01 = e0;
-theta1 = theta;
-u1 = u;
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
 
 %---------------------------------------------------- Simulation -----
+m_type = 2; %with dotzeta
+
+sim('MRAC_111',tfinal);
+
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
+
+%---------------------------------------------------- Simulation -----
+m_type = 1; %without dotzeta
 gamma = gamma2
 sim('MRAC_111',tfinal);
 
-yp2 = yp;   %Save results
-e02 = e0;
-theta2 = theta;
-u2 = u;
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
+
+
+%---------------------------------------------------- Simulation -----
+m_type = 2; %with dotzeta
+sim('MRAC_111',tfinal);
+
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
 
 %----------------------------------------------- Print eps plots -----
-figure(1)
-clf
-subplot(211)
-plot(t,e01,t,e02,'Linew',0.5);
-grid on
-title('e_0')
-par1 = strcat('\gamma = ',num2str(gamma1))
-par2 = strcat('\gamma = ',num2str(gamma2))
-legend(par1,par2)%,'Location','SouthEast')
-print -depsc2 ../relatorio/figs/fig02a.eps
+set(groot, 'defaultAxesTickLabelInterpreter','latex');
+set(groot, 'defaultLegendInterpreter','latex');
+set(groot, 'defaultTextInterpreter','latex');
 
+par1 = strcat('$m^2 = 1 + \zeta^2$');
+par2 = strcat('$m^2 = 1 + \zeta^2 + \dot{\zeta}^2$');
+
+%--------------- Fig1 -------------
+figure(1);
+clf;
+
+subplot(211);
+plot(t,e0_g1,t,e0_g1dz,'Linew',0.5);
+grid on;
+titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
+legend(par1,par2,'Location','SouthEast');
+
+subplot(212)
+plot(t,e0_g2,t,e0_g2dz,'Linew',0.5);
+grid on
+titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
+legend(par1,par2,'Location','SouthEast');
+
+print -depsc2 ../relatorio/figs/e0/ap_2am1yp02.eps
+
+%--------------- Fig2 -------------
 Thetas = thetas*ones(size(t));
+figure(2);
+clf;
 
-figure(2)
-clf
-subplot(211)
-plot(t,theta1,t,theta2,t,Thetas,'Linew',0.5);
+subplot(211);
+plot(t,theta_g1,t,theta_g1dz,t,Thetas,'Linew',0.5);
+grid on;
+titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
+legend(par1,par2,'$\theta$*','Location','SouthEast')
+
+subplot(212);
+plot(t,theta_g2,t,theta_g2dz,t,Thetas,'Linew',0.5);
+grid on;
+titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
+legend(par1,par2,'$\theta$*','Location','SouthEast')
+
+print -depsc2 ../relatorio/figs/theta/ap_2am1yp02.eps
+
+%--------------- Fig3 -------------
+figure(3);
+clf;
+
+subplot(211);
+hold on;
+plot(t,yp_g1)
+plot(t,yp_g1dz,t,r,t,ym,'Linew',0.5)
 grid on
-title('\theta, \theta*')
-legend(par1,par2,'\theta*','Location','SouthEast')
-print -depsc2 ../relatorio/figs/fig02b.eps
+titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
+legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
 
-figure(3)
-clf
-subplot(211)
+subplot(212);
+hold on;
+plot(t,yp_g2)
+plot(t,yp_g2dz,t,r,t,ym,'Linew',0.5)
+grid on
+titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
+legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
+
+print -depsc2 ../relatorio/figs/yp/ap_2am1yp02.eps
+
+%--------------- Fig4 -------------
+deltatheta_g1 = theta_g1 - thetas;
+deltatheta_g2 = theta_g2 - thetas;
+deltatheta_g1dz = theta_g1dz - thetas;
+deltatheta_g2dz = theta_g2dz - thetas;
+figure(4);
+clf;
+
+subplot(121);
 hold on
-plot(t,yp1);
-plot(t,yp2,t,r,t,ym,'Linew',0.5);
-grid on; 
-title('r, y_m, y_p')
-legend(par1,par2,'r','y_m','Location','SouthEast')
-print -depsc2 ../relatorio/figs/fig02c.eps
-
-ttheta1 = theta1 - thetas;
-ttheta2 = theta2 - thetas;
-
-figure(4)
-clf
-hold on
-plot(e01,ttheta1)
-plot(e02,ttheta2)
+plot(e0_g1,deltatheta_g1)
+plot(e0_g1dz,deltatheta_g1dz)
 grid on
 %axis equal
-title('e0 x ttheta')
-xlabel('e_0')
-ylabel('ttheta')
+titleStr = strcat('$e_0$ vs. $\tilde{\theta}$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
+xlabel('$e_0$')
+ylabel('$\tilde{\theta}$')
 legend(par1,par2,'Location','SouthEast')
-print -depsc2 ../relatorio/figs/fig02d.eps
 
+subplot(122);
+hold on
+plot(e0_g2,deltatheta_g2)
+plot(e0_g2dz,deltatheta_g2dz)
+grid on
+%axis equal
+titleStr = strcat('$e_0$ vs. $\tilde{\theta}$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
+xlabel('$e_0$')
+ylabel('$\tilde{\theta}$')
+legend(par1,par2,'Location','SouthEast')
+
+print -depsc2 ../relatorio/figs/e0_vs_deltatheta/ap_2am1yp02.eps
+
+%--------------- Fig5 -------------
 figure(5)
 clf
+
 subplot(211)
 hold on
-plot(t,u1)
-plot(t,u2,'Linew',0.5);grid;
-grid on; 
-title('u')
-legend(par1,par2,'Location','SouthEast')
-print -depsc2 ../relatorio/figs/fig02e.eps
-
-%------------------------------------------------- Display plots -----
-figure(6)
-clf
-
-subplot(221)
-hold on
-plot(t,e01)
-plot(t,e02,'Linew',0.5);
+plot(t,u_g1)
+plot(t,u_g1dz,'Linew',0.5)
 grid on
-title('e_0')
+titleStr = strcat('$u$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-subplot(222)
+subplot(212)
 hold on
-plot(t,theta1)
-plot(t,theta2,t,Thetas,'r','Linew',0.5);
-grid on; 
-title('\theta, \theta*')
-legend(par1,par2,'\theta*','Location','SouthEast')
-
-subplot(223)
-hold on
-plot(t,yp1);
-plot(t,yp2,t,r,t,ym,'Linew',0.5);
+plot(t,u_g2)
+plot(t,u_g2dz,'Linew',0.5)
 grid on
-title('r, y_m, y_p')
-legend(par1,par2,'r','y_m','Location','SouthEast')
-
-subplot(224)
-hold on
-plot(t,u1)
-plot(t,u2,'Linew',0.5);grid;
-grid on
-title('u')
+titleStr = strcat('$u$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-%--------------------------------------- Impress�o dos diagramas -----
-% open_system('MRAC_111');
-% print -depsc2 -sMRAC_111 MRAC-111.eps
-% 
-% open_system('MRAC_111/Plant');
-% print -depsc2 -sMRAC_111/Plant plant.eps
-% 
-% open_system('MRAC_111/Reference model');
-% print -depsc2 '-sMRAC_111/Reference model' reference-model.eps
-% 
-% open_system('MRAC_111/Adaptation');
-% print -depsc2 -sMRAC_111/Adaptation adaptation.eps
-% 
-% open_system('MRAC_111/Reference signal');
-% print -depsc2 '-sMRAC_111/Reference signal' reference-signal.eps
-% 
-% close_system('MRAC_111');
-%---------------------------------------------------------------------
-
+print -depsc2 ../relatorio/figs/u/ap_2am1yp02.eps
 
