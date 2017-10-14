@@ -64,7 +64,7 @@ af = 0.5;
 m_type = 1; %without dotzeta
 
 gamma = gamma1
-sim('MRAC_111',tfinal);
+sim('MRAC_111_8_5',tfinal);
 
 yp_g1 = yp;   %Save results
 e0_g1 = e0;
@@ -74,7 +74,7 @@ u_g1 = u;
 %---------------------------------------------------- Simulation -----
 m_type = 2; %with dotzeta
 
-sim('MRAC_111',tfinal);
+sim('MRAC_111_8_5',tfinal);
 
 yp_g1dz = yp;   %Save results
 e0_g1dz = e0;
@@ -84,7 +84,7 @@ u_g1dz = u;
 %---------------------------------------------------- Simulation -----
 m_type = 1; %without dotzeta
 gamma = gamma2
-sim('MRAC_111',tfinal);
+sim('MRAC_111_8_5',tfinal);
 
 yp_g2 = yp;   %Save results
 e0_g2 = e0;
@@ -94,7 +94,7 @@ u_g2 = u;
 
 %---------------------------------------------------- Simulation -----
 m_type = 2; %with dotzeta
-sim('MRAC_111',tfinal);
+sim('MRAC_111_8_5',tfinal);
 
 yp_g2dz = yp;   %Save results
 e0_g2dz = e0;
@@ -246,20 +246,20 @@ print(path_u, '-depsc2')
 
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
-    open_system('MRAC_111');
-    print -dsvg -sMRAC_111 ../relatorio/figs/MRAC_indireto111.svg
+    open_system('MRAC_111_8_5');
+    print -dsvg -sMRAC_111 ../relatorio/figs/MRAC_111_8_5.svg
     
-    open_system('MRAC_111/Plant');
+    open_system('MRAC_111_8_5/Plant');
     print -dsvg -sMRAC_111/Plant ../relatorio/figs/plant.svg
     
-    open_system('MRAC_111/Reference model');
+    open_system('MRAC_111_8_5/Reference model');
     print -dsvg '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.svg
     
-    open_system('MRAC_111/Adaptation');
+    open_system('MRAC_111_8_5/Adaptation');
     print -dsvg -sMRAC_111/Adaptation ../relatorio/figs/adaptation.svg
     
-    open_system('MRAC_111/Reference signal');
+    open_system('MRAC_111_8_5/Reference signal');
     print -dsvg '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.svg
     
-    close_system('MRAC_111');
+    close_system('MRAC_111_8_5');
 end

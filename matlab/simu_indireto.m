@@ -71,7 +71,7 @@ theta0 = 0;       %Adaptation inicial condition
 %---------------------------------------------------- Simulation -----
 gamma = gamma1
 m_type = 1;
-sim('MRAC_indireto_111',tfinal);
+sim('MRAC_indireto_111_8_5',tfinal);
 
 yp_g1 = yp;   %Save results
 e0_g1 = e0;
@@ -83,7 +83,7 @@ k_g1 = k;
 
 %---------------------------------------------------- Simulation -----
 m_type = 2;
-sim('MRAC_indireto_111',tfinal);
+sim('MRAC_indireto_111_8_5',tfinal);
 
 yp_g1ap = yp;   %Save results
 e0_g1ap = e0;
@@ -96,7 +96,7 @@ k_g1ap = k;
 %---------------------------------------------------- Simulation -----
 m_type = 1;
 gamma = gamma2
-sim('MRAC_indireto_111',tfinal);
+sim('MRAC_indireto_111_8_5',tfinal);
 
 yp_g2 = yp;   %Save results
 e0_g2 = e0;
@@ -108,7 +108,7 @@ k_g2 = k;
 
 %---------------------------------------------------- Simulation -----
 m_type = 2;
-sim('MRAC_indireto_111',tfinal);
+sim('MRAC_indireto_111_8_5',tfinal);
 
 yp_g2ap = yp;   %Save results
 e0_g2ap = e0;
@@ -266,28 +266,28 @@ print(path_yp,'-depsc2')
 
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
-    open_system('MRAC_indireto_111');
+    open_system('MRAC_indireto_111_8_5');
     print -dsvg -sMRAC_111 ../relatorio_indireto/figs/MRAC_indireto111.svg
     
-    open_system('MRAC_indireto_111/Plant');
+    open_system('MRAC_indireto_111_8_5/Plant');
     print -dsvg -sMRAC_111/Plant ../relatorio_indireto/figs/plant.svg
     
-    open_system('MRAC_indireto_111/Model');
+    open_system('MRAC_indireto_111_8_5/Model');
     print -dsvg '-sMRAC_111/Reference model' ../relatorio_indireto/figs/reference-model.svg
     
-    open_system('MRAC_indireto_111/Adaptation');
+    open_system('MRAC_indireto_111_8_5/Adaptation');
     print -dsvg -sMRAC_111/Adaptation ../relatorio_indireto/figs/adaptation.svg
     
-    open_system('MRAC_indireto_111/Reference signal');
+    open_system('MRAC_indireto_111_8_5/Reference signal');
     print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/reference-signal.svg
     
-    open_system('MRAC_indireto_111/Design');
+    open_system('MRAC_indireto_111_8_5/Design');
     print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/design.svg
     
-    open_system('MRAC_indireto_111/Prediction');
+    open_system('MRAC_indireto_111_8_5/Prediction');
     print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/prediction.svg
     
-    close_system('MRAC_indireto_111');
+    close_system('MRAC_indireto_111_8_5');
 end
 
 
