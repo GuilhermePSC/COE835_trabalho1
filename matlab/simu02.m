@@ -28,18 +28,21 @@ s = tf([1 0],[0 1]);    %trick!
 
 %--------------------------------------------------------- Plant -----
 ap = -2;
+apstr = strcat('ap',num2str(ap));
 
 P = 1/(s-ap);
 P = ss(P);
 
 %----------------------------------------------- Reference model -----
 am = 1;
+amstr = strcat('am',num2str(am));
 
 M = 1/(s+am);
 M = ss(M);
 
 %--------------------------------------------- Initial condition -----
-yp0  = 2;
+yp0  = 0;
+yp0str = strcat('yp0',num2str(yp0));
 x0   = yp0;
 
 ym0  = 0;
@@ -58,6 +61,8 @@ thetas = -ap - am;   %theta*
 gamma1 = 2;       %Adaptation gains
 gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
+af = am;
+afstr = strcat('af',num2str(af));
 
 %---------------------------------------------------- Simulation -----
 m_type = 1; %without dotzeta
@@ -108,6 +113,13 @@ set(groot, 'defaultTextInterpreter','latex');
 par1 = strcat('$m^2 = 1 + \zeta^2$');
 par2 = strcat('$m^2 = 1 + \zeta^2 + \dot{\zeta}^2$');
 
+name = strcat(apstr,amstr,yp0str,afstr);
+path_e0 = strcat('../relatorio/figs/e0/',name,'.eps');
+path_e0_vs_deltatheta = strcat('../relatorio/figs/e0_vs_deltatheta/',name,'.eps');
+path_theta = strcat('../relatorio/figs/theta/',name,'.eps');
+path_u = strcat('../relatorio/figs/u/',name,'.eps');
+path_yp = strcat('../relatorio/figs/yp/',name,'.eps');
+
 %--------------- Fig1 -------------
 figure(1);
 clf;
@@ -126,7 +138,7 @@ titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
-print -depsc2 ../relatorio/figs/e0/ap_2am1yp02.eps
+print(path_e0,'-depsc2') 
 
 %--------------- Fig2 -------------
 Thetas = thetas*ones(size(t));
@@ -147,7 +159,7 @@ titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'$\theta$*','Location','SouthEast')
 
-print -depsc2 ../relatorio/figs/theta/ap_2am1yp02.eps
+print(path_theta,'-depsc2')
 
 %--------------- Fig3 -------------
 figure(3);
@@ -171,7 +183,7 @@ titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
 
-print -depsc2 ../relatorio/figs/yp/ap_2am1yp02.eps
+print(path_yp,'-depsc2')
 
 %--------------- Fig4 -------------
 deltatheta_g1 = theta_g1 - thetas;
@@ -205,7 +217,7 @@ xlabel('$e_0$')
 ylabel('$\tilde{\theta}$')
 legend(par1,par2,'Location','SouthEast')
 
-print -depsc2 ../relatorio/figs/e0_vs_deltatheta/ap_2am1yp02.eps
+print(path_e0_vs_deltatheta,'-depsc2')
 
 %--------------- Fig5 -------------
 figure(5)
@@ -229,5 +241,5 @@ titleStr = strcat('$u$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-print -depsc2 ../relatorio/figs/u/ap_2am1yp02.eps
+print(path_u, '-depsc2')
 
