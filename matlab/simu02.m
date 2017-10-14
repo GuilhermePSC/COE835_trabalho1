@@ -61,7 +61,7 @@ thetas = -ap - am;   %theta*
 gamma1 = 2;       %Adaptation gains
 gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
-af = am;
+af = 0.5;
 afstr = strcat('af',num2str(af));
 
 %---------------------------------------------------- Simulation -----
