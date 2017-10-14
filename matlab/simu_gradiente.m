@@ -26,6 +26,8 @@ st = 0.05;      %Sample time to workspace
 
 s = tf([1 0],[0 1]);    %trick!
 
+PRINT = 'ON';  %'ON' : imprime diagramas
+
 %--------------------------------------------------------- Plant -----
 ap = -2;
 
@@ -247,19 +249,19 @@ print(path_u, '-depsc2')
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_111_8_5');
-    print -dsvg -sMRAC_111 ../relatorio/figs/MRAC_111_8_5.svg
+    print -dsvg -sMRAC_111_8_5 ../relatorio/figs/MRAC_111_8_5.svg
     
     open_system('MRAC_111_8_5/Plant');
-    print -dsvg -sMRAC_111/Plant ../relatorio/figs/plant.svg
+    print -dsvg -sMRAC_111_8_5/Plant ../relatorio/figs/plant.svg
     
     open_system('MRAC_111_8_5/Reference model');
-    print -dsvg '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.svg
+    print -dsvg '-sMRAC_111_8_5/Reference model' ../relatorio/figs/reference-model.svg
     
     open_system('MRAC_111_8_5/Adaptation');
-    print -dsvg -sMRAC_111/Adaptation ../relatorio/figs/adaptation.svg
+    print -dsvg -sMRAC_111_8_5/Adaptation ../relatorio/figs/adaptation.svg
     
     open_system('MRAC_111_8_5/Reference signal');
-    print -dsvg '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.svg
+    print -dsvg '-sMRAC_111_8_5/Reference signal' ../relatorio/figs/reference-signal.svg
     
     close_system('MRAC_111_8_5');
 end

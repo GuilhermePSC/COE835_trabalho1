@@ -19,978 +19,906 @@ font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4953)" >
-<defs><clipPath id="clip4953"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L239,0 L239,112 L0,112 L0,0z "/>
+clip-path="url(#clip4060)" >
+<defs><clipPath id="clip4060"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L239,0 L239,112 L0,112 L0,0z "/>
 </clipPath></defs></g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,49,62)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,69)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4954)" >
-<defs><clipPath id="clip4954"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-49,-62 L190,-62 L190,50 L-49,50 L-49,-62z "/>
+clip-path="url(#clip4061)" >
+<defs><clipPath id="clip4061"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-112,-69 L127,-69 L127,43 L-112,43 L-112,-69z "/>
 </clipPath></defs></g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,48.7734,62.5)"
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,112,69.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4955)" >
-<defs><clipPath id="clip4955"><path vector-effect="none" fill-rule="evenodd" d="M-48.7734,-62.5 L190.227,-62.5 L190.227,49.5 L-48.7734,49.5 L-48.7734,-62.5z "/>
-</clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M-3.77344,-8.5 L3.77344,-8.5 L3.77344,8.5 L-3.77344,8.5 L-3.77344,-8.5z "/>
+clip-path="url(#clip4062)" >
+<defs><clipPath id="clip4062"><path vector-effect="none" fill-rule="evenodd" d="M-112,-69.5 L127,-69.5 L127,42.5 L-112,42.5 L-112,-69.5z "/>
+</clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M-1,-8.5 L1,-8.5 L1,8.5 L-1,8.5 L-1,-8.5z "/>
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,48.7734,62.5)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,69.5)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4955)" >
+clip-path="url(#clip4062)" >
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4956)" >
-<defs><clipPath id="clip4956"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-45,-54 L194,-54 L194,58 L-45,58 L-45,-54z "/>
+clip-path="url(#clip4063)" >
+<defs><clipPath id="clip4063"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-111,-61 L128,-61 L128,51 L-111,51 L-111,-61z "/>
 </clipPath></defs></g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4956)" >
+clip-path="url(#clip4063)" >
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4957)" >
-<defs><clipPath id="clip4957"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-5,-5 L13,-5 L13,22 L-5,22 L-5,-5z "/>
-</clipPath></defs><text textLength="5.54688" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1" y="13" font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
- >u</text>
-</g>
+clip-path="url(#clip4064)" >
+<defs><clipPath id="clip4064"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-5,-5 L7,-5 L7,22 L-5,22 L-5,-5z "/>
+</clipPath></defs></g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4958)" >
-<defs><clipPath id="clip4958"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-45,-54 L194,-54 L194,58 L-45,58 L-45,-54z "/>
+clip-path="url(#clip4065)" >
+<defs><clipPath id="clip4065"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-111,-61 L128,-61 L128,51 L-111,51 L-111,-61z "/>
 </clipPath></defs></g>
 
 <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4958)" >
+clip-path="url(#clip4065)" >
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4958)" >
+clip-path="url(#clip4065)" >
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,54)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,111,61)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4958)" >
+clip-path="url(#clip4065)" >
 </g>
 
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,48.7734,62.5)"
+<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,69.5)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4959)" >
-<defs><clipPath id="clip4959"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-48.7734,-62.5 L190.227,-62.5 L190.227,49.5 L-48.7734,49.5 L-48.7734,-62.5z "/>
+clip-path="url(#clip4066)" >
+<defs><clipPath id="clip4066"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-112,-69.5 L127,-69.5 L127,42.5 L-112,42.5 L-112,-69.5z "/>
 </clipPath></defs></g>
 
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,49,62)"
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,112,69)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4960)" >
-<defs><clipPath id="clip4960"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-49,-62 L190,-62 L190,50 L-49,50 L-49,-62z "/>
-</clipPath></defs></g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,165,55)"
-font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4961)" >
-<defs><clipPath id="clip4961"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-165,-55 L74,-55 L74,57 L-165,57 L-165,-55z "/>
-</clipPath></defs></g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,165.273,55.5)"
-font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4962)" >
-<defs><clipPath id="clip4962"><path vector-effect="none" fill-rule="evenodd" d="M-165.273,-55.5 L73.7266,-55.5 L73.7266,56.5 L-165.273,56.5 L-165.273,-55.5z "/>
-</clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M-6.27344,-8.5 L6.27344,-8.5 L6.27344,8.5 L-6.27344,8.5 L-6.27344,-8.5z "/>
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,165.273,55.5)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4962)" >
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4963)" >
-<defs><clipPath id="clip4963"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-159,-47 L80,-47 L80,65 L-159,65 L-159,-47z "/>
-</clipPath></defs></g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4963)" >
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4964)" >
-<defs><clipPath id="clip4964"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-5,-5 L17,-5 L17,22 L-5,22 L-5,-5z "/>
-</clipPath></defs><text textLength="10.5469" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1" y="13" font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
- >yp</text>
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4965)" >
-<defs><clipPath id="clip4965"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-159,-47 L80,-47 L80,65 L-159,65 L-159,-47z "/>
-</clipPath></defs></g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4965)" >
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4965)" >
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,159,47)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4965)" >
-</g>
-
-<g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,165.273,55.5)"
-font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4966)" >
-<defs><clipPath id="clip4966"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-165.273,-55.5 L73.7266,-55.5 L73.7266,56.5 L-165.273,56.5 L-165.273,-55.5z "/>
-</clipPath></defs></g>
-
-<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,165,55)"
-font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4967)" >
-<defs><clipPath id="clip4967"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-165,-55 L74,-55 L74,57 L-165,57 L-165,-55z "/>
+clip-path="url(#clip4067)" >
+<defs><clipPath id="clip4067"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-112,-69 L127,-69 L127,43 L-112,43 L-112,-69z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4968)" >
-<defs><clipPath id="clip4968"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
+clip-path="url(#clip4068)" >
+<defs><clipPath id="clip4068"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
 </clipPath></defs></g>
 
 <g fill="#00d100" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4968)" >
+clip-path="url(#clip4068)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,10 C0,15.5228 4.47715,20 10,20 C15.5228,20 20,15.5228 20,10 C20,4.47715 15.5228,0 10,0 C4.47715,0 0,4.47715 0,10 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4968)" >
+clip-path="url(#clip4068)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4968)" >
+clip-path="url(#clip4068)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4969)" >
-<defs><clipPath id="clip4969"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
+clip-path="url(#clip4069)" >
+<defs><clipPath id="clip4069"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4970)" >
-<defs><clipPath id="clip4970"><path vector-effect="none" fill-rule="evenodd" d="M-10,-10 L10,-10 L10,10 L-10,10 L-10,-10z "/>
+clip-path="url(#clip4070)" >
+<defs><clipPath id="clip4070"><path vector-effect="none" fill-rule="evenodd" d="M-10,-10 L10,-10 L10,10 L-10,10 L-10,-10z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4970)" >
+clip-path="url(#clip4070)" >
 <text textLength="5.54688" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-2.5" y="3" font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
  >1</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4970)" >
+clip-path="url(#clip4070)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4971)" >
-<defs><clipPath id="clip4971"><path vector-effect="none" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
+clip-path="url(#clip4071)" >
+<defs><clipPath id="clip4071"><path vector-effect="none" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4971)" >
+clip-path="url(#clip4071)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4971)" >
+clip-path="url(#clip4071)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4971)" >
+clip-path="url(#clip4071)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,217.5,60.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4972)" >
-<defs><clipPath id="clip4972"><path vector-effect="none" fill-rule="evenodd" d="M-217.5,-60.5 L21.5,-60.5 L21.5,51.5 L-217.5,51.5 L-217.5,-60.5z "/>
+clip-path="url(#clip4072)" >
+<defs><clipPath id="clip4072"><path vector-effect="none" fill-rule="evenodd" d="M-217.5,-60.5 L21.5,-60.5 L21.5,51.5 L-217.5,51.5 L-217.5,-60.5z "/>
 </clipPath></defs><path vector-effect="none" fill-rule="nonzero" d="M0,10 C0,15.5228 4.47715,20 10,20 C15.5228,20 20,15.5228 20,10 C20,4.47715 15.5228,0 10,0 C4.47715,0 0,4.47715 0,10 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4973)" >
-<defs><clipPath id="clip4973"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
+clip-path="url(#clip4073)" >
+<defs><clipPath id="clip4073"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-60 L22,-60 L22,52 L-217,52 L-217,-60z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4974)" >
-<defs><clipPath id="clip4974"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-227,-82 L12,-82 L12,30 L-227,30 L-227,-82z "/>
+clip-path="url(#clip4074)" >
+<defs><clipPath id="clip4074"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-227,-82 L12,-82 L12,30 L-227,30 L-227,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="none" transform="matrix(1,0,0,1,227,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4974)" >
+clip-path="url(#clip4074)" >
 <path vector-effect="none" fill-rule="evenodd" d="M-6.27344,0 L6.27344,0 L6.27344,17 L-6.27344,17 L-6.27344,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4974)" >
+clip-path="url(#clip4074)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4975)" >
-<defs><clipPath id="clip4975"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-220.727,-82 L18.2734,-82 L18.2734,30 L-220.727,30 L-220.727,-82z "/>
+clip-path="url(#clip4075)" >
+<defs><clipPath id="clip4075"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-220.727,-82 L18.2734,-82 L18.2734,30 L-220.727,30 L-220.727,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4975)" >
+clip-path="url(#clip4075)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4976)" >
-<defs><clipPath id="clip4976"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L13,0 L13,17 L0,17 L0,0z "/>
+clip-path="url(#clip4076)" >
+<defs><clipPath id="clip4076"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L13,0 L13,17 L0,17 L0,0z "/>
 </clipPath></defs><text textLength="10.5469" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1" y="13" font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
  >yp</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4977)" >
-<defs><clipPath id="clip4977"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-220.727,-82 L18.2734,-82 L18.2734,30 L-220.727,30 L-220.727,-82z "/>
+clip-path="url(#clip4077)" >
+<defs><clipPath id="clip4077"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-220.727,-82 L18.2734,-82 L18.2734,30 L-220.727,30 L-220.727,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4977)" >
+clip-path="url(#clip4077)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4977)" >
+clip-path="url(#clip4077)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,220.727,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4977)" >
+clip-path="url(#clip4077)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4978)" >
-<defs><clipPath id="clip4978"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-227,-82 L12,-82 L12,30 L-227,30 L-227,-82z "/>
+clip-path="url(#clip4078)" >
+<defs><clipPath id="clip4078"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-227,-82 L12,-82 L12,30 L-227,30 L-227,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,227,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4978)" >
+clip-path="url(#clip4078)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4979)" >
-<defs><clipPath id="clip4979"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
+clip-path="url(#clip4079)" >
+<defs><clipPath id="clip4079"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
 </clipPath></defs></g>
 
 <g fill="#e8d152" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4979)" >
+clip-path="url(#clip4079)" >
 <path vector-effect="none" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4979)" >
+clip-path="url(#clip4079)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4979)" >
+clip-path="url(#clip4079)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4980)" >
-<defs><clipPath id="clip4980"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
+clip-path="url(#clip4080)" >
+<defs><clipPath id="clip4080"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,84,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4981)" >
-<defs><clipPath id="clip4981"><path vector-effect="none" fill-rule="evenodd" d="M-12,-13 L13,-13 L13,13 L-12,13 L-12,-13z "/>
+clip-path="url(#clip4081)" >
+<defs><clipPath id="clip4081"><path vector-effect="none" fill-rule="evenodd" d="M-12,-13 L13,-13 L13,13 L-12,13 L-12,-13z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,84,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4981)" >
+clip-path="url(#clip4081)" >
 <text textLength="5.54688" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-3" y="3" font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
  >u</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,84,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4981)" >
+clip-path="url(#clip4081)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,84,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4982)" >
-<defs><clipPath id="clip4982"><path vector-effect="none" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
+clip-path="url(#clip4082)" >
+<defs><clipPath id="clip4082"><path vector-effect="none" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4982)" >
+clip-path="url(#clip4082)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4982)" >
+clip-path="url(#clip4082)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4982)" >
+clip-path="url(#clip4082)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,72.5,2.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4983)" >
-<defs><clipPath id="clip4983"><path vector-effect="none" fill-rule="evenodd" d="M-72.5,-2.5 L166.5,-2.5 L166.5,109.5 L-72.5,109.5 L-72.5,-2.5z "/>
+clip-path="url(#clip4083)" >
+<defs><clipPath id="clip4083"><path vector-effect="none" fill-rule="evenodd" d="M-72.5,-2.5 L166.5,-2.5 L166.5,109.5 L-72.5,109.5 L-72.5,-2.5z "/>
 </clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4984)" >
-<defs><clipPath id="clip4984"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
+clip-path="url(#clip4084)" >
+<defs><clipPath id="clip4084"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-2 L167,-2 L167,110 L-72,110 L-72,-2z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4985)" >
-<defs><clipPath id="clip4985"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
+clip-path="url(#clip4085)" >
+<defs><clipPath id="clip4085"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
 </clipPath></defs></g>
 
 <g fill="#e8d152" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4985)" >
+clip-path="url(#clip4085)" >
 <path vector-effect="none" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4985)" >
+clip-path="url(#clip4085)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4985)" >
+clip-path="url(#clip4085)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4986)" >
-<defs><clipPath id="clip4986"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
+clip-path="url(#clip4086)" >
+<defs><clipPath id="clip4086"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,224,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4987)" >
-<defs><clipPath id="clip4987"><path vector-effect="none" fill-rule="evenodd" d="M-12,-13 L13,-13 L13,13 L-12,13 L-12,-13z "/>
+clip-path="url(#clip4087)" >
+<defs><clipPath id="clip4087"><path vector-effect="none" fill-rule="evenodd" d="M-12,-13 L13,-13 L13,13 L-12,13 L-12,-13z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,224,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4987)" >
+clip-path="url(#clip4087)" >
 <text textLength="10.5469" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-5.5" y="3" font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
  >yp</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,224,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4987)" >
+clip-path="url(#clip4087)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,224,15)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4988)" >
-<defs><clipPath id="clip4988"><path vector-effect="none" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
+clip-path="url(#clip4088)" >
+<defs><clipPath id="clip4088"><path vector-effect="none" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4988)" >
+clip-path="url(#clip4088)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4988)" >
+clip-path="url(#clip4088)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4988)" >
+clip-path="url(#clip4088)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,212.5,2.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4989)" >
-<defs><clipPath id="clip4989"><path vector-effect="none" fill-rule="evenodd" d="M-212.5,-2.5 L26.5,-2.5 L26.5,109.5 L-212.5,109.5 L-212.5,-2.5z "/>
+clip-path="url(#clip4089)" >
+<defs><clipPath id="clip4089"><path vector-effect="none" fill-rule="evenodd" d="M-212.5,-2.5 L26.5,-2.5 L26.5,109.5 L-212.5,109.5 L-212.5,-2.5z "/>
 </clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M0,0 L25,0 L25,26 L0,26 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,2)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4990)" >
-<defs><clipPath id="clip4990"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
+clip-path="url(#clip4090)" >
+<defs><clipPath id="clip4090"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-2 L27,-2 L27,110 L-212,110 L-212,-2z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4991)" >
-<defs><clipPath id="clip4991"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
+clip-path="url(#clip4091)" >
+<defs><clipPath id="clip4091"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
 </clipPath></defs></g>
 
 <g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4991)" >
+clip-path="url(#clip4091)" >
 <path vector-effect="none" fill-rule="evenodd" d="M0,0 L75,0 L75,42 L0,42 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4991)" >
+clip-path="url(#clip4091)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4991)" >
+clip-path="url(#clip4091)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4992)" >
-<defs><clipPath id="clip4992"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L75,0 L75,42 L0,42 L0,0z "/>
+clip-path="url(#clip4092)" >
+<defs><clipPath id="clip4092"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L75,0 L75,42 L0,42 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4993)" >
-<defs><clipPath id="clip4993"><path vector-effect="none" fill-rule="evenodd" d="M-37,-21 L38,-21 L38,21 L-37,21 L-37,-21z "/>
+clip-path="url(#clip4093)" >
+<defs><clipPath id="clip4093"><path vector-effect="none" fill-rule="evenodd" d="M-37,-21 L38,-21 L38,21 L-37,21 L-37,-21z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4993)" >
+clip-path="url(#clip4093)" >
 <text textLength="6.65625" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-3.5" y="3" font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
  >P</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4993)" >
+clip-path="url(#clip4093)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4994)" >
-<defs><clipPath id="clip4994"><path vector-effect="none" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
+clip-path="url(#clip4094)" >
+<defs><clipPath id="clip4094"><path vector-effect="none" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4994)" >
+clip-path="url(#clip4094)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4994)" >
+clip-path="url(#clip4094)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4994)" >
+clip-path="url(#clip4094)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,72.5,49.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4995)" >
-<defs><clipPath id="clip4995"><path vector-effect="none" fill-rule="evenodd" d="M-72.5,-49.5 L166.5,-49.5 L166.5,62.5 L-72.5,62.5 L-72.5,-49.5z "/>
+clip-path="url(#clip4095)" >
+<defs><clipPath id="clip4095"><path vector-effect="none" fill-rule="evenodd" d="M-72.5,-49.5 L166.5,-49.5 L166.5,62.5 L-72.5,62.5 L-72.5,-49.5z "/>
 </clipPath></defs><path vector-effect="none" fill-rule="evenodd" d="M0,0 L75,0 L75,42 L0,42 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,49)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4996)" >
-<defs><clipPath id="clip4996"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
+clip-path="url(#clip4096)" >
+<defs><clipPath id="clip4096"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-49 L167,-49 L167,63 L-72,63 L-72,-49z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109.5,93)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4997)" >
-<defs><clipPath id="clip4997"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-109.5,-93 L129.5,-93 L129.5,19 L-109.5,19 L-109.5,-93z "/>
+clip-path="url(#clip4097)" >
+<defs><clipPath id="clip4097"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-109.5,-93 L129.5,-93 L129.5,19 L-109.5,19 L-109.5,-93z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="none" transform="matrix(1,0,0,1,109.5,93)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip4997)" >
+clip-path="url(#clip4097)" >
 <path vector-effect="none" fill-rule="evenodd" d="M-15.1406,0 L15.1406,0 L15.1406,17 L-15.1406,17 L-15.1406,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109.5,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4997)" >
+clip-path="url(#clip4097)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4998)" >
-<defs><clipPath id="clip4998"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-94.3594,-93 L144.641,-93 L144.641,19 L-94.3594,19 L-94.3594,-93z "/>
+clip-path="url(#clip4098)" >
+<defs><clipPath id="clip4098"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-94.3594,-93 L144.641,-93 L144.641,19 L-94.3594,19 L-94.3594,-93z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4998)" >
+clip-path="url(#clip4098)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip4999)" >
-<defs><clipPath id="clip4999"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L30,0 L30,17 L0,17 L0,0z "/>
+clip-path="url(#clip4099)" >
+<defs><clipPath id="clip4099"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L30,0 L30,17 L0,17 L0,0z "/>
 </clipPath></defs><text textLength="28.2812" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1" y="13" font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
  >Planta</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5000)" >
-<defs><clipPath id="clip5000"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-94.3594,-93 L144.641,-93 L144.641,19 L-94.3594,19 L-94.3594,-93z "/>
+clip-path="url(#clip4100)" >
+<defs><clipPath id="clip4100"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-94.3594,-93 L144.641,-93 L144.641,19 L-94.3594,19 L-94.3594,-93z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5000)" >
+clip-path="url(#clip4100)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5000)" >
+clip-path="url(#clip4100)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,94.3594,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5000)" >
+clip-path="url(#clip4100)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109.5,93)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5001)" >
-<defs><clipPath id="clip5001"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-109.5,-93 L129.5,-93 L129.5,19 L-109.5,19 L-109.5,-93z "/>
+clip-path="url(#clip4101)" >
+<defs><clipPath id="clip4101"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-109.5,-93 L129.5,-93 L129.5,19 L-109.5,19 L-109.5,-93z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109.5,93)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5001)" >
+clip-path="url(#clip4101)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5002)" >
-<defs><clipPath id="clip5002"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
+clip-path="url(#clip4102)" >
+<defs><clipPath id="clip4102"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
 </clipPath></defs></g>
 
 <g fill="#00d100" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5002)" >
+clip-path="url(#clip4102)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,10 C0,15.5228 4.47715,20 10,20 C15.5228,20 20,15.5228 20,10 C20,4.47715 15.5228,0 10,0 C4.47715,0 0,4.47715 0,10 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5002)" >
+clip-path="url(#clip4102)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5002)" >
+clip-path="url(#clip4102)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5003)" >
-<defs><clipPath id="clip5003"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
+clip-path="url(#clip4103)" >
+<defs><clipPath id="clip4103"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5004)" >
-<defs><clipPath id="clip5004"><path vector-effect="none" fill-rule="evenodd" d="M-10,-10 L10,-10 L10,10 L-10,10 L-10,-10z "/>
+clip-path="url(#clip4104)" >
+<defs><clipPath id="clip4104"><path vector-effect="none" fill-rule="evenodd" d="M-10,-10 L10,-10 L10,10 L-10,10 L-10,-10z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5004)" >
+clip-path="url(#clip4104)" >
 <text textLength="5.54688" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-2.5" y="3" font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
  >1</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5004)" >
+clip-path="url(#clip4104)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,70)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5005)" >
-<defs><clipPath id="clip5005"><path vector-effect="none" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
+clip-path="url(#clip4105)" >
+<defs><clipPath id="clip4105"><path vector-effect="none" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="Liberation Sans" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5005)" >
+clip-path="url(#clip4105)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5005)" >
+clip-path="url(#clip4105)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5005)" >
+clip-path="url(#clip4105)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,2.5,60.5)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5006)" >
-<defs><clipPath id="clip5006"><path vector-effect="none" fill-rule="evenodd" d="M-2.5,-60.5 L236.5,-60.5 L236.5,51.5 L-2.5,51.5 L-2.5,-60.5z "/>
+clip-path="url(#clip4106)" >
+<defs><clipPath id="clip4106"><path vector-effect="none" fill-rule="evenodd" d="M-2.5,-60.5 L236.5,-60.5 L236.5,51.5 L-2.5,51.5 L-2.5,-60.5z "/>
 </clipPath></defs><path vector-effect="none" fill-rule="nonzero" d="M0,10 C0,15.5228 4.47715,20 10,20 C15.5228,20 20,15.5228 20,10 C20,4.47715 15.5228,0 10,0 C4.47715,0 0,4.47715 0,10 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,2,60)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5007)" >
-<defs><clipPath id="clip5007"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
+clip-path="url(#clip4107)" >
+<defs><clipPath id="clip4107"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-2,-60 L237,-60 L237,52 L-2,52 L-2,-60z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5008)" >
-<defs><clipPath id="clip5008"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-12,-82 L227,-82 L227,30 L-12,30 L-12,-82z "/>
+clip-path="url(#clip4108)" >
+<defs><clipPath id="clip4108"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-12,-82 L227,-82 L227,30 L-12,30 L-12,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="none" transform="matrix(1,0,0,1,12,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5008)" >
+clip-path="url(#clip4108)" >
 <path vector-effect="none" fill-rule="evenodd" d="M-3.77344,0 L3.77344,0 L3.77344,17 L-3.77344,17 L-3.77344,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5008)" >
+clip-path="url(#clip4108)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5009)" >
-<defs><clipPath id="clip5009"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-8.22656,-82 L230.773,-82 L230.773,30 L-8.22656,30 L-8.22656,-82z "/>
+clip-path="url(#clip4109)" >
+<defs><clipPath id="clip4109"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-8.22656,-82 L230.773,-82 L230.773,30 L-8.22656,30 L-8.22656,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5009)" >
+clip-path="url(#clip4109)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5010)" >
-<defs><clipPath id="clip5010"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L8,0 L8,17 L0,17 L0,0z "/>
+clip-path="url(#clip4110)" >
+<defs><clipPath id="clip4110"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L8,0 L8,17 L0,17 L0,0z "/>
 </clipPath></defs><text textLength="5.54688" fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="1" y="13" font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
  >u</text>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5011)" >
-<defs><clipPath id="clip5011"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-8.22656,-82 L230.773,-82 L230.773,30 L-8.22656,30 L-8.22656,-82z "/>
+clip-path="url(#clip4111)" >
+<defs><clipPath id="clip4111"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-8.22656,-82 L230.773,-82 L230.773,30 L-8.22656,30 L-8.22656,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5011)" >
+clip-path="url(#clip4111)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5011)" >
+clip-path="url(#clip4111)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,8.22656,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5011)" >
+clip-path="url(#clip4111)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,82)"
 font-family="TeX Gyre Heros" font-size="10" font-weight="400" font-style="normal" 
-clip-path="url(#clip5012)" >
-<defs><clipPath id="clip5012"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-12,-82 L227,-82 L227,30 L-12,30 L-12,-82z "/>
+clip-path="url(#clip4112)" >
+<defs><clipPath id="clip4112"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-12,-82 L227,-82 L227,30 L-12,30 L-12,-82z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,12,82)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5012)" >
+clip-path="url(#clip4112)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5013)" >
-<defs><clipPath id="clip5013"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4113)" >
+<defs><clipPath id="clip4113"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5013)" >
+clip-path="url(#clip4113)" >
 <path vector-effect="none" fill-rule="evenodd" d="M70,110 L85,110"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5013)" >
+clip-path="url(#clip4113)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,37,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5014)" >
-<defs><clipPath id="clip5014"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-37,-70 L202,-70 L202,42 L-37,42 L-37,-70z "/>
+clip-path="url(#clip4114)" >
+<defs><clipPath id="clip4114"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-37,-70 L202,-70 L202,42 L-37,42 L-37,-70z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,37,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5014)" >
+clip-path="url(#clip4114)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5015)" >
-<defs><clipPath id="clip5015"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-15 L167,-15 L167,97 L-72,97 L-72,-15z "/>
+clip-path="url(#clip4115)" >
+<defs><clipPath id="clip4115"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-15 L167,-15 L167,97 L-72,97 L-72,-15z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,72,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5015)" >
+clip-path="url(#clip4115)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5015)" >
+clip-path="url(#clip4115)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5016)" >
-<defs><clipPath id="clip5016"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4116)" >
+<defs><clipPath id="clip4116"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5016)" >
+clip-path="url(#clip4116)" >
 <path vector-effect="none" fill-rule="evenodd" d="M85,110 L85,55 L112,55"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5016)" >
+clip-path="url(#clip4116)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5017)" >
-<defs><clipPath id="clip5017"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-70 L167,-70 L167,42 L-72,42 L-72,-70z "/>
+clip-path="url(#clip4117)" >
+<defs><clipPath id="clip4117"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-72,-70 L167,-70 L167,42 L-72,42 L-72,-70z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,72,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5017)" >
+clip-path="url(#clip4117)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,72,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5017)" >
+clip-path="url(#clip4117)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5018)" >
-<defs><clipPath id="clip5018"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4118)" >
+<defs><clipPath id="clip4118"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5018)" >
+clip-path="url(#clip4118)" >
 <path vector-effect="none" fill-rule="evenodd" d="M85,110 L112,110"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5018)" >
+clip-path="url(#clip4118)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,37,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5019)" >
-<defs><clipPath id="clip5019"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-37,-70 L202,-70 L202,42 L-37,42 L-37,-70z "/>
+clip-path="url(#clip4119)" >
+<defs><clipPath id="clip4119"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-37,-70 L202,-70 L202,42 L-37,42 L-37,-70z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,37,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5019)" >
+clip-path="url(#clip4119)" >
 <path vector-effect="none" fill-rule="evenodd" d="M2,0 C2,1.10457 1.10457,2 0,2 C-1.10457,2 -2,1.10457 -2,0 C-2,-1.10457 -1.10457,-2 0,-2 C1.10457,-2 2,-1.10457 2,0 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,37,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5019)" >
+clip-path="url(#clip4119)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5020)" >
-<defs><clipPath id="clip5020"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4120)" >
+<defs><clipPath id="clip4120"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5020)" >
+clip-path="url(#clip4120)" >
 <path vector-effect="none" fill-rule="evenodd" d="M195,110 L230,110"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5020)" >
+clip-path="url(#clip4120)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,182,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5021)" >
-<defs><clipPath id="clip5021"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-182,-70 L57,-70 L57,42 L-182,42 L-182,-70z "/>
+clip-path="url(#clip4121)" >
+<defs><clipPath id="clip4121"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-182,-70 L57,-70 L57,42 L-182,42 L-182,-70z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,182,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5021)" >
+clip-path="url(#clip4121)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5022)" >
-<defs><clipPath id="clip5022"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-70 L22,-70 L22,42 L-217,42 L-217,-70z "/>
+clip-path="url(#clip4122)" >
+<defs><clipPath id="clip4122"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-217,-70 L22,-70 L22,42 L-217,42 L-217,-70z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,217,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5022)" >
+clip-path="url(#clip4122)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,217,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5022)" >
+clip-path="url(#clip4122)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5023)" >
-<defs><clipPath id="clip5023"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4123)" >
+<defs><clipPath id="clip4123"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5023)" >
+clip-path="url(#clip4123)" >
 <path vector-effect="none" fill-rule="evenodd" d="M230,110 L257,110"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5023)" >
+clip-path="url(#clip4123)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5024)" >
-<defs><clipPath id="clip5024"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-15 L27,-15 L27,97 L-212,97 L-212,-15z "/>
+clip-path="url(#clip4124)" >
+<defs><clipPath id="clip4124"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-212,-15 L27,-15 L27,97 L-212,97 L-212,-15z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,212,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5024)" >
+clip-path="url(#clip4124)" >
 <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,15)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5024)" >
+clip-path="url(#clip4124)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5025)" >
-<defs><clipPath id="clip5025"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
+clip-path="url(#clip4125)" >
+<defs><clipPath id="clip4125"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M48,40 L287,40 L287,152 L48,152 L48,40z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5025)" >
+clip-path="url(#clip4125)" >
 <path vector-effect="none" fill-rule="evenodd" d="M230,110 L230,55 L252,55"/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,-48,-40)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5025)" >
+clip-path="url(#clip4125)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,182,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5026)" >
-<defs><clipPath id="clip5026"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-182,-70 L57,-70 L57,42 L-182,42 L-182,-70z "/>
+clip-path="url(#clip4126)" >
+<defs><clipPath id="clip4126"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-182,-70 L57,-70 L57,42 L-182,42 L-182,-70z "/>
 </clipPath></defs></g>
 
 <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,182,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5026)" >
+clip-path="url(#clip4126)" >
 <path vector-effect="none" fill-rule="evenodd" d="M2,0 C2,1.10457 1.10457,2 0,2 C-1.10457,2 -2,1.10457 -2,0 C-2,-1.10457 -1.10457,-2 0,-2 C1.10457,-2 2,-1.10457 2,0 z "/>
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,182,70)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5026)" >
+clip-path="url(#clip4126)" >
 </g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
@@ -1005,8 +933,8 @@ font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5027)" >
-<defs><clipPath id="clip5027"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L239,0 L239,112 L0,112 L0,0z "/>
+clip-path="url(#clip4127)" >
+<defs><clipPath id="clip4127"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L239,0 L239,112 L0,112 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
@@ -1021,8 +949,8 @@ font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
 font-family="TeX Gyre Heros" font-size="16" font-weight="400" font-style="normal" 
-clip-path="url(#clip5028)" >
-<defs><clipPath id="clip5028"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1,0 L1,1 L0,1 L0,0z "/>
+clip-path="url(#clip4128)" >
+<defs><clipPath id="clip4128"><path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L1,0 L1,1 L0,1 L0,0z "/>
 </clipPath></defs></g>
 
 <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"

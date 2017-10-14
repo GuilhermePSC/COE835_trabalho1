@@ -3,7 +3,7 @@
 %
 %  Script para simular exemplo preliminar (exemplo 3)
 %
-%  Algoritmo : Método indireto
+%  Algoritmo : Mï¿½todo indireto
 %
 %  Ref. [Tao:2003], pag. 21 & 212
 %                                                       Ramon R. Costa
@@ -18,9 +18,9 @@ disp('Script para simular o exemplo 3')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
-disp('      Parâmetros ........ np = 1')
+disp('      Parï¿½metros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Método indireto')
+disp('Algoritmo: Mï¿½todo indireto')
 disp(' ')
 disp('-------------------------------')
 
@@ -30,7 +30,7 @@ st = 0.05;      %Sample time to workspace
 
 s = tf('s');    %trick!
 
-PRINT = 'ON';  %'ON' : imprimi diagramas
+PRINT = 'ON';  %'ON' : imprime diagramas
 
 %--------------------------------------------------------- Plant -----
 ap = -2;
@@ -267,25 +267,28 @@ print(path_yp,'-depsc2')
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_indireto_111_8_5');
-    print -dsvg -sMRAC_111 ../relatorio_indireto/figs/MRAC_indireto111.svg
+    print -dsvg -sMRAC_indireto_111_8_5 ../relatorio_indireto/figs/MRAC_indireto111.svg
     
     open_system('MRAC_indireto_111_8_5/Plant');
-    print -dsvg -sMRAC_111/Plant ../relatorio_indireto/figs/plant.svg
+    print -dsvg -sMRAC_indireto_111_8_5/Plant ../relatorio_indireto/figs/plant.svg
     
     open_system('MRAC_indireto_111_8_5/Model');
-    print -dsvg '-sMRAC_111/Reference model' ../relatorio_indireto/figs/reference-model.svg
+    print -dsvg '-sMRAC_indireto_111_8_5/Model' ../relatorio_indireto/figs/reference-model.svg
     
     open_system('MRAC_indireto_111_8_5/Adaptation');
-    print -dsvg -sMRAC_111/Adaptation ../relatorio_indireto/figs/adaptation.svg
+    print -dsvg -sMRAC_indireto_111_8_5/Adaptation ../relatorio_indireto/figs/adaptation.svg
+    
+    open_system('MRAC_indireto_111_8_5/Adaptation/Normalization');
+    print -dsvg -sMRAC_indireto_111_8_5/Adaptation/Normalization ../relatorio_indireto/figs/normalization.svg
     
     open_system('MRAC_indireto_111_8_5/Reference signal');
-    print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/reference-signal.svg
+    print -dsvg '-sMRAC_indireto_111_8_5/Reference signal' ../relatorio_indireto/figs/reference-signal.svg
     
     open_system('MRAC_indireto_111_8_5/Design');
-    print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/design.svg
+    print -dsvg '-sMRAC_indireto_111_8_5/Design' ../relatorio_indireto/figs/design.svg
     
     open_system('MRAC_indireto_111_8_5/Prediction');
-    print -dsvg '-sMRAC_111/Reference signal' ../relatorio_indireto/figs/prediction.svg
+    print -dsvg '-sMRAC_indireto_111_8_5/Prediction' ../relatorio_indireto/figs/prediction.svg
     
     close_system('MRAC_indireto_111_8_5');
 end
