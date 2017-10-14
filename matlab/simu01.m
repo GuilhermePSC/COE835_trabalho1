@@ -277,19 +277,19 @@ print -depsc2 ../relatorio/figs/fig01e.eps
 %--------------------------------------- Impress�o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_111');
-    print -depsc2 -sMRAC_111 ../relatorio/figs/MRAC-111.eps
+    print -dsvg -sMRAC_111 ../relatorio/figs/MRAC-111.eps
     
     open_system('MRAC_111/Plant');
-    print -depsc2 -sMRAC_111/Plant ../relatorio/figs/plant.eps
+    print -dsvg -sMRAC_111/Plant ../relatorio/figs/plant.eps
     
     open_system('MRAC_111/Reference model');
-    print -depsc2 '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.eps
+    print -dsvg '-sMRAC_111/Reference model' ../relatorio/figs/reference-model.eps
     
     open_system('MRAC_111/Adaptation');
-    print -depsc2 -sMRAC_111/Adaptation ../relatorio/figs/adaptation.eps
+    print -dsvg -sMRAC_111/Adaptation ../relatorio/figs/adaptation.eps
     
     open_system('MRAC_111/Reference signal');
-    print -depsc2 '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.eps
+    print -dsvg '-sMRAC_111/Reference signal' ../relatorio/figs/reference-signal.eps
     
     close_system('MRAC_111');
 end
