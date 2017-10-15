@@ -30,7 +30,7 @@ st = 0.05;      %Sample time to workspace
 
 s = tf('s');    %trick!
 
-PRINT = 'ON';  %'ON' : imprime diagramas
+PRINT = 'OFF';  %'ON' : imprime diagramas
 
 %--------------------------------------------------------- Plant -----
 ap = -2;
@@ -262,6 +262,30 @@ title(titleStr);
 legend(par1,par2,'r','ym','Location','SouthEast');
 
 print(path_yp,'-depsc2') 
+
+%--------------- Fig7 -------------
+figure(7)
+clf
+
+subplot(211)
+hold on
+plot(t,u_g1)
+plot(t,u_g1ap,'Linew',0.5)
+grid on
+titleStr = strcat('$u$ com $\gamma = ',num2str(gamma1), '$');
+title(titleStr);
+legend(par1,par2,'Location','SouthEast')
+
+subplot(212)
+hold on
+plot(t,u_g2)
+plot(t,u_g2ap,'Linew',0.5)
+grid on
+titleStr = strcat('$u$ com $\gamma = ',num2str(gamma2), '$');
+title(titleStr);
+legend(par1,par2,'Location','SouthEast')
+
+print(path_u, '-depsc2')
 
 
 %--------------------------------------- Impress?o dos diagramas -----
