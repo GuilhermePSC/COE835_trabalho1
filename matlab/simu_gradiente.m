@@ -249,19 +249,19 @@ print(path_u, '-depsc2')
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_111_8_5');
-    print -dsvg -sMRAC_111_8_5 ../relatorio/figs/MRAC_111_8_5.svg
+    print -dpdf -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.pdf
     
     open_system('MRAC_111_8_5/Plant');
-    print -dsvg -sMRAC_111_8_5/Plant ../relatorio/figs/plant.svg
+    print -dpdf -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.pdf
     
     open_system('MRAC_111_8_5/Reference model');
-    print -dsvg '-sMRAC_111_8_5/Reference model' ../relatorio/figs/reference-model.svg
+    print -dpdf '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.pdf
     
     open_system('MRAC_111_8_5/Adaptation');
-    print -dsvg -sMRAC_111_8_5/Adaptation ../relatorio/figs/adaptation.svg
+    print -dpdf -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.pdf
     
     open_system('MRAC_111_8_5/Reference signal');
-    print -dsvg '-sMRAC_111_8_5/Reference signal' ../relatorio/figs/reference-signal.svg
+    print -dpdf '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.pdf
     
     close_system('MRAC_111_8_5');
 end
