@@ -60,7 +60,7 @@ thetas = -ap - am;   %theta*
 gamma1 = 2;       %Adaptation gains
 gamma2 = 100;
 theta0 = 0;       %Adaptation inicial condition
-af = 0.5;
+af = 1;
 
 %---------------------------------------------------- Simulation -----
 m_type = 1; %without dotzeta
@@ -127,19 +127,23 @@ path_yp = strcat('../relatorio/figs/yp/',name,'.eps');
 figure(1);
 clf;
 
-subplot(211);
+h1 = subplot(211);
 plot(t,e0_g1,t,e0_g1dz,'Linew',0.5);
 grid on;
 titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma1), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
-subplot(212)
+h2 = subplot(212);
 plot(t,e0_g2,t,e0_g2dz,'Linew',0.5);
 grid on
 titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
+
+%Reduce gap btw subplots
+pos_pct = .05;
+set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
 
 print(path_e0,'-depsc2') 
 
@@ -148,19 +152,23 @@ Thetas = thetas*ones(size(t));
 figure(2);
 clf;
 
-subplot(211);
+h1 = subplot(211);
 plot(t,theta_g1,t,theta_g1dz,t,Thetas,'Linew',0.5);
 grid on;
 titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma1), '$');
 title(titleStr);
 legend(par1,par2,'$\theta$*','Location','SouthEast')
 
-subplot(212);
+h2 = subplot(212);
 plot(t,theta_g2,t,theta_g2dz,t,Thetas,'Linew',0.5);
 grid on;
 titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'$\theta$*','Location','SouthEast')
+
+%Reduce gap btw subplots
+pos_pct = .05;
+set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
 
 print(path_theta,'-depsc2')
 
@@ -168,7 +176,7 @@ print(path_theta,'-depsc2')
 figure(3);
 clf;
 
-subplot(211);
+h1 = subplot(211);
 hold on;
 plot(t,yp_g1)
 plot(t,yp_g1dz,t,r,t,ym,'Linew',0.5)
@@ -177,7 +185,7 @@ titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma1), '$');
 title(titleStr);
 legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
 
-subplot(212);
+h2 = subplot(212);
 hold on;
 plot(t,yp_g2)
 plot(t,yp_g2dz,t,r,t,ym,'Linew',0.5)
@@ -185,6 +193,10 @@ grid on
 titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
+
+%Reduce gap btw subplots
+pos_pct = .05;
+set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
 
 print(path_yp,'-depsc2')
 
@@ -226,7 +238,7 @@ print(path_e0_vs_deltatheta,'-depsc2')
 figure(5)
 clf
 
-subplot(211)
+h1 = subplot(211);
 hold on
 plot(t,u_g1)
 plot(t,u_g1dz,'Linew',0.5)
@@ -235,7 +247,7 @@ titleStr = strcat('$u$ com $\gamma = ',num2str(gamma1), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-subplot(212)
+h2 = subplot(212);
 hold on
 plot(t,u_g2)
 plot(t,u_g2dz,'Linew',0.5)
@@ -243,6 +255,10 @@ grid on
 titleStr = strcat('$u$ com $\gamma = ',num2str(gamma2), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast')
+
+%Reduce gap btw subplots
+pos_pct = .05;
+set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
 
 print(path_u, '-depsc2')
 

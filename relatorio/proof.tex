@@ -4,18 +4,20 @@
 No método do gradiente, deseja-se minimizar um \textit{erro de estimativa} através de de uma \textit{lei de adaptação} normalizada baseada na descida do gradiente da função custo
 %
 \begin{equation}
-J = \frac{\varepsilon^2}{m^2} = \frac{\tilde{\theta}^2\,\zeta^2}{m^2} \,.
+J = \frac{\varepsilon^2}{m^2} = \frac{\tilde{\theta}^2\,\zeta^2}{m^2} \,,
 \end{equation}
-
-Seja o modelo real da planta dado por \eqref{eq:planta}, o modelo de referência dado por \eqref{eq:ref_model} e a lei de controle \eqref{eq:ctrl_law}. O método do gradiente consiste em adaptar o parâmetro de ganho de realimentação $\theta$ até o seu valor ideal $\theta^* = -a_p-a_m$, que realocará o pólo \textit{desconhecido} $a_p$ da planta até o pólo estável e conhecido do modelo de referência desejado $-a_m$.
+%
+onde $\tilde{\theta} = \theta - \theta^*$ e $\theta^*$ é o ganho de realimentação ideal.
+%
+Seja o modelo real da planta dado por \eqref{eq:planta}, o modelo de referência dado por \eqref{eq:ref_model} e a lei de controle \eqref{eq:ctrl_law}, o método do gradiente consiste em adaptar o parâmetro de ganho de realimentação $\theta$ até o seu valor ideal $\theta^* = -a_p-a_m$, que realocará o pólo \textit{desconhecido} $a_p$ da planta até o pólo estável e conhecido do modelo de referência desejado $-a_m$.
 %
 Note que, como $a_p$ não é conhecido, $\theta^*$ também não o é, e por isso a adaptação se faz necessária.
 
-Inicialmente, filtra-se o sinal de saída $y_p(t)$ utilizando o modelo de referência, produzindo o sinal de saída filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal é utilizado para a construção da estimativa do erro \eqref{eq:est_error} e na própria lei de adaptação do parâmetro $\theta$, dada em \eqref{eq:adpt_law}.
+Inicialmente, filtra-se o sinal de saída $y_p(t)$ utilizando a função de transferência do modelo de referência, produzindo o sinal de saída filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal é utilizado para a construção da estimativa \eqref{eq:est_error} do erro de saída \eqref{eq:error} e na própria lei de adaptação do parâmetro $\theta$, dada em \eqref{eq:adpt_law}.
 
 \subsection{Prova da limitação de $\dot{\varepsilon}/m$}
 
-Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a dinâmica do erro é expressa por:
+Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a dinâmica do erro de saída é expressa por:
 %
 \begin{flalign}
 \dot{e}_0 &= \dot{y}_p - \dot{y}_m \nonumber \\
@@ -29,7 +31,7 @@ e_0 &= \mathcal{L}^{-1}\left\{\frac{\tilde{\theta}\,y_p}{s+a_m}\right\} \nonumbe
 &= \mathcal{L}^{-1}\left\{\frac{\theta\,y_p}{s+a_m}\right\} - \theta^* \, \zeta \,,
 \end{flalign}
 %
-onde $\tilde{\theta} = \theta - \theta^*$, $\theta^*$ é o ganho de realimentação ideal e o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa.
+onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa.
 %onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa e $\theta^*$ é o ganho de realimentação ideal.
 %
 Assim, o erro de estimativa pode ser escrito como:
@@ -47,14 +49,14 @@ A seguinte candidata à função de Lyapunov é proposta:
 2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0
 \end{equation}
 
-Derivando e utilizando a lei de adaptação proposta, tem-se:
+Derivando no tempo e utilizando a lei de adaptação proposta, tem-se:
 %
 \begin{flalign}
 \dot{V} &= \gamma^{-1} \, \tilde{\theta} \, \dot{\theta} \nonumber \\
 &= - \frac{\varepsilon^2}{m^2} \leq 0 \,,
 \end{flalign}
 %
-onde \eqref{eq:erro_est} foi utilizado. Como $\dot{V}$ é apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
+onde \eqref{eq:adpt_law} e \eqref{eq:erro_est} foram utilizadas. Como $\dot{V}$ é apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
 
 \begin{lemma}
 Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Então:
