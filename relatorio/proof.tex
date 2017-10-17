@@ -1,7 +1,21 @@
 %---------------------------------------------------------------------
-\section{Prova da limitação de $\dot{\varepsilon}/m$}
+\section{O método do gradiente}
 
-Utilizando as eq.s do sistema, a dinâmica do erro é expressa por:
+No método do gradiente, deseja-se minimizar um \textit{erro de estimativa} através de de uma \textit{lei de adaptação} normalizada baseada na descida do gradiente da função custo
+%
+\begin{equation}
+J = \frac{\varepsilon^2}{m^2} = \frac{\tilde{\theta}^2\,\zeta^2}{m^2} \,.
+\end{equation}
+
+Seja o modelo real da planta dado por \eqref{eq:planta}, o modelo de referência dado por \eqref{eq:ref_model} e a lei de controle \eqref{eq:ctrl_law}. O método do gradiente consiste em adaptar o parâmetro de ganho de realimentação $\theta$ até o seu valor ideal $\theta^* = -a_p-a_m$, que realocará o pólo \textit{desconhecido} $a_p$ da planta até o pólo estável e conhecido do modelo de referência desejado $-a_m$.
+%
+Note que, como $a_p$ não é conhecido, $\theta^*$ também não o é, e por isso a adaptação se faz necessária.
+
+Inicialmente, filtra-se o sinal de saída $y_p(t)$ utilizando o modelo de referência, produzindo o sinal de saída filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal é utilizado para a construção da estimativa do erro \eqref{eq:est_error} e na própria de lei de adaptação do parâmetro $\theta$, dada em \eqref{eq:adpt_law}.
+
+\subsection{Prova da limitação de $\dot{\varepsilon}/m$}
+
+Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a dinâmica do erro é expressa por:
 %
 \begin{flalign}
 \dot{e}_0 &= \dot{y}_p - \dot{y}_m \nonumber \\
@@ -11,17 +25,17 @@ Utilizando as eq.s do sistema, a dinâmica do erro é expressa por:
 ou ainda:
 %
 \begin{flalign}
-e_0 &= \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast ( \tilde{\theta}\,y_p ) \nonumber \\ 
-&= \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta\,y_p) - \theta^* \, \zeta \,,
+e_0 &= \mathcal{L}^{-1}\left\{\frac{\tilde{\theta}\,y_p}{s+a_m}\right\} \nonumber \\ 
+&= \mathcal{L}^{-1}\left\{\frac{\theta\,y_p}{s+a_m}\right\} - \theta^* \, \zeta \,,
 \end{flalign}
 %
-onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa, $\circledast$ denota a operação de \textit{convolução} de sinais e $\theta^*$ é o ganho de realimentação ideal.
+onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa e $\theta^*$ é o ganho de realimentação ideal.
 %
 Assim, o erro de estimativa pode ser escrito como:
 %
 \begin{flalign}
 \varepsilon &= e_0 - \hat{e} \nonumber \\ 
-&=\mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta \, y_p) - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{1}{s+a_m}\right\} \circledast (\theta \, y_p) + \theta \, \zeta \nonumber \nonumber \\
+&=\mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} + \theta \, \zeta \nonumber \nonumber \\
 &= \tilde{\theta} \, \zeta \,.
 \label{eq:erro_est}
 \end{flalign}

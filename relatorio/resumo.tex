@@ -1,29 +1,34 @@
 %---------------------------------------------------------------------
-\section{Resumo das equações do sistema simulado}
+\section{Resumo das equações do método}
+
+Abaixo, resumimos algumas das principais equações utilizadas no método.
+
+\vspace{20mm}
 
 \equacao{Planta}
-  {\dot{y}_p = a_p y_p + u}
+  {\dot{y}_p = a_p y_p + u \label{eq:planta}}
 
 \equacao{Modelo}
-  {\dot{y}_m = -a_m y_m + r}
+  {\dot{y}_m = -a_m y_m + r \label{eq:ref_model}}
 
 \equacao{Erro de saída}
-  {e_0 = y_p - y_m}
+  {e_0 = y_p - y_m \label{eq:error}}
 
 \equacao{Lei de controle}
-  {u = \theta \, y_p + r}
+  {u = \theta \, y_p + r \label{eq:ctrl_law}}
 
 \equacao{Filtro}
-  {\dot{\zeta} + a_m \, \zeta = y_p}
+  {\dot{\zeta} + a_m \, \zeta = y_p \label{eq:filter}}
 
 \equacao{Estimativa do erro}
-  {\hat{e} = \frac{1}{s+a_m}\,[\theta y_p] - \theta\zeta}
+  {\hat{e} = \mathcal{L}^{-1}\left\{\frac{\theta y_p }{s+a_m}\right\}- \theta\zeta \label{eq:est_error}}
 
 \equacao{Erro de estimativa}
-  {\varepsilon = e_0 - \hat{e}}
+  {\varepsilon = e_0 - \hat{e} \label{eq:error_est}}
 
 \equacao{Sinal normalizante}
-  {m^2 = 1 + \zeta^2 \\ m^2 = 1 + \zeta^2 + \dot{\zeta}^2 }
+  {m^2 = 1 + \zeta^2 \\ m^2 = 1 + \zeta^2 + \dot{\zeta}^2 \label{eq:norm_signal}}
 
 \equacao{Lei de adaptação}
-  {\dot{\theta} = - \frac{\gamma \varepsilon \zeta}{m^2}}
+  {\dot{\theta} = - \frac{\gamma \varepsilon \zeta}{m^2} \label{eq:adpt_law}}
+
