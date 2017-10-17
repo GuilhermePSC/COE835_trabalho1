@@ -1,2 +1,32 @@
 %---------------------------------------------------------------------
 \section{O método MRAC indireto}
+
+O método MRAC indireto consiste em uma realimentacão de saída utilizando um ganho variante no tempo, que é estimado através da adaptacão do pólo incerto da planta, como é evidente de acordo com \eqref{eq:ctrl_law} e \eqref{eq:est_gain}. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{figs/blocks/estruturaMRAC_indireto.png}
+  \caption{Estrutura do MRAC indireto.}
+\end{figure}
+
+Como em outros esquemas MRAC, este controle possui um modelo de referência desejado que é utilizado para a geracão de um sinal de erro de saída \eqref{eq:error}. Ele também possui um filtro estável de primeira ordem que é aplicado sobre os sinais de entrada e saída. Assim, é possível escrever a saída do sistema como
+%
+\begin{equation}
+y = \theta^* \, \phi + \mathcal{L}^{-1}\left\{ \frac{1}{s+a_f} \right\} \,, \quad \theta^* = a_f + a_p \,,
+\label{eq:saida}
+\end{equation}
+%
+motivando portanto a \textit{definição} da predição de saída dada por \eqref{eq:pred_saida}. Assim, utilizando \eqref{eq:pred_error}, \eqref{eq:pred_saida} e \eqref{eq:saida} temos:
+%
+\begin{flalign}
+\epsilon &= \hat{y} - y \nonumber \\
+&= \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} - \theta^* \, \phi - \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \nonumber \\
+&= ( \theta - \theta^*) \, \phi = \tilde{\theta} \, \phi \,.
+\label{eq:pred_error2}
+\end{flalign}
+
+Utilizando a candidata à função de Lyapunov $2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2$, derivando no tempo e aplicando a lei de adaptação \eqref{eq:adpt_law}, obtemos:
+%
+$$\dot{V} = -\frac{\epsilon^2}{m^2} \leq 0 \,,$$
+%
+de onde conclui-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$. \rev{É possível demonstrar que $\epsilon, e_0 \rightarrow 0$.}

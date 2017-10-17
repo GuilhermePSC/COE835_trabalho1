@@ -30,7 +30,7 @@ st = 0.05;      %Sample time to workspace
 
 s = tf('s');    %trick!
 
-PRINT = 'ON';  %'ON' : imprime diagramas
+PRINT = 'OFF';  %'ON' : imprime diagramas
 
 %--------------------------------------------------------- Plant -----
 ap = -2;

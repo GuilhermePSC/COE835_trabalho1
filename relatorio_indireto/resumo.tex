@@ -29,14 +29,14 @@ Abaixo, resumimos algumas das principais equações utilizadas no método.
 \equacao{Saída filtrada}
 	{\phi = \mathcal{L}^{-1}\left\{ \frac{y}{s+a_f} \right\}}
 
-\equacao{Parâmetro modificado}
+\equacao{Parâmetro estimado}
 	{\theta = a_f + \hat{a}_p}
 
 \equacao{Predição da saída}
-	{\hat{y} = \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} }
+	{\hat{y} = \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \label{eq:pred_saida} }
 
 \equacao{Erro de Predicao}
-	{\epsilon = \hat{y} - y = \tilde{\theta} \, \phi }
+	{\epsilon = \hat{y} - y \label{eq:pred_error}}
 
 \equacao{Lei de adaptação}
   {\dot{\theta} = - \frac{\gamma \epsilon \phi}{m^2} \,, \quad m^2 = 1+\phi^2 \label{eq:adpt_law}}
