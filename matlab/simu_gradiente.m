@@ -249,19 +249,24 @@ print(path_u, '-depsc2')
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_111_8_5');
-    print -dpdf -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.pdf
+%     print -dpdf -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.pdf
+    print -depsc2 -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.eps
     
     open_system('MRAC_111_8_5/Plant');
-    print -dpdf -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.pdf
+%     print -dpdf -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.pdf
+    print -depsc2 -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.eps
     
     open_system('MRAC_111_8_5/Reference model');
-    print -dpdf '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.pdf
+%     print -dpdf '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.pdf
+    print -depsc2 '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.eps
     
     open_system('MRAC_111_8_5/Adaptation');
-    print -dpdf -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.pdf
+%     print -dpdf -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.pdf
+    print -depsc2 -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.eps
     
     open_system('MRAC_111_8_5/Reference signal');
-    print -dpdf '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.pdf
+%     print -dpdf '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.pdf
+    print -depsc2 '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.eps
     
     close_system('MRAC_111_8_5');
 end
