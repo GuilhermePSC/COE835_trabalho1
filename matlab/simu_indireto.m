@@ -30,7 +30,7 @@ st = 0.05;      %Sample time to workspace
 
 s = tf('s');    %trick!
 
-PRINT = 'OFF';  %'ON' : imprime diagramas
+PRINT = 'ON';  %'ON' : imprime diagramas
 
 %--------------------------------------------------------- Plant -----
 ap = -2;
@@ -291,28 +291,28 @@ print(path_u, '-depsc2')
 %--------------------------------------- Impress?o dos diagramas -----
 if strcmp(PRINT,'ON')
     open_system('MRAC_indireto_111_8_5');
-    print -dsvg -sMRAC_indireto_111_8_5 ../relatorio_indireto/figs/MRAC_indireto111.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5' ../relatorio_indireto/figs/MRAC_indireto111.eps
     
     open_system('MRAC_indireto_111_8_5/Plant');
-    print -dsvg -sMRAC_indireto_111_8_5/Plant ../relatorio_indireto/figs/plant.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Plant' ../relatorio_indireto/figs/plant.eps
     
     open_system('MRAC_indireto_111_8_5/Model');
-    print -dsvg '-sMRAC_indireto_111_8_5/Model' ../relatorio_indireto/figs/reference-model.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Model' ../relatorio_indireto/figs/reference-model.eps
     
     open_system('MRAC_indireto_111_8_5/Adaptation');
-    print -dsvg -sMRAC_indireto_111_8_5/Adaptation ../relatorio_indireto/figs/adaptation.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Adaptation' ../relatorio_indireto/figs/adaptation.eps
     
     open_system('MRAC_indireto_111_8_5/Adaptation/Normalization');
-    print -dsvg -sMRAC_indireto_111_8_5/Adaptation/Normalization ../relatorio_indireto/figs/normalization.svg
+    print -depsc2 -sMRAC_indireto_111_8_5/Adaptation/Normalization ../relatorio_indireto/figs/normalization.eps
     
     open_system('MRAC_indireto_111_8_5/Reference signal');
-    print -dsvg '-sMRAC_indireto_111_8_5/Reference signal' ../relatorio_indireto/figs/reference-signal.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Reference signal' ../relatorio_indireto/figs/reference-signal.eps
     
     open_system('MRAC_indireto_111_8_5/Design');
-    print -dsvg '-sMRAC_indireto_111_8_5/Design' ../relatorio_indireto/figs/design.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Design' ../relatorio_indireto/figs/design.eps
     
     open_system('MRAC_indireto_111_8_5/Prediction');
-    print -dsvg '-sMRAC_indireto_111_8_5/Prediction' ../relatorio_indireto/figs/prediction.svg
+    print -depsc2 '-sMRAC_indireto_111_8_5/Prediction' ../relatorio_indireto/figs/prediction.eps
     
     close_system('MRAC_indireto_111_8_5');
 end
