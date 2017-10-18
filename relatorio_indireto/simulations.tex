@@ -1,12 +1,31 @@
 %---------------------------------------------------------------------
 \section{Resultados das simulações}
 
-Simulação utilizando \HI{\texttt{Matlab/Simulink}}.
+%Simulação utilizando \HI{\texttt{Matlab/Simulink}}.
+
+Nas simulações, procuramos avaliar o comportamento do sistema para as seguintes condições:
+%
+\begin{enumerate*}[label=(\roman*)]
+\item condição inicial $y(0)$;
+\item pólo (estável) do filtro $a_f$;
+\item ganho de adaptação $\gamma$.
+\end{enumerate*}
+%
+Para cada simulação, comparamos o comportamento das variáveis do sistema para dois tipos de predição de saída $\hat{y}$:
+%
+\begin{enumerate*}[label=(\roman*)]
+\item $\theta = \hat{a}_p + a_f$;
+\item $\theta = \hat{a}_p$.
+\end{enumerate*}
+
+Apresentaremos os resultados obtidos através de simulações no ambiente \HI{\texttt{Matlab/Simulink}} e os discutiremos na próxima seção.
 
 \subsection{Simulação \#1}
 
+Inicialmente, desejamos verificar o comportamento do sistema para variações no ganho de adaptação $\gamma$, para condições iniciais \textit{nulas}.
+
 \bigskip%
-Parâmetros e condições iniciais  :
+Parâmetros e condições iniciais :
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
