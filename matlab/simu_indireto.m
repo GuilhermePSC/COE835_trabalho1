@@ -14,13 +14,13 @@ clc;
 
 %---------------------------------------------------------------------
 disp('-------------------------------')
-disp('Script para simular o exemplo 3')
+disp('Script para simular MRAC Indireto')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
-disp('      Parï¿½metros ........ np = 1')
+disp('      Parâmetros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Mï¿½todo indireto')
+disp('Algoritmo: Método indireto')
 disp(' ')
 disp('-------------------------------')
 
@@ -32,99 +32,127 @@ s = tf('s');    %trick!
 
 PRINT = 'OFF';  %'ON' : imprime diagramas
 
-%--------------------------------------------------------- Plant -----
-ap = -2;
 
-p = 1/(s-ap);
-P = ss(p);
+% --------------- Default Parameters --------------------
 
-%----------------------------------------------- Reference model -----
-am = 1;
+%Plant Parameters
+ap1 = -2;
+ap2 = -2;
 
-m = 1/(s+am);
-M = ss(m);
+%Reference Model Parameters
+am1 = 1;
+am2 = 1;
 
-%-------------------------------------------------------- Filter -----
-af = 1;
+%Filter
+af1 = 1;
+af2 = 1;
 
-%--------------------------------------------- Initial condition -----
-yp0  = 0;
+%Initial condition
+yp01  = 0;
+yp02 = 0;
 ym0  = 0;
 
-%----------------------------------- Reference signal parameters -----
+%Reference signal parameters
 DC = 1;   %Constant
-
 As = 0;   %Sine wave amplitude
 ws = 2;  %Frequency
 
-%------------------------------------------------- Matching gain -----
+%Matching gain
 ks = -ap - am;
-
 thetas_1 = ap + af;
 thetas_2 = ap; 
 
-%----------------------------------------- Adaptation parameters -----
+%Adaptation parameters
 gamma1 = 2;         %Adaptation gains
-gamma2 = 100;
+gamma2 = 2;
 theta0 = 0;       %Adaptation inicial condition
+changed = '';
 
-%---------------------------------------------------- Simulation -----
-gamma = gamma1
+%---------------------Simulation 1
+
+ap = ap1;
+am = am1;
+gamma = gamma1;
+yp0 = yp01;
+
+% Model
+m = 1/(s+am);
+M = ss(m);
+
+% Plant
+p = 1/(s-ap);
+P = ss(p);
+
+%theta = ap + af
 m_type = 1;
 sim('MRAC_indireto_111_8_5',tfinal);
 
-yp_g1 = yp;   %Save results
-e0_g1 = e0;
-yhat_g1 = yhat;
-epsilon_g1 = epsilon;
-theta_g1 = theta;
-u_g1 = u;
-k_g1 = k;
+yp_11 = yp;   %Save results
+e0_11 = e0;
+yhat_11 = yhat;
+epsilon_11 = epsilon;
+theta_11 = theta;
+u_11 = u;
+k_11 = k;
 
-%---------------------------------------------------- Simulation -----
+%theta = ap
 m_type = 2;
 sim('MRAC_indireto_111_8_5',tfinal);
 
-yp_g1ap = yp;   %Save results
-e0_g1ap = e0;
-yhat_g1ap = yhat;
-epsilon_g1ap = epsilon;
-theta_g1ap = theta;
-u_g1ap = u;
-k_g1ap = k;
+yp_12 = yp;   %Save results
+e0_12 = e0;
+yhat_12 = yhat;
+epsilon_12 = epsilon;
+theta_12 = theta;
+u_12 = u;
+k_12 = k;
 
-%---------------------------------------------------- Simulation -----
+%---------------------Simulation 1
+
+ap = ap2;
+am = am2;
+gamma = gamma2;
+yp0 = yp02;
+
+% Model
+m = 1/(s+am);
+M = ss(m);
+
+% Plant
+p = 1/(s-ap);
+P = ss(p);
+
+%theta = ap + af
 m_type = 1;
-gamma = gamma2
 sim('MRAC_indireto_111_8_5',tfinal);
 
-yp_g2 = yp;   %Save results
-e0_g2 = e0;
-yhat_g2 = yhat;
-epsilon_g2 = epsilon;
-theta_g2 = theta;
-u_g2 = u;
-k_g2 = k;
+yp_21 = yp;   %Save results
+e0_21 = e0;
+yhat_21 = yhat;
+epsilon_21 = epsilon;
+theta_21 = theta;
+u_21 = u;
+k_21 = k;
 
-%---------------------------------------------------- Simulation -----
+%theta = ap
 m_type = 2;
 sim('MRAC_indireto_111_8_5',tfinal);
 
-yp_g2ap = yp;   %Save results
-e0_g2ap = e0;
-yhat_g2ap = yhat;
-epsilon_g2ap = epsilon;
-theta_g2ap = theta;
-u_g2ap = u;
-k_g2ap = k;
+yp_22 = yp;   %Save results
+e0_22 = e0;
+yhat_22 = yhat;
+epsilon_22 = epsilon;
+theta_22 = theta;
+u_22 = u;
+k_22 = k;
 
 %----------------------------------------------- Print eps plots -----
 set(groot, 'defaultAxesTickLabelInterpreter','latex');
 set(groot, 'defaultLegendInterpreter','latex');
 set(groot, 'defaultTextInterpreter','latex');
 
-par1 = strcat('$\theta = ap$');
-par2 = strcat('$\theta = ap + af$');
+par1 = strcat('$\theta = a_p$');
+par2 = strcat('$\theta = a_p + a_f$');
 
 apstr = strcat('ap',num2str(ap));
 amstr = strcat('am',num2str(am));
@@ -147,7 +175,7 @@ clf;
 subplot(211);
 plot(t,e0_g1,t,e0_g1ap,'Linew',0.5);
 grid on;
-titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma1), '$');
+titleStr = strcat('$e_0$ com', changed, '=', num2str(gamma1), '$');
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
@@ -316,5 +344,3 @@ if strcmp(PRINT,'ON')
     
     close_system('MRAC_indireto_111_8_5');
 end
-
-
