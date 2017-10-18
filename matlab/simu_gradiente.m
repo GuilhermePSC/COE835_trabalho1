@@ -20,269 +20,278 @@ disp('Algoritmo: Gradiente normalizado')
 disp(' ')
 disp('-------------------------------')
 
-%------------------------------------------------ Initialization -----
-tfinal = 10;    %Simulation interval
-st = 0.05;      %Sample time to workspace
+%--------------------------------- Simulation 1: gamma variation -----
 
-s = tf([1 0],[0 1]);    %trick!
+run parameters.m;
+paramstr = '\gamma';
+param1 = gamma;
+param2 = gamma_2;
+run set_model.m;
 
-PRINT = 'ON';  %'ON' : imprime diagramas
-
-%--------------------------------------------------------- Plant -----
-ap = -2;
-
-P = 1/(s-ap);
-P = ss(P);
-
-%----------------------------------------------- Reference model -----
-am = 1;
-
-M = 1/(s+am);
-M = ss(M);
-
-%--------------------------------------------- Initial condition -----
-yp0  = 0;
-x0   = yp0;
-
-ym0  = 0;
-xm0  = ym0;
-
-%----------------------------------- Reference signal parameters -----
-DC = 1;   %Constant
-
-As = 0;   %Sine wave amplitude
-ws = 10;  %Frequency
-
-%------------------------------------------------- Matching gain -----
-thetas = -ap - am;   %theta*
-
-%----------------------------------------- Adaptation parameters -----
-gamma1 = 2;       %Adaptation gains
-gamma2 = 100;
-theta0 = 0;       %Adaptation inicial condition
-af = 1;
-
-%---------------------------------------------------- Simulation -----
 m_type = 1; %without dotzeta
-
-gamma = gamma1
 sim('MRAC_111_8_5',tfinal);
-
 yp_g1 = yp;   %Save results
 e0_g1 = e0;
 theta_g1 = theta;
 u_g1 = u;
 
-%---------------------------------------------------- Simulation -----
 m_type = 2; %with dotzeta
-
 sim('MRAC_111_8_5',tfinal);
-
 yp_g1dz = yp;   %Save results
 e0_g1dz = e0;
 theta_g1dz = theta;
 u_g1dz = u;
 
-%---------------------------------------------------- Simulation -----
-m_type = 1; %without dotzeta
-gamma = gamma2
-sim('MRAC_111_8_5',tfinal);
+%-----------------------------
 
+gamma = gamma_2;
+run set_model.m;
+
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
 yp_g2 = yp;   %Save results
 e0_g2 = e0;
 theta_g2 = theta;
 u_g2 = u;
 
-
-%---------------------------------------------------- Simulation -----
 m_type = 2; %with dotzeta
 sim('MRAC_111_8_5',tfinal);
-
 yp_g2dz = yp;   %Save results
 e0_g2dz = e0;
 theta_g2dz = theta;
 u_g2dz = u;
 
-%----------------------------------------------- Print eps plots -----
-set(groot, 'defaultAxesTickLabelInterpreter','latex');
-set(groot, 'defaultLegendInterpreter','latex');
-set(groot, 'defaultTextInterpreter','latex');
+%Print plots
+name = strcat('gamma','_',num2str(param1),'_',num2str(param2));
+PRINT = 'ON';  %'ON' : imprime diagramas do simulink
+run print_plots.m
 
-par1 = strcat('$m^2 = 1 + \zeta^2$');
-par2 = strcat('$m^2 = 1 + \zeta^2 + \dot{\zeta}^2$');
+%----------------------------------- Simulation 2: yp0 variation -----
 
-apstr = strcat('ap',num2str(ap));
-amstr = strcat('am',num2str(am));
-yp0str = strcat('yp0',num2str(yp0));
-afstr = strcat('af',num2str(af));
+run parameters.m;
+paramstr = 'y_p(0)';
+param1 = yp0;
+param2 = yp0_2;
+run set_model.m;
 
-name = strcat(apstr,amstr,yp0str,afstr);
-path_e0 = strcat('../relatorio/figs/e0/',name,'.eps');
-path_e0_vs_deltatheta = strcat('../relatorio/figs/e0_vs_deltatheta/',name,'.eps');
-path_theta = strcat('../relatorio/figs/theta/',name,'.eps');
-path_u = strcat('../relatorio/figs/u/',name,'.eps');
-path_yp = strcat('../relatorio/figs/yp/',name,'.eps');
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
 
-%--------------- Fig1 -------------
-figure(1);
-clf;
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
 
-h1 = subplot(211);
-plot(t,e0_g1,t,e0_g1dz,'Linew',0.5);
-grid on;
-titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma1), '$');
-title(titleStr);
-legend(par1,par2,'Location','SouthEast');
+%-----------------------------
 
-h2 = subplot(212);
-plot(t,e0_g2,t,e0_g2dz,'Linew',0.5);
-grid on
-titleStr = strcat('$e_0$ com $\gamma = ',num2str(gamma2), '$');
-title(titleStr);
-legend(par1,par2,'Location','SouthEast');
+yp0 = yp0_2;
+run set_model.m;
 
-%Reduce gap btw subplots
-pos_pct = .05;
-set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
 
-print(path_e0,'-depsc2') 
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
 
-%--------------- Fig2 -------------
-Thetas = thetas*ones(size(t));
-figure(2);
-clf;
+%Print plots
+name = strcat('yp0','_',num2str(param1),'_',num2str(param2));
+PRINT = 'OFF';  %'ON' : imprime diagramas do simulink
+run print_plots.m
 
-h1 = subplot(211);
-plot(t,theta_g1,t,theta_g1dz,t,Thetas,'Linew',0.5);
-grid on;
-titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma1), '$');
-title(titleStr);
-legend(par1,par2,'$\theta$*','Location','SouthEast')
+%----------------------------------- Simulation 3: yp0 variation -----
 
-h2 = subplot(212);
-plot(t,theta_g2,t,theta_g2dz,t,Thetas,'Linew',0.5);
-grid on;
-titleStr = strcat('$\theta$, $\theta*$ com $\gamma = ',num2str(gamma2), '$');
-title(titleStr);
-legend(par1,par2,'$\theta$*','Location','SouthEast')
+run parameters.m;
+paramstr = 'y_p(0)';
+param1 = yp0;
+param2 = yp0_3;
+run set_model.m;
 
-%Reduce gap btw subplots
-pos_pct = .05;
-set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
 
-print(path_theta,'-depsc2')
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
 
-%--------------- Fig3 -------------
-figure(3);
-clf;
+%-----------------------------
 
-h1 = subplot(211);
-hold on;
-plot(t,yp_g1)
-plot(t,yp_g1dz,t,r,t,ym,'Linew',0.5)
-grid on
-titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma1), '$');
-title(titleStr);
-legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
+yp0 = yp0_3;
+run set_model.m;
 
-h2 = subplot(212);
-hold on;
-plot(t,yp_g2)
-plot(t,yp_g2dz,t,r,t,ym,'Linew',0.5)
-grid on
-titleStr = strcat('$r$, $y_m$, $y_p$ com $\gamma = ',num2str(gamma2), '$');
-title(titleStr);
-legend(par1,par2,'$r$','$y_m$','Location','SouthEast')
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
 
-%Reduce gap btw subplots
-pos_pct = .05;
-set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
 
-print(path_yp,'-depsc2')
+%Print plots
+name = strcat('yp0','_',num2str(param1),'_',num2str(param2));
+PRINT = 'OFF';  %'ON' : imprime diagramas do simulink
+run print_plots.m
 
-%--------------- Fig4 -------------
-deltatheta_g1 = theta_g1 - thetas;
-deltatheta_g2 = theta_g2 - thetas;
-deltatheta_g1dz = theta_g1dz - thetas;
-deltatheta_g2dz = theta_g2dz - thetas;
-figure(4);
-clf;
+%----------------------------------- Simulation 4: ap variation -----
 
-subplot(121);
-hold on
-plot(e0_g1,deltatheta_g1)
-plot(e0_g1dz,deltatheta_g1dz)
-grid on
-%axis equal
-titleStr = strcat('$e_0$ vs. $\tilde{\theta}$ com $\gamma = ',num2str(gamma1), '$');
-title(titleStr);
-xlabel('$e_0$')
-ylabel('$\tilde{\theta}$')
-legend(par1,par2,'Location','SouthEast')
+run parameters.m;
+paramstr = 'a_p';
+param1 = ap;
+param2 = ap_2;
+run set_model.m;
 
-subplot(122);
-hold on
-plot(e0_g2,deltatheta_g2)
-plot(e0_g2dz,deltatheta_g2dz)
-grid on
-%axis equal
-titleStr = strcat('$e_0$ vs. $\tilde{\theta}$ com $\gamma = ',num2str(gamma2), '$');
-title(titleStr);
-xlabel('$e_0$')
-ylabel('$\tilde{\theta}$')
-legend(par1,par2,'Location','SouthEast')
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
 
-print(path_e0_vs_deltatheta,'-depsc2')
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
 
-%--------------- Fig5 -------------
-figure(5)
-clf
+%-----------------------------
 
-h1 = subplot(211);
-hold on
-plot(t,u_g1)
-plot(t,u_g1dz,'Linew',0.5)
-grid on
-titleStr = strcat('$u$ com $\gamma = ',num2str(gamma1), '$');
-title(titleStr);
-legend(par1,par2,'Location','SouthEast')
+ap = ap_2;
+run set_model.m;
 
-h2 = subplot(212);
-hold on
-plot(t,u_g2)
-plot(t,u_g2dz,'Linew',0.5)
-grid on
-titleStr = strcat('$u$ com $\gamma = ',num2str(gamma2), '$');
-title(titleStr);
-legend(par1,par2,'Location','SouthEast')
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
 
-%Reduce gap btw subplots
-pos_pct = .05;
-set(h2,'Position',[h2.Position(1), h2.Position(2) + pos_pct*(h1.Position(2) - h2.Position(2)), h2.Position(3), h2.Position(4)]);
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
 
-print(path_u, '-depsc2')
+%Print plots
+name = strcat('ap','_',num2str(param1),'_',num2str(param2));
+PRINT = 'OFF';  %'ON' : imprime diagramas do simulink
+run print_plots.m
 
-%--------------------------------------- Impress?o dos diagramas -----
-if strcmp(PRINT,'ON')
-    open_system('MRAC_111_8_5');
-%     print -dpdf -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.pdf
-    print -depsc2 -sMRAC_111_8_5 ../relatorio/figs/blocks/MRAC_111_8_5.eps
-    
-    open_system('MRAC_111_8_5/Plant');
-%     print -dpdf -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.pdf
-    print -depsc2 -sMRAC_111_8_5/Plant ../relatorio/figs//blocks/plant.eps
-    
-    open_system('MRAC_111_8_5/Reference model');
-%     print -dpdf '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.pdf
-    print -depsc2 '-sMRAC_111_8_5/Reference model' ../relatorio/figs//blocks/reference-model.eps
-    
-    open_system('MRAC_111_8_5/Adaptation');
-%     print -dpdf -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.pdf
-    print -depsc2 -sMRAC_111_8_5/Adaptation ../relatorio/figs//blocks/adaptation.eps
-    
-    open_system('MRAC_111_8_5/Reference signal');
-%     print -dpdf '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.pdf
-    print -depsc2 '-sMRAC_111_8_5/Reference signal' ../relatorio/figs//blocks/reference-signal.eps
-    
-    close_system('MRAC_111_8_5');
-end
+%----------------------------------- Simulation 5: am variation -----
+
+run parameters.m;
+paramstr = 'a_m';
+param1 = am;
+param2 = am_2;
+run set_model.m;
+
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
+
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
+
+%-----------------------------
+
+am = am_2;
+run set_model.m;
+
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
+
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
+
+%Print plots
+name = strcat('am','_',num2str(param1),'_',num2str(param2));
+PRINT = 'OFF';  %'ON' : imprime diagramas do simulink
+run print_plots.m
+
+%----------------------------------- Simulation 5: af variation -----
+
+run parameters.m;
+paramstr = 'a_f';
+param1 = af;
+param2 = af_2;
+run set_model.m;
+
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1 = yp;   %Save results
+e0_g1 = e0;
+theta_g1 = theta;
+u_g1 = u;
+
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g1dz = yp;   %Save results
+e0_g1dz = e0;
+theta_g1dz = theta;
+u_g1dz = u;
+
+%-----------------------------
+
+af = af_2;
+run set_model.m;
+
+m_type = 1; %without dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2 = yp;   %Save results
+e0_g2 = e0;
+theta_g2 = theta;
+u_g2 = u;
+
+m_type = 2; %with dotzeta
+sim('MRAC_111_8_5',tfinal);
+yp_g2dz = yp;   %Save results
+e0_g2dz = e0;
+theta_g2dz = theta;
+u_g2dz = u;
+
+%Print plots
+name = strcat('af','_',num2str(param1),'_',num2str(param2));
+PRINT = 'OFF';  %'ON' : imprime diagramas do simulink
+run print_plots.m
