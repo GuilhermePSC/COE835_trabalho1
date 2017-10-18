@@ -27,6 +27,10 @@ motivando portanto a \textit{definição} da predição de saída dada por \eqref{eq:
 
 Utilizando a candidata à função de Lyapunov $2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2$, derivando no tempo e aplicando a lei de adaptação \eqref{eq:adpt_law}, obtemos:
 %
-$$\dot{V} = -\frac{\epsilon^2}{m^2} \leq 0 \,,$$
+$$\dot{V} = -\frac{\epsilon^2}{m^2} \leq 0 \,.$$
 %
-de onde conclui-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$. \rev{É possível demonstrar que $\epsilon, e_0 \rightarrow 0$.}
+Portanto, conclui-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$ e ainda:
+%
+$$ \int^{\infty}_{0} \frac{\epsilon^2}{m^2} \le \infty \,, \int^{\infty}_{0} \dot{\theta}^2 \le \infty \,.$$
+%
+Utilizando extes resultados, é possível demonstrar que $\epsilon \rightarrow 0, e_0 \rightarrow 0$.
