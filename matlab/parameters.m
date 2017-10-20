@@ -32,7 +32,7 @@ ap_default = -2;
 am_default = 1;
 af_default = 1;
 yp0_default = 0;
-gamma_default = 0;
+gamma_default = 5;
 
 %Plant Parameters
 ap1 = ap_default;
