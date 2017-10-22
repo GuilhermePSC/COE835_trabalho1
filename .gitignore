@@ -163,5 +163,3 @@ sympy-plots-for-*.tex/
 *.tps
 #Merge tools
 *.orig
-/relatorio/
-/relatorio_indireto/
