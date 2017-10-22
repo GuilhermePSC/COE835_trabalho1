@@ -25,7 +25,7 @@ disp(' ')
 disp('-------------------------------')
 
 PRINT = 'OFF';  %'ON' : imprime diagramas
-
+quit = 0;
 
 % --------------- Default Parameters --------------------
 ap_default = -2;
@@ -92,14 +92,17 @@ if strcmp(PRINT,'ON')
 end
 
 finish = 0;
-evalin('base','app1')
+evalin('base','app_indireto')
 
-while 1
+while ~quit
     
     while ~finish
         pause(1)
     end
-    plot_indireto
+    
+    if ~quit && finish
+        plot_indireto
+    end
 
     % --------------- Change to Default --------------------
     %Plant Parameters
