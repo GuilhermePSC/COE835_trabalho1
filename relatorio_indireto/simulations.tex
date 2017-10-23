@@ -22,51 +22,42 @@ Apresentaremos os resultados obtidos através de simulações no ambiente \HI{\text
 
 \subsection{Simulação \#1}
 
-Inicialmente, desejamos verificar o comportamento do sistema para variações no ganho de adaptação $\gamma$, para condições iniciais \textit{nulas}.
+Inicialmente, desejamos verificar o comportamento do sistema para variações no ganho de adaptação $\gamma$.
 
 \bigskip%
 Parâmetros e condições iniciais :
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= \HI{2, 100}\,, \\
   r &= 1\,, & a_f &= 1\,.
 \end{align*}
 
 \bigskip%
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/e0/ap-2am1yp00af1.eps} \\[2mm]
+  \includegraphics[width=12cm]{figs/e0/gamma2gamma100.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/epsilon/ap-2am1yp00af1.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/gamma2gamma100.eps} 
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/theta/gamma2gamma100.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/k/ap-2am1yp00af1.eps} 
+  \includegraphics[width=12cm]{figs/yp/gamma2gamma100.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/ap-2am1yp00af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/yp/ap-2am1yp00af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/yhat/ap-2am1yp00af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/u/ap-2am1yp00af1.eps} 
+  \includegraphics[width=12cm]{figs/u/gamma2gamma100.eps} 
 \end{figure}
 
 \newpage%
@@ -74,49 +65,38 @@ Parâmetros e condições iniciais :
 \subsection{Simulação \#2}
 
 \bigskip%
-Parâmetros e condições iniciais  :
+Parâmetros e condições iniciais:
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
-  r &= 1\,, & a_f &= \HI{5}\,.
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 5\,, \\
+  r &= 1\,, & a_f &= \HI{2, 5}\,.
 \end{align*}
 
-\bigskip%
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/e0/ap-2am1yp00af5.eps} \\[2mm]
-\end{figure}
-
-%---------------------------------------------------------------------
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/epsilon/ap-2am1yp00af5.eps} 
+  \includegraphics[width=12cm]{figs/e0/af2af5.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/k/ap-2am1yp00af5.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/af2af5.eps} 
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/theta/af2af5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/ap-2am1yp00af5.eps} 
+  \includegraphics[width=12cm]{figs/yp/af2af5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yp/ap-2am1yp00af5.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/yhat/ap-2am1yp00af5.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/u/ap-2am1yp00af5.eps} 
+  \includegraphics[width=12cm]{figs/u/af2af5.eps} 
 \end{figure}
 
 \newpage%
@@ -126,150 +106,121 @@ Parâmetros e condições iniciais  :
 \bigskip%
 Parâmetros e condições iniciais  :
 %
-\begin{align*}
-  a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
-  r &= 1\,, & a_f &= \HI{10}\,.
-\end{align*}
 
 \bigskip%
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/e0/ap-2am1yp00af10.eps} \\[2mm]
-\end{figure}
-
-%---------------------------------------------------------------------
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/epsilon/ap-2am1yp00af10.eps} 
-\end{figure}
+Parâmetros e condições iniciais:
+%
+\begin{align*}
+  a_p &= \HI{-2, -5}\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 5\,, \\
+  r &= 1\,, & a_f &= 1\,.
+\end{align*}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/k/ap-2am1yp00af10.eps} 
+  \includegraphics[width=12cm]{figs/e0/ap-2ap-5.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/ap-2am1yp00af10.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/ap-2ap-5.eps} 
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/theta/ap-2ap-5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yp/ap-2am1yp00af10.eps} 
+  \includegraphics[width=12cm]{figs/yp/ap-2ap-5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yhat/ap-2am1yp00af10.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/u/ap-2am1yp00af10.eps} 
+  \includegraphics[width=12cm]{figs/u/ap-2ap-5.eps} 
 \end{figure}
 
 \newpage%
-%-------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------
 
 \subsection{Simulação \#4}
 
 \bigskip%
-Parâmetros e condições iniciais  :
+Parâmetros e condições iniciais:
 %
 \begin{align*}
-  a_p &= -2\,,  &  y_p(0) &= \HI{2}\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
+  a_m &= \HI{2, 5}\,,   &  y_m(0) &= 0\,, & \gamma &= 5\,, \\
   r &= 1\,, & a_f &= 1\,.
 \end{align*}
 
-\bigskip%
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/e0/ap-2am1yp02af1.eps} \\[2mm]
-\end{figure}
-
-%---------------------------------------------------------------------
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/epsilon/ap-2am1yp02af1.eps} 
+  \includegraphics[width=12cm]{figs/e0/am2am5.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/k/ap-2am1yp02af1.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/am2am5.eps} 
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/theta/am2am5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/ap-2am1yp02af1.eps} 
+  \includegraphics[width=12cm]{figs/yp/am2am5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yp/ap-2am1yp02af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/yhat/ap-2am1yp02af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/u/ap-2am1yp02af1.eps} 
+  \includegraphics[width=12cm]{figs/u/am2am5.eps} 
 \end{figure}
 
 \newpage%
-%-------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------
 
 \subsection{Simulação \#5}
 
 \bigskip%
-Parâmetros e condições iniciais  :
+Parâmetros e condições iniciais:
 %
 \begin{align*}
-  a_p &= -2\,,  &  y_p(0) &= \HI{10}\,, & \theta(0) &= 0\,, \\
-  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 2,\ 100\,, \\
+  a_p &= -2\,,  &  y_p(0) &= \HI{0, 5}\,, & \theta(0) &= 0\,, \\
+  a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 5\,, \\
   r &= 1\,, & a_f &= 1\,.
 \end{align*}
 
-\bigskip%
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/e0/ap-2am1yp010af1.eps} \\[2mm]
-\end{figure}
-
-%---------------------------------------------------------------------
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/epsilon/ap-2am1yp010af1.eps} 
+  \includegraphics[width=12cm]{figs/e0/yp00yp05.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/k/ap-2am1yp010af1.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/yp00yp05.eps} 
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{figs/theta/yp00yp05.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/ap-2am1yp010af1.eps} 
+  \includegraphics[width=12cm]{figs/yp/yp00yp05.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yp/ap-2am1yp010af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/yhat/ap-2am1yp010af1.eps} 
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=12cm]{figs/u/ap-2am1yp010af1.eps} 
+  \includegraphics[width=12cm]{figs/u/yp00yp05.eps} 
 \end{figure}
 
 \newpage%
-%------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------
