@@ -123,12 +123,6 @@ Novamente utilizando o Lema 1, mostra-se que os sinais constituintes de $\dot{\v
 
 Suponha que o filtro seja dado por \eqref{eq:filter}. A equação dinâmica do erro é dada por \eqref{eq:error_eq}. Assim, o erro pode ser escrito de forma similar a \eqref{eq:error1}:
 %
-%\begin{flalign}
-%e_0 &= \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\tilde{\theta}\,y_p\} \,, \quad G(s) = \frac{s+a_f}{s+a_m} \nonumber \\ 
-%&= \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\theta\,y_p\} - \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\theta^{*}\,y_p\}
-%\label{eq:error1}
-%\end{flalign}
-%
 \begin{flalign}
 e_0 &= G(s) \odot \{\tilde{\theta}\,\zeta\} \,, \qquad G(s) = \frac{s+a_f}{s+a_m} \nonumber \\ 
 &= G(s) \odot \{\theta\,\zeta\} - \theta^{*} G(s) \{\zeta\}
@@ -140,7 +134,7 @@ Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa é dado por:
 \begin{flalign}
 \varepsilon &= e_0 - \hat{e} \nonumber \\ 
 &= G(s) \odot \{\theta\,\zeta\} - \theta^{*} \, G(s) \{\zeta\} - G(s) \odot \{\theta\,\zeta\} + \theta \, G(s) \{\zeta\} \nonumber \\
-&= \tilde{\theta} \,,
+&= \tilde{\theta} \, \xi \,,
 \label{eq:erro_est4}
 \end{flalign}
 %
@@ -152,4 +146,13 @@ Propondo a mesma funcao de Lyapunov de antes \eqref{eq:lyap}, derivando e substi
 \dot{V} &= - \frac{\tilde{\theta}^2 \, \zeta \, \xi}{m^2} \leq 0 \,.
 \end{flalign}
 %
-Note que, devido à relação entre $\xi$ e $\zeta$, \textcolor{red}{............}
+Note que, com a função de Lyapunov proposta, não é possível assegurar a limitação de $\tilde{\theta}$. Além disso, também não é imediato demonstrar a limitação de $\dot{\varepsilon}/m$ para a atual definição de $m$. 
+%
+Entretanto, modificando a lei de adaptação proposta para:
+%
+\begin{equation}
+\dot{\theta} = - \frac{\gamma \varepsilon \xi}{m^2} \,, \qquad m^2 = 1 + \xi^2 + \dot{\xi}^2 \,,
+\label{eq:adpt_law2}
+\end{equation}
+%
+é perfeitamente possível provar a limitação de $\tilde{\theta}$, $\varepsilon}/m$ e $\dot{\varepsilon}/m$ utilizando a mesma função de Lyapunov e um raciocínio de cálculo análogo ao da seção anterior.
