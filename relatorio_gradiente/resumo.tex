@@ -5,6 +5,8 @@
 
 \vspace{20mm}
 
+\noindent
+
 \equacao{Planta}
   {\dot{y}_p = a_p y_p + u \label{eq:planta}}
 
@@ -18,10 +20,10 @@
   {u = \theta \, y_p + r \label{eq:ctrl_law}}
 
 \equacao{Filtro}
-  {\dot{\zeta} + a_m \, \zeta = y_p \label{eq:filter}}
+  {\dot{\zeta} + a_f \, \zeta = y_p \label{eq:filter}}
 
 \equacao{Estimativa do erro}
-  {\hat{e} = \mathcal{L}^{-1}\left\{\frac{\theta y_p }{s+a_m}\right\}- \theta\zeta \label{eq:est_error}}
+  {\hat{e} = \mathcal{L}^{-1}\left\{\frac{\Theta Y_p }{s+a_f}\right\}- \theta\zeta \label{eq:est_error}}
 
 \equacao{Erro de estimativa}
   {\varepsilon = e_0 - \hat{e} \label{eq:error_est}}

@@ -27,8 +27,8 @@ Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a dinâmic
 ou ainda:
 %
 \begin{flalign}
-e_0 &= \mathcal{L}^{-1}\left\{\frac{\tilde{\theta}\,y_p}{s+a_m}\right\} \nonumber \\ 
-&= \mathcal{L}^{-1}\left\{\frac{\theta\,y_p}{s+a_m}\right\} - \theta^* \, \zeta \,,
+e_0 &= \mathcal{L}^{-1}\left\{\frac{\tilde{\Theta}\,Y_p}{s+a_m}\right\} \nonumber \\ 
+&= \mathcal{L}^{-1}\left\{\frac{\Theta\,Y_p}{s+a_m}\right\} - \theta^* \, \zeta \,,
 \end{flalign}
 %
 onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa.
@@ -38,7 +38,7 @@ Assim, o erro de estimativa pode ser escrito como:
 %
 \begin{flalign}
 \varepsilon &= e_0 - \hat{e} \nonumber \\ 
-&=\mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} + \theta \, \zeta \nonumber \nonumber \\
+&=\mathcal{L}^{-1}\left\{\frac{\Theta \, Y_p}{s+a_m}\right\} - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{\Theta \, Y_p}{s+a_m}\right\} + \theta \, \zeta \nonumber \nonumber \\
 &= \tilde{\theta} \, \zeta \,.
 \label{eq:erro_est}
 \end{flalign}
