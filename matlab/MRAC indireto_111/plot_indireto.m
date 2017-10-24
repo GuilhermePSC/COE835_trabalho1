@@ -54,7 +54,9 @@ titleStr = strcat('$e_0$ ', title2);
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
-print(path_e0,'-depsc2') 
+if strcmp(PRINT,'ON')
+    print(path_e0,'-depsc2') 
+end
 
 %--------------- Fig2 -------------
 figure(2);
@@ -74,7 +76,9 @@ titleStr = strcat('$\epsilon$ ', title2);
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
-print(path_epsilon,'-depsc2') 
+if strcmp(PRINT,'ON')
+    print(path_epsilon,'-depsc2') 
+end
 
 %--------------- Fig3 -------------
 figure(3);
@@ -99,7 +103,9 @@ titleStr = strcat('$\theta$ ', title2);
 title(titleStr);
 legend(par1,par2,'$\theta$*','$\theta2$*','Location','SouthEast');
 
-print(path_theta,'-depsc2') 
+if strcmp(PRINT,'ON')
+    print(path_theta,'-depsc2') 
+end
 
 %--------------- Fig4 -------------
 figure(4);
@@ -119,7 +125,9 @@ titleStr = strcat('$\hat{y}$ ', title2);
 title(titleStr);
 legend(par1,par2,'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
 
-print(path_yp,'-depsc2') 
+if strcmp(PRINT,'ON')
+    print(path_yp,'-depsc2') 
+end
 
 %--------------- Fig5 -------------
 figure(5)
@@ -143,5 +151,6 @@ titleStr = strcat('$u$ ',title2);
 title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-print(path_u, '-depsc2')
-
+if strcmp(PRINT,'ON')
+    print(path_u, '-depsc2')
+end

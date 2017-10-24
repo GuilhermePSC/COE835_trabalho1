@@ -23,7 +23,7 @@ disp('Algoritmo: Método indireto')
 disp(' ')
 disp('-------------------------------')
 
-PRINT = 'OFF';  %'ON' : imprime diagramas
+PRINT = 'OFF';  %'ON' : imprime figuras
 quit = 0;
 
 % --------------- Default Parameters --------------------
