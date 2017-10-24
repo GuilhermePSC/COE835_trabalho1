@@ -9,10 +9,12 @@ O método MRAC indireto consiste em uma realimentacão de saída utilizando um ganh
   \caption{Estrutura do MRAC indireto.}
 \end{figure}
 
-Como em outros esquemas MRAC, este controle possui um modelo de referência desejado que é utilizado para a geracão de um sinal de erro de saída \eqref{eq:error}. Ele também possui um filtro estável de primeira ordem que é aplicado sobre os sinais de entrada e saída. Assim, é possível escrever a saída do sistema como
+Como em outros esquemas MRAC, este controle possui um modelo de referência
+desejado que é utilizado para a geração de um sinal de erro de saída \eqref{eq:error}. Ele também possui um filtro estável de primeira ordem que é aplicado sobre os sinais de entrada e saída. Assim, é possível escrever a saída do sistema como
 %
 \begin{equation}
-y = \theta^* \, \phi + \mathcal{L}^{-1}\left\{ \frac{1}{s+a_f} \right\} \,, \quad \theta^* = a_f + a_p \,,
+y = \theta^* \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \,,
+\quad \theta^* = a_f + a_p \,,
 \label{eq:saida}
 \end{equation}
 %
@@ -20,7 +22,8 @@ motivando portanto a \textit{definição} da predição de saída dada por \eqref{eq:
 %
 \begin{flalign}
 \epsilon &= \hat{y} - y \nonumber \\
-&= \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} - \theta^* \, \phi - \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \nonumber \\
+&= \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} - \theta^*
+\, \phi - \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} \nonumber \\
 &= ( \theta - \theta^*) \, \phi = \tilde{\theta} \, \phi \,.
 \label{eq:pred_error2}
 \end{flalign}
@@ -33,4 +36,14 @@ Portanto, conclui-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$ e ainda:
 %
 $$ \int^{\infty}_{0} \frac{\epsilon^2}{m^2} \le \infty \,, \int^{\infty}_{0} \dot{\theta}^2 \le \infty \,.$$
 %
-Utilizando extes resultados, é possível demonstrar que $\epsilon \rightarrow 0, e_0 \rightarrow 0$.
+Utilizando estes resultados, é possível demonstrar que $\epsilon \rightarrow 0,
+e_0 \rightarrow 0$.
+
+Alternativamente, podemos usar a parametrização $\theta^* = a_p$, e, em vez da
+Equação \eqref{eq:saida}, obtemos uma equação similar para a saída $y$
+\eqref{eq:saida2}:
+ \begin{equation}
+y - \mathcal{L}^{-1}\left\{ \frac{a_fY}{s+a_f} \right\}= \theta^* \, \phi +
+\mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} \,, \quad \theta^* = a_p \,,
+\label{eq:saida2}
+\end{equation}
