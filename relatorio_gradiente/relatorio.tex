@@ -13,6 +13,9 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[latin1]{inputenc} %pacote para utilizar palavras acentuadas
 \usepackage{amsmath,amssymb}  %pacotes do AMS
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsthm}
 \usepackage{latexsym}         %pacote para incluir símbolos (ex.\Box)
 \usepackage{fancybox,fancyhdr}%pacote com frescuras
 \usepackage{graphicx}         %pacote para incluir figuras tipo eps
@@ -28,7 +31,10 @@
   colorlinks=true,
   linkcolor=blue
 }
-     
+%
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+
 \input{macros}
 
 \begin{document}

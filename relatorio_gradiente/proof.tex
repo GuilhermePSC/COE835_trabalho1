@@ -15,30 +15,53 @@ Note que, como $a_p$ não é conhecido, $\theta^*$ também não o é, e por isso a ad
 
 Inicialmente, filtra-se o sinal de saída $y_p(t)$ utilizando a função de transferência do modelo de referência, produzindo o sinal de saída filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal é utilizado para a construção da estimativa \eqref{eq:est_error} do erro de saída \eqref{eq:error} e na própria lei de adaptação do parâmetro $\theta$, dada em \eqref{eq:adpt_law}.
 
+A seguir, apresentamos um lema que será útil no desenvolvimento das demonstracões teóricas que se seguirão.
+
+\begin{lemma}
+Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Então:
+%
+\begin{flalign}
+\norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
+\norm{\frac{b}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,. \nonumber
+\end{flalign}
+%
+\end{lemma}
+
+\begin{proof} A demonstracão é trivial. Como $a^2,b^2 \geq 0$, $a^2 \leq 1+a^2+C^2$ e $b^2 \leq 1+b^2+C^2$, onde $C \in \mathbb{R}$. Dividindo ambos os lados por $1+a^2+b^2$ (considerando $C = a$ ou $C = b$) e aplicando a raiz quadrada, prova-se o lema anterior. $\blacksquare$
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Prova da limitação de $\dot{\varepsilon}/m$}
 
+\begin{theorem}
+Suponha que o pólo do filtro é idêntico ao pólo do modelo de referência adotado ($a_f = a_m$). Então, $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$.
+\end{theorem}
+
+\begin{proof}
 Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a dinâmica do erro de saída é expressa por:
 %
 \begin{flalign}
 \dot{e}_0 &= \dot{y}_p - \dot{y}_m \nonumber \\
-&= -a_m \, e_0 + \tilde{\theta} \, y_p \,,
+&= -a_m \, e_0 + \tilde{\theta} \, y_p \,.
+\label{eq:error_eq}
 \end{flalign}
 %
-ou ainda:
+Utilizando a hipótese do teorema ($a_f = a_m$), é possível escrever:
 %
 \begin{flalign}
-e_0 &= \mathcal{L}^{-1}\left\{\frac{\tilde{\theta}\,y_p}{s+a_m}\right\} \nonumber \\ 
-&= \mathcal{L}^{-1}\left\{\frac{\theta\,y_p}{s+a_m}\right\} - \theta^* \, \zeta \,,
+e_0 &= M(s) \odot \{\tilde{\theta}\,y_p\} \,, \qquad M(s) = \frac{1}{s+a_m} \nonumber \\ 
+&= M(s) \odot \{\theta\,y_p\} - \theta^* \, \zeta \,,
+\label{eq:error1}
 \end{flalign}
 %
-onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa.
+onde $\odot$ denota a transformada de Laplace à esquerda como um \textit{operador} sobre o sinal.
 %onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa e $\theta^*$ é o ganho de realimentação ideal.
 %
 Assim, o erro de estimativa pode ser escrito como:
 %
 \begin{flalign}
 \varepsilon &= e_0 - \hat{e} \nonumber \\ 
-&=\mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} - \theta^* \, \zeta - \mathcal{L}^{-1}\left\{\frac{\theta \, y_p}{s+a_m}\right\} + \theta \, \zeta \nonumber \nonumber \\
+&= M(s) \odot \{\theta \, y_p\} - \theta^* \, \zeta - M(s) \odot \{\theta \, y_p\} + \theta \, \zeta \nonumber \\
 &= \tilde{\theta} \, \zeta \,.
 \label{eq:erro_est}
 \end{flalign}
@@ -46,7 +69,7 @@ Assim, o erro de estimativa pode ser escrito como:
 A seguinte candidata à função de Lyapunov é proposta:
 %
 \begin{equation}
-2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0
+2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0 \label{eq:lyap}
 \end{equation}
 
 Derivando no tempo e utilizando a lei de adaptação proposta, tem-se:
@@ -58,15 +81,15 @@ Derivando no tempo e utilizando a lei de adaptação proposta, tem-se:
 %
 onde \eqref{eq:adpt_law} e \eqref{eq:erro_est} foram utilizadas. Como $\dot{V}$ é apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
 
-\begin{lemma}
-Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Então:
-%
-\begin{flalign}
-\norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
-\norm{\frac{b}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,. \nonumber
-\end{flalign}
-%
-\end{lemma}
+%\begin{lemma}
+%Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Então:
+%%
+%\begin{flalign}
+%\norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
+%\norm{\frac{b}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,. \nonumber
+%\end{flalign}
+%%
+%\end{lemma}
 
 Dividindo \eqref{eq:erro_est} por $m = \sqrt{1+\zeta^2+\dot{\zeta}^2}$, obtemos:
 %
@@ -93,3 +116,40 @@ Finalmente, derivando \eqref{eq:erro_est} no tempo e divindo por $m$, obtemos:
 \end{flalign}
 
 Novamente utilizando o Lema 1, mostra-se que os sinais constituintes de $\dot{\varepsilon}/m$ são limitados, e portanto $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$. $\blacksquare$
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Análise de estabilidade da lei de adaptação (caso geral)}
+
+Suponha que o filtro seja dado por \eqref{eq:filter}. A equação dinâmica do erro é dada por \eqref{eq:error_eq}. Assim, o erro pode ser escrito de forma similar a \eqref{eq:error1}:
+%
+%\begin{flalign}
+%e_0 &= \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\tilde{\theta}\,y_p\} \,, \quad G(s) = \frac{s+a_f}{s+a_m} \nonumber \\ 
+%&= \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\theta\,y_p\} - \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\theta^{*}\,y_p\}
+%\label{eq:error1}
+%\end{flalign}
+%
+\begin{flalign}
+e_0 &= G(s) \odot \{\tilde{\theta}\,\zeta\} \,, \qquad G(s) = \frac{s+a_f}{s+a_m} \nonumber \\ 
+&= G(s) \odot \{\theta\,\zeta\} - \theta^{*} G(s) \{\zeta\}
+\label{eq:error2}
+\end{flalign}
+%
+Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa é dado por:
+%
+\begin{flalign}
+\varepsilon &= e_0 - \hat{e} \nonumber \\ 
+&= G(s) \odot \{\theta\,\zeta\} - \theta^{*} \, G(s) \{\zeta\} - G(s) \odot \{\theta\,\zeta\} + \theta \, G(s) \{\zeta\} \nonumber \\
+&= \tilde{\theta} \,,
+\label{eq:erro_est4}
+\end{flalign}
+%
+onde $\xi = G(s) \{\zeta\}$.
+%
+Propondo a mesma funcao de Lyapunov de antes \eqref{eq:lyap}, derivando e substituindo a lei de adaptação \eqref{eq:adpt_law}, obtém-se:
+%
+\begin{flalign}
+\dot{V} &= - \frac{\tilde{\theta}^2 \, \zeta \, \xi}{m^2} \leq 0 \,.
+\end{flalign}
+%
+Note que, devido à relação entre $\xi$ e $\zeta$, \textcolor{red}{............}
