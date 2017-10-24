@@ -27,13 +27,14 @@ Abaixo, resumimos algumas das principais equações utilizadas no método.
   {k(t) = -\hat{a}_p-a_m \label{eq:est_gain}}
 
 \equacao{Saída filtrada}
-	{\phi = \mathcal{L}^{-1}\left\{ \frac{y}{s+a_f} \right\}}
+	{\phi = \mathcal{L}^{-1}\left\{ \frac{Y}{s+a_f} \right\}}
 
 \equacao{Parâmetro estimado}
 	{\theta = a_f + \hat{a}_p}
 
 \equacao{Predição da saída}
-	{\hat{y} = \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \label{eq:pred_saida} }
+	{\hat{y} = \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\}
+	\label{eq:pred_saida} }
 
 \equacao{Erro de Predicao}
 	{\epsilon = \hat{y} - y \label{eq:pred_error}}

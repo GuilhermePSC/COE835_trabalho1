@@ -1,24 +1,24 @@
 %---------------------------------------------------------------------
-\section{O mÈtodo do gradiente}
+\section{O m√©todo do gradiente}
 
-No mÈtodo do gradiente, deseja-se minimizar um \textit{erro de estimativa} atravÈs de de uma \textit{lei de adaptaÁ„o} normalizada baseada na descida do gradiente da funÁ„o custo
+No m√©todo do gradiente, deseja-se minimizar um \textit{erro de estimativa} atrav√©s de de uma \textit{lei de adapta√ß√£o} normalizada baseada na descida do gradiente da fun√ß√£o custo
 %
 \begin{equation}
 J = \frac{\varepsilon^2}{m^2} = \frac{\tilde{\theta}^2\,\zeta^2}{m^2} \,,
 \end{equation}
 %
-onde $\tilde{\theta} = \theta - \theta^*$ e $\theta^*$ È o ganho de realimentaÁ„o ideal.
+onde $\tilde{\theta} = \theta - \theta^*$ e $\theta^*$ √© o ganho de realimenta√ß√£o ideal.
 %
-Seja o modelo real da planta dado por \eqref{eq:planta}, o modelo de referÍncia dado por \eqref{eq:ref_model} e a lei de controle \eqref{eq:ctrl_law}, o mÈtodo do gradiente consiste em adaptar o par‚metro de ganho de realimentaÁ„o $\theta$ atÈ o seu valor ideal $\theta^* = -a_p-a_m$, que realocar· o pÛlo \textit{desconhecido} $a_p$ da planta atÈ o pÛlo est·vel e conhecido do modelo de referÍncia desejado $-a_m$.
+Seja o modelo real da planta dado por \eqref{eq:planta}, o modelo de refer√™ncia dado por \eqref{eq:ref_model} e a lei de controle \eqref{eq:ctrl_law}, o m√©todo do gradiente consiste em adaptar o par√¢metro de ganho de realimenta√ß√£o $\theta$ at√© o seu valor ideal $\theta^* = -a_p-a_m$, que realocar√° o p√≥lo \textit{desconhecido} $a_p$ da planta at√© o p√≥lo est√°vel e conhecido do modelo de refer√™ncia desejado $-a_m$.
 %
-Note que, como $a_p$ n„o È conhecido, $\theta^*$ tambÈm n„o o È, e por isso a adaptaÁ„o se faz necess·ria.
+Note que, como $a_p$ n√£o √© conhecido, $\theta^*$ tamb√©m n√£o o √©, e por isso a adapta√ß√£o se faz necess√°ria.
 
-Inicialmente, filtra-se o sinal de saÌda $y_p(t)$ utilizando a funÁ„o de transferÍncia do modelo de referÍncia, produzindo o sinal de saÌda filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal È utilizado para a construÁ„o da estimativa \eqref{eq:est_error} do erro de saÌda \eqref{eq:error} e na prÛpria lei de adaptaÁ„o do par‚metro $\theta$, dada em \eqref{eq:adpt_law}.
+Inicialmente, filtra-se o sinal de sa√≠da $y_p(t)$ utilizando a fun√ß√£o de transfer√™ncia do modelo de refer√™ncia, produzindo o sinal de sa√≠da filtrada $\zeta(t)$ \eqref{eq:filter}. Este sinal √© utilizado para a constru√ß√£o da estimativa \eqref{eq:est_error} do erro de sa√≠da \eqref{eq:error} e na pr√≥pria lei de adapta√ß√£o do par√¢metro $\theta$, dada em \eqref{eq:adpt_law}.
 
-A seguir, apresentamos um lema que ser· ˙til no desenvolvimento das demonstracıes teÛricas que se seguir„o.
+A seguir, apresentamos um lema que ser√° √∫til no desenvolvimento das demonstrac√µes te√≥ricas que se seguir√£o.
 
 \begin{lemma}
-Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Ent„o:
+Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Ent√£o:
 %
 \begin{flalign}
 \norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
@@ -27,18 +27,18 @@ Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Ent„o:
 %
 \end{lemma}
 
-\begin{proof} A demonstrac„o È trivial. Como $a^2,b^2 \geq 0$, $a^2 \leq 1+a^2+C^2$ e $b^2 \leq 1+b^2+C^2$, onde $C \in \mathbb{R}$. Dividindo ambos os lados por $1+a^2+b^2$ (considerando $C = a$ ou $C = b$) e aplicando a raiz quadrada, prova-se o lema anterior. $\blacksquare$
+\begin{proof} A demonstrac√£o √© trivial. Como $a^2,b^2 \geq 0$, $a^2 \leq 1+a^2+C^2$ e $b^2 \leq 1+b^2+C^2$, onde $C \in \mathbb{R}$. Dividindo ambos os lados por $1+a^2+b^2$ (considerando $C = a$ ou $C = b$) e aplicando a raiz quadrada, prova-se o lema anterior. $\blacksquare$
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Prova da limitaÁ„o de $\dot{\varepsilon}/m$}
+\subsection{Prova da limita√ß√£o de $\dot{\varepsilon}/m$}
 
 \begin{theorem}
-Suponha que o pÛlo do filtro È idÍntico ao pÛlo do modelo de referÍncia adotado ($a_f = a_m$). Ent„o, $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$.
+Suponha que o p√≥lo do filtro √© id√™ntico ao p√≥lo do modelo de refer√™ncia adotado ($a_f = a_m$). Ent√£o, $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$.
 \end{theorem}
 
 \begin{proof}
-Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a din‚mica do erro de saÌda È expressa por:
+Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a din√¢mica do erro de sa√≠da √© expressa por:
 %
 \begin{flalign}
 \dot{e}_0 &= \dot{y}_p - \dot{y}_m \nonumber \\
@@ -46,7 +46,7 @@ Utilizando \eqref{eq:error}, \eqref{eq:planta} e \eqref{eq:ctrl_law} , a din‚mic
 \label{eq:error_eq}
 \end{flalign}
 %
-Utilizando a hipÛtese do teorema ($a_f = a_m$), È possÌvel escrever:
+Utilizando a hip√≥tese do teorema ($a_f = a_m$), √© poss√≠vel escrever:
 %
 \begin{flalign}
 e_0 &= M(s) \odot \{\tilde{\theta}\,y_p\} \,, \qquad M(s) = \frac{1}{s+a_m} \nonumber \\ 
@@ -54,8 +54,8 @@ e_0 &= M(s) \odot \{\tilde{\theta}\,y_p\} \,, \qquad M(s) = \frac{1}{s+a_m} \non
 \label{eq:error1}
 \end{flalign}
 %
-onde $\odot$ denota a transformada de Laplace ‡ esquerda como um \textit{operador} sobre o sinal.
-%onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa e $\theta^*$ È o ganho de realimentaÁ„o ideal.
+onde $\odot$ denota a transformada de Laplace √† esquerda como um \textit{operador} sobre o sinal.
+%onde o operador $\mathcal{L}^{-1}\{*\}$ denota a transformada de Laplace inversa e $\theta^*$ √© o ganho de realimenta√ß√£o ideal.
 %
 Assim, o erro de estimativa pode ser escrito como:
 %
@@ -66,23 +66,23 @@ Assim, o erro de estimativa pode ser escrito como:
 \label{eq:erro_est}
 \end{flalign}
 
-A seguinte candidata ‡ funÁ„o de Lyapunov È proposta:
+A seguinte candidata √† fun√ß√£o de Lyapunov √© proposta:
 %
 \begin{equation}
 2V(\tilde{\theta}) = \gamma^{-1} \, \tilde{\theta}^2 \ge 0 \label{eq:lyap}
 \end{equation}
 
-Derivando no tempo e utilizando a lei de adaptaÁ„o proposta, tem-se:
+Derivando no tempo e utilizando a lei de adapta√ß√£o proposta, tem-se:
 %
 \begin{flalign}
 \dot{V} &= \gamma^{-1} \, \tilde{\theta} \, \dot{\theta} \nonumber \\
 &= - \frac{\varepsilon^2}{m^2} \leq 0 \,,
 \end{flalign}
 %
-onde \eqref{eq:adpt_law} e \eqref{eq:erro_est} foram utilizadas. Como $\dot{V}$ È apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
+onde \eqref{eq:adpt_law} e \eqref{eq:erro_est} foram utilizadas. Como $\dot{V}$ √© apenas negativa \textit{semi-definida}, mostra-se que $\tilde{\theta} \in \mathcal{L}_{\infty}$.
 
 %\begin{lemma}
-%Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Ent„o:
+%Sejam $a,b \in \mathbb{R}$ e $m^2 = 1+a^2+b^2$. Ent√£o:
 %%
 %\begin{flalign}
 %\norm{\frac{a}{m}} \leq 1 \,, \quad \forall a,b \in \mathbb{R} \,, \nonumber \\
@@ -98,7 +98,7 @@ Dividindo \eqref{eq:erro_est} por $m = \sqrt{1+\zeta^2+\dot{\zeta}^2}$, obtemos:
 \label{eq:erro_est2}
 \end{flalign}
 
-De acordo com o Lema 1 (para $a = \zeta$, $b=\dot{\zeta}$), $\norm{\zeta/m} \leq 1$ e, como $\tilde{\theta} \in \mathcal{L}_{\infty}$, ent„o 
+De acordo com o Lema 1 (para $a = \zeta$, $b=\dot{\zeta}$), $\norm{\zeta/m} \leq 1$ e, como $\tilde{\theta} \in \mathcal{L}_{\infty}$, ent√£o 
 $\varepsilon/m \in \mathcal{L}_{\infty}$.
 %
 A lei de controle pode ser expressa por:
@@ -106,7 +106,7 @@ A lei de controle pode ser expressa por:
 \dot{\theta} = \dot{\tilde{\theta}} = - \gamma \, \underbrace{\frac{\varepsilon}{m}}_{\in \mathcal{L}_{\infty}} \, \frac{\zeta}{m} \,.
 \end{equation}
 
-Como $\varepsilon/m \in \mathcal{L}_{\infty}$ e pelo Lema 1 $\norm{\zeta/m} \leq 1$, ent„o $\dot{\tilde{\theta}} \in \mathcal{L}_{\infty}$.
+Como $\varepsilon/m \in \mathcal{L}_{\infty}$ e pelo Lema 1 $\norm{\zeta/m} \leq 1$, ent√£o $\dot{\tilde{\theta}} \in \mathcal{L}_{\infty}$.
 %
 Finalmente, derivando \eqref{eq:erro_est} no tempo e divindo por $m$, obtemos:
 %
@@ -115,13 +115,13 @@ Finalmente, derivando \eqref{eq:erro_est} no tempo e divindo por $m$, obtemos:
 \label{eq:erro_est3}
 \end{flalign}
 
-Novamente utilizando o Lema 1, mostra-se que os sinais constituintes de $\dot{\varepsilon}/m$ s„o limitados, e portanto $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$. $\blacksquare$
+Novamente utilizando o Lema 1, mostra-se que os sinais constituintes de $\dot{\varepsilon}/m$ s√£o limitados, e portanto $\dot{\varepsilon}/m \in \mathcal{L}_{\infty}$. $\blacksquare$
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{An·lise de estabilidade da lei de adaptaÁ„o (caso geral)}
+\subsection{An√°lise de estabilidade da lei de adapta√ß√£o (caso geral)}
 
-Suponha que o filtro seja dado por \eqref{eq:filter}. A equaÁ„o din‚mica do erro È dada por \eqref{eq:error_eq}. Assim, o erro pode ser escrito de forma similar a \eqref{eq:error1}:
+Suponha que o filtro seja dado por \eqref{eq:filter}. A equa√ß√£o din√¢mica do erro √© dada por \eqref{eq:error_eq}. Assim, o erro pode ser escrito de forma similar a \eqref{eq:error1}:
 %
 %\begin{flalign}
 %e_0 &= \mathcal{L}^{-1}\left\{G(s)\right\}\circledast\{\tilde{\theta}\,y_p\} \,, \quad G(s) = \frac{s+a_f}{s+a_m} \nonumber \\ 
@@ -135,7 +135,7 @@ e_0 &= G(s) \odot \{\tilde{\theta}\,\zeta\} \,, \qquad G(s) = \frac{s+a_f}{s+a_m
 \label{eq:error2}
 \end{flalign}
 %
-Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa È dado por:
+Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa √© dado por:
 %
 \begin{flalign}
 \varepsilon &= e_0 - \hat{e} \nonumber \\ 
@@ -146,10 +146,10 @@ Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa È dado por:
 %
 onde $\xi = G(s) \{\zeta\}$.
 %
-Propondo a mesma funcao de Lyapunov de antes \eqref{eq:lyap}, derivando e substituindo a lei de adaptaÁ„o \eqref{eq:adpt_law}, obtÈm-se:
+Propondo a mesma funcao de Lyapunov de antes \eqref{eq:lyap}, derivando e substituindo a lei de adapta√ß√£o \eqref{eq:adpt_law}, obt√©m-se:
 %
 \begin{flalign}
 \dot{V} &= - \frac{\tilde{\theta}^2 \, \zeta \, \xi}{m^2} \leq 0 \,.
 \end{flalign}
 %
-Note que, devido ‡ relaÁ„o entre $\xi$ e $\zeta$, \textcolor{red}{............}
+Note que, devido √† rela√ß√£o entre $\xi$ e $\zeta$, \textcolor{red}{............}

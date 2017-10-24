@@ -18,13 +18,14 @@ disp('Script para simular MRAC Indireto')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
-disp('      Parâmetros ........ np = 1')
+disp('      Parï¿½metros ........ np = 1')
 disp(' ')
-disp('Algoritmo: Método indireto')
+disp('Algoritmo: Mï¿½todo indireto')
 disp(' ')
 disp('-------------------------------')
 
-PRINT = 'OFF';  %'ON' : imprime figuras
+PRINT_BLOCKS = 'OFF';  %'ON' : imprime blocks
+PRINT = 'ON';  %'ON' : imprime figuras
 quit = 0;
 
 % --------------- Default Parameters --------------------
@@ -62,8 +63,8 @@ gamma2 = gamma_default;
 theta0 = 0;       %Adaptation inicial condition
 changed = 0;
 
-%--------------------------------------- Impressão dos diagramas -----
-if strcmp(PRINT,'ON')
+%--------------------------------------- Impressï¿½o dos diagramas -----
+if strcmp(PRINT_BLOCKS,'ON')
     open_system('MRAC_indireto_111_8_5');
     print -depsc2 '-sMRAC_indireto_111_8_5' ../../relatorio_indireto/figs/MRAC_indireto111.eps
     
