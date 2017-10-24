@@ -1,8 +1,17 @@
 %---------------------------------------------------------------------
 \section{Discussão}
 
-O novo fator normalizante é rude para todos os casos.
+%geralzao
+De uma maneira geral, vê-se que o fator de normalização modificado ($m^2 = 1 + \zeta^2 + \dot{\zeta}^2$) obteve desempenho pior que o fator normalização original ($m^2 = 1 + \zeta^2)$ para todas as simulações. Isso se deve porque o sinal $\dot{\zeta}^2$ a mais na normalização presente na lei de adaptação limita ainda mais a capacidade de variação do parâmetro adaptado $\theta$ de forma  desnecessária. Com isso, torna-se sempre mais demorada a convergência do parâmetro adaptado, implicando também em uma maior demora para convergência do erro.
 
-O termo a mais no fator de normalização vai sempre overnormalizar (limitar em exagero) e prejudicar a variação de $\theta$, então converge mais lento. nao sei ainda qual a vantagem em ter $\dot{\epsilon}/m$ limitado.
+%sim 1
+De forma isolada, variando os parâmetros do modelo e do controle, vê-se pela \textbf{simulação \#1} que um ganho $\gamma$ maior na lei de adaptação resulta em uma convergência mais rápida do parâmetro adaptado e consequentemente do erro de saída. No entanto, o sinal de controle é naturalmente mais acentuado.
 
-No caso do af, da pra ver q aumentando af, vc diminui a variação de theta, então o ajuste fica mais lento mesmo. Vc fica com uma equação (s+af)/(s2+2af+af2)
+%sim 2
+Pela \textbf{simulação \#2}, é possível perceber que quanto maior a diferença entre as condições iniciais da planta ($y_p(0)$) e do modelo de referência ($y_m(0)$), mais lenta é a convergência da adaptação e do erro de saída.
+
+%sim 3
+Variando-se o filtro do sinal de saída na \textbf{simulação \#3}, nota-se que a mudança para um filtro com pólo mais longe da origem prejudica a convergência do parâmetro adaptado e do erro de saída, que tornam-se mais lentas.
+
+%sim 4
+As \textbf{simulações \#4 e \#5} comparam o desempenho do controlador adaptativo para funções de transferência lentas e rápidas, tanto para a planta quanto para o modelo de referência. Nota-se que quando a diferença entre a dinâmica real da planta e a desejada no modelo de referência é grande, o parâmetro de adaptação ideal $\theta^*$ é maior, e então a convergência até esse valor torna-se mais lenta utilizando o mesmo ganho de adaptação.

@@ -16,7 +16,7 @@ switch changed
         title0 = '$\gamma';
     case 5
         changed_str = 'yp0';
-        title0 = '$yp_0';
+        title0 = '$y_p(0)';
 end
 
 set(groot, 'defaultAxesTickLabelInterpreter','latex');
@@ -63,7 +63,7 @@ figure(2);
 clf;
 
 subplot(211);
-plot(t,epsilon_11,t,epsilon_11,'Linew',0.5);
+plot(t,epsilon_11,t,epsilon_12,'Linew',0.5);
 grid on;
 titleStr = strcat('$\epsilon$ ', title1);
 title(titleStr);
@@ -116,14 +116,14 @@ plot(t,yhat_11,t,yhat_12,t,r,t,yp_11,t,yp_12,'Linew',0.5);
 grid on;
 titleStr = strcat('$\hat{y}$ ', title1);
 title(titleStr);
-legend(par1,par2,'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
+legend(strcat('$y_m$ para~ ',par1),strcat('$y_m$ para~ ',par2),'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
 
 subplot(212)
 plot(t,yhat_21,t,yhat_22,t,r,t,yp_21,t,yp_22,'Linew',0.5);
 grid on
 titleStr = strcat('$\hat{y}$ ', title2);
 title(titleStr);
-legend(par1,par2,'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
+legend(strcat('$y_m$ para~ ',par1),strcat('$y_m$ para~ ',par2),'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
 
 if strcmp(PRINT,'ON')
     print(path_yp,'-depsc2') 
