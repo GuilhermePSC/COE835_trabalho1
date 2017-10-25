@@ -1,17 +1,17 @@
-%---------------------------------------------------------------------
-\section{Discussão}
+ï»¿%---------------------------------------------------------------------
+\section{DiscussÃ£o}
 
 %geralzao
-De uma maneira geral, vê-se que o fator de normalização modificado ($m^2 = 1 + \zeta^2 + \dot{\zeta}^2$) obteve desempenho pior que o fator normalização original ($m^2 = 1 + \zeta^2)$ para todas as simulações. Isso se deve porque o sinal $\dot{\zeta}^2$ a mais na normalização presente na lei de adaptação limita ainda mais a capacidade de variação do parâmetro adaptado $\theta$ de forma  desnecessária. Com isso, torna-se sempre mais demorada a convergência do parâmetro adaptado, implicando também em uma maior demora para convergência do erro.
+De uma maneira geral, vÃª-se que o fator de normalizaÃ§Ã£o modificado ($m^2 = 1 + \zeta^2 + \dot{\zeta}^2$) obteve desempenho pior que o fator normalizaÃ§Ã£o original ($m^2 = 1 + \zeta^2)$ para todas as simulaÃ§Ãµes. Isso se deve porque o sinal $\dot{\zeta}^2$ a mais na normalizaÃ§Ã£o presente na lei de adaptaÃ§Ã£o limita ainda mais a capacidade de variaÃ§Ã£o do parÃ¢metro adaptado $\theta$ de forma  desnecessÃ¡ria. Com isso, torna-se sempre mais demorada a convergÃªncia do parÃ¢metro adaptado, implicando tambÃ©m em uma maior demora para convergÃªncia do erro.
 
 %sim 1
-De forma isolada, variando os parâmetros do modelo e do controle, vê-se pela \textbf{simulação \#1} que um ganho $\gamma$ maior na lei de adaptação resulta em uma convergência mais rápida do parâmetro adaptado e consequentemente do erro de saída. No entanto, o sinal de controle é naturalmente mais acentuado.
+De forma isolada, variando os parÃ¢metros do modelo e do controle, vÃª-se pela \textbf{simulaÃ§Ã£o \#1} que um ganho $\gamma$ maior na lei de adaptaÃ§Ã£o resulta em uma convergÃªncia mais rÃ¡pida do parÃ¢metro adaptado e consequentemente do erro de saÃ­da. No entanto, o sinal de controle Ã© naturalmente mais acentuado.
 
 %sim 2
-Pela \textbf{simulação \#2}, é possível perceber que quanto maior a diferença entre as condições iniciais da planta ($y_p(0)$) e do modelo de referência ($y_m(0)$), mais lenta é a convergência da adaptação e do erro de saída.
+Pela \textbf{simulaÃ§Ã£o \#2}, Ã© possÃ­vel perceber que quanto maior a diferenÃ§a entre as condiÃ§Ãµes iniciais da planta ($y_p(0)$) e do modelo de referÃªncia ($y_m(0)$), mais lenta Ã© a convergÃªncia da adaptaÃ§Ã£o e do erro de saÃ­da.
 
 %sim 3
-Variando-se o filtro do sinal de saída na \textbf{simulação \#3}, nota-se que a mudança para um filtro com pólo mais longe da origem prejudica a convergência do parâmetro adaptado e do erro de saída, que tornam-se mais lentas.
+Variando-se o filtro do sinal de saÃ­da na \textbf{simulaÃ§Ã£o \#3}, nota-se que a mudanÃ§a para um filtro com pÃ³lo mais longe da origem prejudica a convergÃªncia do parÃ¢metro adaptado e do erro de saÃ­da, que tornam-se mais lentas.
 
 %sim 4
-As \textbf{simulações \#4 e \#5} comparam o desempenho do controlador adaptativo para funções de transferência lentas e rápidas, tanto para a planta quanto para o modelo de referência. Nota-se que quando a diferença entre a dinâmica real da planta e a desejada no modelo de referência é grande, o parâmetro de adaptação ideal $\theta^*$ é maior, e então a convergência até esse valor torna-se mais lenta utilizando o mesmo ganho de adaptação.
+As \textbf{simulaÃ§Ãµes \#4 e \#5} comparam o desempenho do controlador adaptativo para funÃ§Ãµes de transferÃªncia lentas e rÃ¡pidas, tanto para a planta quanto para o modelo de referÃªncia. Nota-se que quando a diferenÃ§a entre a dinÃ¢mica real da planta e a desejada no modelo de referÃªncia Ã© grande, o parÃ¢metro de adaptaÃ§Ã£o ideal $\theta^*$ Ã© maior, e entÃ£o a convergÃªncia atÃ© esse valor torna-se mais lenta utilizando o mesmo ganho de adaptaÃ§Ã£o.
