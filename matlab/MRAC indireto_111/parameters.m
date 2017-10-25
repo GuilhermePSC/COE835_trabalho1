@@ -25,7 +25,7 @@ disp(' ')
 disp('-------------------------------')
 
 PRINT_BLOCKS = 'OFF';  %'ON' : imprime blocks
-PRINT = 'ON';  %'ON' : imprime figuras
+PRINT = false ;  %'ON' : imprime figuras
 quit = 0;
 
 % --------------- Default Parameters --------------------
