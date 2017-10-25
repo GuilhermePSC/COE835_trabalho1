@@ -140,15 +140,15 @@ Da mesma forma que em \eqref{eq:erro_est}, o erro de estimativa é dado por:
 %
 onde $\xi = G(s) \{\zeta\}$.
 %
-Propondo a mesma funcao de Lyapunov de antes \eqref{eq:lyap}, derivando e substituindo a lei de adaptação \eqref{eq:adpt_law}, obtém-se:
+Propondo a mesma funcão de Lyapunov de antes \eqref{eq:lyap}, derivando e substituindo a lei de adaptação \eqref{eq:adpt_law}, obtém-se:
 %
 \begin{flalign}
 \dot{V} &= - \frac{\tilde{\theta}^2 \, \zeta \, \xi}{m^2} \leq 0 \,.
 \end{flalign}
 %
-Note que, com a função de Lyapunov proposta, não é possível assegurar a limitação de $\tilde{\theta}$. Além disso, também não é imediato demonstrar a limitação de $\dot{\varepsilon}/m$ para a atual definição de $m$. 
+Note que não é possível assegurar a limitação de $\tilde{\theta}$. Além disso, também não é imediato demonstrar a limitação de $\dot{\varepsilon}/m$ para a atual definição de $m$.
 %
-Entretanto, modificando a lei de adaptação proposta para:
+Entretanto, \textit{modificando} a lei de adaptação proposta para:
 %
 \begin{equation}
 \dot{\theta} = - \frac{\gamma \varepsilon \xi}{m^2} \,, \qquad m^2 = 1 + \xi^2 + \dot{\xi}^2 \,,
@@ -157,3 +157,5 @@ Entretanto, modificando a lei de adaptação proposta para:
 %
 é perfeitamente possível provar a limitação de $\tilde{\theta}$,
 ${\varepsilon}/m$ e $\dot{\varepsilon}/m$ utilizando a mesma função de Lyapunov e um raciocínio de cálculo análogo ao da seção anterior.
+%
+Porém, este caso não será abordado nas simulações.

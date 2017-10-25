@@ -8,10 +8,10 @@
 \noindent
 
 \equacao{Planta}
-  {\dot{y}_p = a_p y_p + u \label{eq:planta}}
+  {\dot{y}_p = a_p y_p + u \,, \quad P(s) = \frac{1}{s+a_p} \label{eq:planta}}
 
 \equacao{Modelo}
-  {\dot{y}_m = -a_m y_m + r \label{eq:ref_model}}
+  {\dot{y}_m = -a_m y_m + r \,, \quad M(s) = \frac{1}{s+a_m} \label{eq:ref_model}}
 
 \equacao{Erro de saída}
   {e_0 = y_p - y_m \label{eq:error}}
@@ -20,10 +20,10 @@
   {u = \theta \, y_p + r \label{eq:ctrl_law}}
 
 \equacao{Filtro}
-  {\dot{\zeta} + a_f \, \zeta = y_p \label{eq:filter}}
+  {\dot{\zeta} + a_f \, \zeta = y_p \,, \quad F(s) = \frac{1}{s+a_f} \label{eq:filter}}
 
 \equacao{Estimativa do erro}
-  {\hat{e} = \mathcal{L}^{-1}\left\{\frac{\Theta Y_p }{s+a_f}\right\}- \theta\zeta \label{eq:est_error}}
+  {\hat{e} = F(s) \odot \{\theta \, y_p\} - \theta\zeta \label{eq:est_error}}
 
 \equacao{Erro de estimativa}
   {\varepsilon = e_0 - \hat{e} \label{eq:error_est}}
