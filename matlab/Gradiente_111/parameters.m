@@ -23,7 +23,8 @@ disp('Algoritmo: Método indireto')
 disp(' ')
 disp('-------------------------------')
 
-PRINT = 'OFF';  %'ON' : imprime figuras
+PRINT = false;  %'ON' : imprime figuras
+PRINT_BLOCKS = 'OFF';
 quit = 0;
 
 % --------------- Default Parameters --------------------
@@ -62,7 +63,7 @@ theta0 = 0;       %Adaptation inicial condition
 changed = 0;
 
 %--------------------------------------- Impressão dos diagramas -----
-if strcmp(PRINT,'ON')
+if strcmp(PRINT_BLOCKS,'ON')
     open_system('MRAC_111_8_5');
     print -depsc2 '-sMRAC_111_8_5' ../../relatorio_indireto/figs/MRAC_indireto111.eps
     

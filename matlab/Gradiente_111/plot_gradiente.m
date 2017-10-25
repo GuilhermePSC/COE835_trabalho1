@@ -54,7 +54,7 @@ titleStr = strcat('$e_0$ ', title2);
 title(titleStr);
 legend(par1,par2,'Location','SouthEast');
 
-if strcmp(PRINT,'ON')
+if PRINT
     print(path_e0,'-depsc2')
 end
 
@@ -90,7 +90,7 @@ xlabel('$e_0$')
 ylabel('$\tilde{\theta}$')
 legend(par1,par2,'Location','SouthEast')
 
-if strcmp(PRINT,'ON')
+if PRINT
     print(path_e0_vs_deltatheta,'-depsc2')
 end
 
@@ -115,7 +115,7 @@ titleStr = strcat('$\theta$ ', title2);
 title(titleStr);
 legend(par1,par2,'$\theta$*','Location','SouthEast');
 
-if strcmp(PRINT,'ON')
+if PRINT
     print(path_theta,'-depsc2') 
 end
 
@@ -137,7 +137,7 @@ titleStr = strcat('$y_m$ ', title2);
 title(titleStr);
 legend(strcat('$y_m$ para~ ',par1),strcat('$y_m$ para~ ',par2),'r',strcat('$y_p$ para~ ',par1),strcat('$y_p$ para~ ',par2),'Location','SouthEast');
 
-if strcmp(PRINT,'ON')
+if PRINT
     print(path_yp,'-depsc2') 
 end
 
@@ -163,7 +163,7 @@ titleStr = strcat('$u$ ',title2);
 title(titleStr);
 legend(par1,par2,'Location','SouthEast')
 
-if strcmp(PRINT,'ON')
+if PRINT
     print(path_u, '-depsc2')
 end
 
