@@ -13,17 +13,16 @@ Como em outros esquemas MRAC, este controle possui um modelo de referência
 desejado que é utilizado para a geração de um sinal de erro de saída \eqref{eq:error}. Ele também possui um filtro estável de primeira ordem que é aplicado sobre os sinais de entrada e saída. Assim, é possível escrever a saída do sistema como
 %
 \begin{equation}
-y = \theta^* \, \phi + \mathcal{L}^{-1}\left\{ \frac{u}{s+a_f} \right\} \,,
+y = \theta^* \, \phi + F(s) \odot u\,,
 \quad \theta^* = a_f + a_p \,,
 \label{eq:saida}
 \end{equation}
 %
-motivando portanto a \textit{definição} da predição de saída dada por \eqref{eq:pred_saida}. Assim, utilizando \eqref{eq:pred_error}, \eqref{eq:pred_saida} e \eqref{eq:saida} temos:
+motivando portanto a \textit{definição} da predição de saída dada por \eqref{eq:pred_saida}, onde $\theta = a_f + \hat{a}_p$ e $\hat{a}_p$ é uma estimativa de $a_p$. Assim, utilizando \eqref{eq:pred_error}, \eqref{eq:pred_saida} e \eqref{eq:saida} temos:
 %
 \begin{flalign}
 \epsilon &= \hat{y} - y \nonumber \\
-&= \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} - \theta^*
-\, \phi - \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} \nonumber \\
+&= \theta \, \phi + F(s) \odot u - \theta^* \, \phi - F(s) \odot u \nonumber \\
 &= ( \theta - \theta^*) \, \phi = \tilde{\theta} \, \phi \,.
 \label{eq:pred_error2}
 \end{flalign}
@@ -40,10 +39,18 @@ Utilizando estes resultados, é possível demonstrar que $\epsilon \rightarrow 0,
 e_0 \rightarrow 0$.
 
 Alternativamente, podemos usar a parametrização $\theta^* = a_p$, e, em vez da
-Equação \eqref{eq:saida}, obtemos uma equação similar para a saída $y$
-\eqref{eq:saida2}:
- \begin{equation}
-y - \mathcal{L}^{-1}\left\{ \frac{a_fY}{s+a_f} \right\}= \theta^* \, \phi +
-\mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\} \,, \quad \theta^* = a_p \,,
+Equação \eqref{eq:saida}, obtemos uma equação similar para a saída $y$:
+%
+\begin{equation}
+y - a_f \, \phi = \theta^* \, \phi + F(s) \odot u \,, \quad \theta^* = a_p \,,
 \label{eq:saida2}
 \end{equation}
+%
+e consequentemente, para a estimação da saída $\hat{y}$:
+%
+\begin{equation}
+\hat{y} = \theta \, \phi + F(s) \odot u + a_f \, \phi \,, \quad \theta = \hat{a}_p \,.
+\label{eq:saida_est2}
+\end{equation}
+
+Porém, o erro de predição utilizando \eqref{eq:saida2} e \eqref{eq:saida_est2} é idêntico à \eqref{eq:pred_error}. Portanto, toda a análise de estabilidade para este caso é também idêntica ao caso anterior.

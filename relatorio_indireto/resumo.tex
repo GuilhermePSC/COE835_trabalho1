@@ -6,16 +6,16 @@ Abaixo, resumimos algumas das principais equações utilizadas no método.
 \vspace{20mm}
 
 \equacao{Planta}
-  {\dot{y}_p = a_p y_p + u \label{eq:planta}}
+  {\dot{y}_p = a_p y + u \label{eq:planta}}
 
 \equacao{Modelo}
   {\dot{y}_m = -a_m y_m + r \label{eq:ref_model}}
 
 \equacao{Erro de saída}
-  {e_0 = y_p - y_m \label{eq:error}}
+  {e_0 = y - y_m \label{eq:error}}
 
 \equacao{Lei de controle}
-  {u(t) = k(t) \, y_p + r \label{eq:ctrl_law}}
+  {u(t) = k(t) \, y + r \label{eq:ctrl_law}}
 
 \equacao{Filtro}
   { F(s) = \frac{1}{s+a_f} \label{eq:filter}}
@@ -27,16 +27,17 @@ Abaixo, resumimos algumas das principais equações utilizadas no método.
   {k(t) = -\hat{a}_p-a_m \label{eq:est_gain}}
 
 \equacao{Saída filtrada}
-	{\phi = \mathcal{L}^{-1}\left\{ \frac{Y}{s+a_f} \right\}}
+	{\phi = F(s) \odot y }
 
 \equacao{Parâmetro estimado}
-	{\theta = a_f + \hat{a}_p}
+	{\theta = a_f + \hat{a}_p \quad ou \quad
+	\theta = \hat{a}_p}
 
 \equacao{Predição da saída}
-	{\hat{y} = \theta \, \phi + \mathcal{L}^{-1}\left\{ \frac{U}{s+a_f} \right\}
+	{\hat{y} = \theta \, \phi + F(s) \odot u
 	\label{eq:pred_saida} }
 
-\equacao{Erro de Predicao}
+\equacao{Erro de predição}
 	{\epsilon = \hat{y} - y \label{eq:pred_error}}
 
 \equacao{Lei de adaptação}

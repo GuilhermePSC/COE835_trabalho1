@@ -24,8 +24,8 @@ Apresentaremos os resultados obtidos através de simulações no ambiente \HI{\text
 
 Inicialmente, desejamos verificar o comportamento do sistema para variações no ganho de adaptação $\gamma$.
 
-\bigskip%
-Parâmetros e condições iniciais :
+%\bigskip%
+%Parâmetros e condições iniciais :
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
@@ -64,51 +64,51 @@ Parâmetros e condições iniciais :
 %---------------------------------------------------------------------
 \subsection{Simulação \#2}
 
-\bigskip%
-Parâmetros e condições iniciais:
+Na segunda simulação, observamos o comportamento do sistema para variações no pólo do filtro.
+
+%\bigskip%
+%Parâmetros e condições iniciais:
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
   a_m &= 1\,,   &  y_m(0) &= 0\,, & \gamma &= 5\,, \\
-  r &= 1\,, & a_f &= \HI{2, 5}\,.
+  r &= 1\,, & a_f &= \HI{3, 5}\,.
 \end{align*}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/e0/af2af5.eps} \\[2mm]
+  \includegraphics[width=12cm]{figs/e0/af3af5.eps} \\[2mm]
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/epsilon/af2af5.eps} 
+  \includegraphics[width=12cm]{figs/epsilon/af3af5.eps} 
 \end{figure}
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/theta/af2af5.eps} 
+  \includegraphics[width=12cm]{figs/theta/af3af5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/yp/af2af5.eps} 
+  \includegraphics[width=12cm]{figs/yp/af3af5.eps} 
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{figs/u/af2af5.eps} 
+  \includegraphics[width=12cm]{figs/u/af3af5.eps} 
 \end{figure}
 
 \newpage%
 %---------------------------------------------------------------------
 \subsection{Simulação \#3}
 
-\bigskip%
-Parâmetros e condições iniciais  :
-%
+Na terceira simulação, observamos o comportamento do sistema para variações no pólo desconhecido da planta.
 
-\bigskip%
-Parâmetros e condições iniciais:
+%\bigskip%
+%Parâmetros e condições iniciais:
 %
 \begin{align*}
   a_p &= \HI{-2, -5}\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
@@ -147,8 +147,10 @@ Parâmetros e condições iniciais:
 
 \subsection{Simulação \#4}
 
-\bigskip%
-Parâmetros e condições iniciais:
+Na simulação 4, variamos o pólo do modelo de referência utilizado.
+
+%\bigskip%
+%Parâmetros e condições iniciais:
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= 0\,, & \theta(0) &= 0\,, \\
@@ -187,8 +189,10 @@ Parâmetros e condições iniciais:
 
 \subsection{Simulação \#5}
 
-\bigskip%
-Parâmetros e condições iniciais:
+Por último, observamos o comportamento do sistema para variações nas condições iniciais da planta.
+
+%\bigskip%
+%Parâmetros e condições iniciais:
 %
 \begin{align*}
   a_p &= -2\,,  &  y_p(0) &= \HI{0, 5}\,, & \theta(0) &= 0\,, \\
