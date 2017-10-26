@@ -27,6 +27,7 @@ disp('-------------------------------')
 PRINT_BLOCKS = 'OFF';  %'ON' : imprime blocks
 PRINT = false ;  %'ON' : imprime figuras
 quit = 0;
+tfinal = 10;
 
 % --------------- Default Parameters --------------------
 ap_default = -2;
@@ -34,6 +35,7 @@ am_default = 1;
 af_default = 1;
 yp0_default = 0;
 gamma_default = 5;
+theta0_default = 0;
 
 %Plant Parameters
 ap1 = ap_default;
@@ -60,7 +62,8 @@ ws = 2;  %Frequency
 %Adaptation parameters
 gamma1 = gamma_default;         %Adaptation gains
 gamma2 = gamma_default;
-theta0 = 0;       %Adaptation inicial condition
+theta01 = theta0_default;
+theta02 = theta0_default;       %Adaptation inicial condition
 changed = 0;
 
 %--------------------------------------- Impress�o dos diagramas -----
@@ -131,7 +134,8 @@ while ~quit
     %Adaptation parameters
     gamma1 = gamma_default;         %Adaptation gains
     gamma2 = gamma_default;
-    theta0 = 0;       %Adaptation inicial condition
+    theta01 = theta0_default;
+    theta02 = theta0_default;       %Adaptation inicial condition
     changed = 0;
     finish =0;
 end

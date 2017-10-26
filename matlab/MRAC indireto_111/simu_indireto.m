@@ -1,5 +1,4 @@
 %------------------------------------------------ Initialization -----
-tfinal = 10;    %Simulation interval
 st = 0.05;      %Sample time to workspace
 
 s = tf('s');    %trick!
@@ -10,6 +9,7 @@ am = am1;
 gamma = gamma1;
 yp0 = yp01;
 af = af1;
+theta0 = theta01;
 
 %Matching gain
 thetas_11 = ap + af;
@@ -54,6 +54,7 @@ am = am2;
 gamma = gamma2;
 yp0 = yp02;
 af = af2;
+theta0 = theta02;
 
 %Matching gain
 ks = -ap - am;
