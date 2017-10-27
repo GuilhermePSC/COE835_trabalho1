@@ -18,14 +18,14 @@ disp('Script para simular MRAC Indireto')
 disp(' ')
 disp('Caso: Planta ............. n = 1')
 disp('      Grau relativo ..... n* = 1')
-disp('      Par�metros ........ np = 1')
+disp('      Parametros ........ np = 1')
 disp(' ')
-disp('Algoritmo: M�todo indireto')
+disp('Algoritmo: Metodo indireto')
 disp(' ')
 disp('-------------------------------')
 
-PRINT_BLOCKS = 'OFF';  %'ON' : imprime blocks
-PRINT = false ;  %'ON' : imprime figuras
+PRINT_BLOCKS = false;  %true imprime blocks
+PRINT = true ; %true imprime figuras
 quit = 0;
 tfinal = 10;
 
@@ -67,7 +67,7 @@ theta02 = theta0_default;       %Adaptation inicial condition
 changed = 0;
 
 %--------------------------------------- Impress�o dos diagramas -----
-if strcmp(PRINT_BLOCKS,'ON')
+if PRINT_BLOCKS
     open_system('MRAC_indireto_111_8_5');
     print -depsc2 '-sMRAC_indireto_111_8_5' ../../relatorio_indireto/figs/MRAC_indireto111.eps
     

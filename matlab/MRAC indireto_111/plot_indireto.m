@@ -97,17 +97,17 @@ plot(t,theta_11,t,theta_12,t,Thetas11,t,Thetas12,'Linew',0.5);
 grid on;
 titleStr = strcat('$\theta$ ', title1);
 title(titleStr);
-legend(par1,par2,'$\theta1$*','$\theta2$*','Location','SouthEast');
+legend(par1,par2,'$\theta$*(i)','$\theta$*(ii)','Location','SouthEast');
 
 subplot(212)
 plot(t,theta_21,t,theta_22,t,Thetas21,t,Thetas22,'Linew',0.5);
 grid on
 titleStr = strcat('$\theta$ ', title2);
 title(titleStr);
-legend(par1,par2,'$\theta$*','$\theta2$*','Location','SouthEast');
+legend(par1,par2,'$\theta$*(i)','$\theta$*(ii)','Location','SouthEast');
 
 if PRINT
-    print(path_theta,'-depsc2') 
+    print(path_theta,'-depsc2')
 end
 
 %--------------- Fig4 -------------

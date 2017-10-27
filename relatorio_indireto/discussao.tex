@@ -6,14 +6,16 @@ Observa-se que $\epsilon = \tilde{\theta}\phi$, logo $\dot{\theta} =
 varia proporcionalmente ao valor inicial ($\theta-\theta^*$), $\gamma$ e $a_f\,
 (\phi^2)$.
 
-Na primeira simulação, a variação do parâmetro de adaptação $\gamma$ apresenta grande impacto sobre a convergência do parâmetro adaptado $\theta$, como esperado. Valores maiores de $\gamma$ garantem tanto menor tempo de convergência quanto menor sobrepasso em $\theta$, $e_0$ e $\varepsilon$. Nota-se também uma convergência ligeiramente mais rápida para tipo (i) de predição de saída, e overshoot menor nestes sinais.
+Na \textbf{simulação \#1}, a variação do ganho de adaptação $\gamma$ apresenta grande impacto sobre a convergência do parâmetro adaptado $\theta$, como esperado. Valores maiores de $\gamma$ garantem tanto menor tempo de convergência quanto menor sobrepasso em $\theta$, $e_0$ e $\varepsilon$. Nota-se também uma convergência ligeiramente mais rápida para tipo (i) de predição de saída, e overshoot menor nestes sinais.
 
-Na segunda simulação, variamos o pólo do filtro e notamos que um pólo mais rápido implica em menor tempo de convergência para o parâmetro e para o erro de predição. Mais uma vez, a convergência foi mais rápida para o tipo (i) de predição de saída do que para o tipo (ii).
+Na \textbf{simulação \#2}, variamos o pólo do filtro e notamos que um pólo mais rápido implica em menor tempo de convergência para o parâmetro e para o erro de predição. Mais uma vez, a convergência foi mais rápida para o tipo (i) de predição de saída do que para o tipo (ii).
 
-Na simulação 3, a variação do pólo instável da planta causou impacto significativo no tempo de convergência e no sobrepasso dos sinais. Em particular, também houve uma notável diferença no nível DC do sinal de controle $u(t)$.
+Na \textbf{simulação \#3}, a variação do pólo instável da planta causou impacto significativo no tempo de convergência e no sobrepasso dos sinais. Em particular, também houve uma notável diferença no nível DC do sinal de controle $u(t)$.
 
-Na simulação 4, variamos o pólo do modelo de referência. Notou-se que, ao escolher um pólo mais rápido, há grande impacto no tempo de convergência de $y(t)$, $\varepsilon$ e $\theta$. Em contrapartida, obtém-se sobrepasso ligeiramente menor e também menor nível DC no sinal de controle $u(t)$.
+Na \textbf{simulação \#4}, variamos o pólo do modelo de referência. Notou-se que, ao escolher um pólo mais rápido, há grande impacto no tempo de convergência de $y(t)$, $\varepsilon$ e $\theta$. Em contrapartida, obtém-se sobrepasso ligeiramente menor e também menor nível DC no sinal de controle $u(t)$.
 %
-Na última simulação, variamos as condições iniciais da planta. Não houve variação significativa nos tempos de convergência para os dois casos. Porém, nota-se que, mesmo para erro inicial nulo ($y(0)=0$), há sobrepasso no erro devido à adaptação paramétrica.
+Na \textbf{simulação \#5}, variamos as condições iniciais da planta. Não houve variação significativa nos tempos de convergência para os dois casos. Porém, nota-se que, mesmo para erro inicial nulo ($y(0)=0$), há sobrepasso no erro devido à adaptação paramétrica.
 
-Finalmente, ressaltamos que o tipo (i) de predição de saída apresentou resultados melhores do que o tipo (ii) em termos de sobrepasso e tempo de convergência em todas as simulações realizadas.
+Na \textbf{simulação \#6}, houve variação da condição inicial do parâmetro estimado, $\theta(0)$. Nessas condições, o tipo (i) de predição de saída apresentou resultados piores do que o tipo (ii), já que o parâmetro ideal $\theta^*$ passou a ficar mais próximo do valor inicial de adaptação utilizando $\theta = a_p$ do que $\theta = a_p + a_f$.
+
+% Finalmente, ressaltamos que o tipo (i) de predição de saída apresentou resultados melhores do que o tipo (ii) em termos de sobrepasso e tempo de convergência em todas as simulações realizadas.
